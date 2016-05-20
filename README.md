@@ -6,7 +6,9 @@ a limited number of users in your organization. It offers some of the
 benefits of open source while preserving the ability to charge for the
 software.
 
-See https://fair.io.
+[**License text (Fair Source License v0.9)**](./fair-source-license-v0.9.txt)
+
+See https://fair.io for more information.
 
 
 ## How Fair Source Works

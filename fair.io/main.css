@@ -1,0 +1,77 @@
+body {
+    margin: 0 auto;
+	max-width: 800px;
+	padding: 10px 20px;
+    background-color: rgba(255, 255, 0, 0.04);
+	color: #333;
+	line-height: 1.6;
+	font-family: "Droid Serif", "Georgia", serif;
+	font-size: 1.2rem;
+	text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: -apple-system, ".SFNSText-Regular", "SFNS Display", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+    font-weight: 600;
+	margin: 0;
+}
+h1 {
+	margin-top: 100px;
+	text-transform: uppercase;
+	letter-spacing: 6px;
+	text-align: center;
+	font-size: 3rem;
+}
+h2 {
+	font-size: 1.75rem;
+	margin-top: 75px;
+}
+h3 {
+	margin-top: 30px;
+}
+h4 {
+	margin-top: 15px;
+}
+
+p {
+    margin: 0 0 1rem 0;
+}
+p:first-child {
+	margin-top: 1rem;
+}
+a {
+    color: #243ddb;
+    text-decoration: none;
+    line-height: inherit;
+    outline: 0;
+    -webkit-transition: color .1s ease-out;
+    -webkit-transition-property: color;
+    -webkit-transition-duration: .1s;
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-delay: initial;
+    -moz-transition: color .1s ease-out;
+    -o-transition: color .1s ease-out;
+    -ms-transition: color .1s ease-out;
+    transition: color .1s ease-out;
+    transition-property: color;
+    transition-duration: .1s;
+    transition-timing-function: ease-out;
+    transition-delay: initial;
+}
+a:hover {
+    color: #5075e2;
+}
+footer {
+	margin-top: 65px;
+    text-align: center;
+    font-size: 18px;
+	font-weight: bold;
+}
+li {
+	padding: 15px 0;
+}

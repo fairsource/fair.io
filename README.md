@@ -24,6 +24,12 @@ Any individual user can view, download, execute, and modify Fair Source-licensed
 
 See https://fair.io.
 
+* [About](https://fair.io/#about)
+* [Benefits](https://fair.io/#benefits)
+* [FAQ](https://fair.io/#faq)
+* [Community](https://fair.io/#community)
+* [Media](https://fair.io/#media) (what people are saying about Fair Source)
+
 
 ## Contributions & community
 

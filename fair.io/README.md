@@ -2,6 +2,14 @@
 
 This directory contains the https://fair.io website sources.
 
+## Editing
+
+1. Clone this repository to your computer.
+2. Open the index.html file in a text editor.
+3. Open the index.html file in a browser (in a separate window).
+4. Make changes in your text editor and reload the browser to see them take effect.
+5. When done, submit a pull request with your changes.
+
 ## Updating
 
 Update the files in this directory. There is no static site generator;

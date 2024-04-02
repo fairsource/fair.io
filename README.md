@@ -1,7 +1,7 @@
 # [Fair Source](https://fair.io)
 
-Not Open Source. Not closed source. Fair Source is companies meaningfully
-sharing the code for their core products under non-compete licenses.
+Not closed source. Not Open Source. Fair Source is for companies that want to
+safely share their core products. Let there be code! 🙌
 
 ## Contributions & community
 

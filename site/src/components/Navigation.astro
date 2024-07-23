@@ -71,12 +71,12 @@ const socialLinks = [
   <ul class="hidden absolute top-0 right-0 lg:flex lg:mx-auto lg:flex lg:items-center lg:justify-end lg:w-[66.6%]">
     {             
       links.map((link) => <li class="mb-1">
-        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href={link.url} target={link.target}>{link.name}</a>
+        <a class="block p-4 text-[17px] font-medium text-black hover:bg-blue-50 hover:text-blue-600 rounded" href={link.url} target={link.target}>{link.name}</a>
       </li>)
     }
     {
       socialLinks.map((link) => <li class="mb-1">
-        <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold rounded-xl transition duration-200" href={link.url} target={link.target}>{link.name}</a>
+        <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-[17px] text-black font-medium rounded-xl transition duration-200" href={link.url} target={link.target}>{link.name}</a>
       </li>)
     }
   </ul>

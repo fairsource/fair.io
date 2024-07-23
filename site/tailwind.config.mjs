@@ -13,7 +13,11 @@ export default {
       midnight: '#1E1E1E',
       taupe: '#E8E3DC',
       rust: '#BB3E04',
-      purple: '#6E5494'
+      purple: '#6E5494',
+      white: '#ffffff'
+    },
+    borderRadius: {
+      DEFAULT: '32px'
     },
 		extend: {},
 	},

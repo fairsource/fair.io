@@ -1,6 +1,7 @@
 ---
 
 import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 
 
 interface Props {
@@ -23,6 +24,7 @@ const { title } = Astro.props;
 	<body class="bg-background">
 		<Navigation />
 		<slot />
+		<Footer />
 	</body>
 </html>
 <style is:global>

@@ -1,4 +1,8 @@
 ---
+import { Image } from 'astro:assets';
+import iconX from '../assets/navigation/x.png'
+import iconGitHub from '../assets/navigation/github.png'
+
 const links = [
   {
     name: 'Home',
@@ -31,20 +35,20 @@ const socialLinks = [
   {
     name: 'Github',
     url: 'https://github.com/fairsource/fair.io',
-    icon: '',
+    icon: iconGitHub,
     target: '_BLANK'
   },
   {
     name: 'X',
     url: 'https://x.com/fairsrc/',
-    icon: '',
+    icon: iconX,
     target: '_BLANK'
   }
 ];
 
 ---
 
-<nav class="relative px-4 py-4 flex justify-between items-center bg-transparent">
+<nav class="relative px-[3rem] py-[2.5rem] flex justify-between items-center bg-transparent">
   <a class="text-3xl font-bold leading-none" href="/">
     <svg class="h-6" viewBox="0 0 186 30" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M7.03254 28.7455H3.14011V10.6501H0V6.76556H3.14011C3.17282 3.78742 3.92514 0 8.86427 0C11.939 0 13.6726 2.29835 14.2286 3.65793L14.3595 3.94927L10.696 5.3736L10.5652 5.08226C10.5652 5.08226 10.0091 3.85216 8.86427 3.85216C7.49047 3.85216 7.13067 4.88804 7.03254 6.73319H13.7053V10.6177H7.03254V28.7455Z" fill="#0D1B2A"/>
@@ -68,7 +72,7 @@ const socialLinks = [
       </svg>
     </button>
   </div>
-  <ul class="hidden absolute top-0 right-0 lg:flex lg:mx-auto lg:flex lg:items-center lg:justify-end lg:w-[66.6%]">
+  <ul class="hidden relative lg:flex lg:items-center lg:justify-end lg:w-[66.6%]">
     {             
       links.map((link) => <li class="mb-1">
         <a class="block p-4 text-[17px] font-medium text-black hover:bg-blue-50 hover:text-blue-600 rounded" href={link.url} target={link.target}>{link.name}</a>
@@ -76,7 +80,7 @@ const socialLinks = [
     }
     {
       socialLinks.map((link) => <li class="mb-1">
-        <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-[17px] text-black font-medium rounded-xl transition duration-200" href={link.url} target={link.target}>{link.name}</a>
+        <a class="hidden lg:inline-block lg:ml-auto lg:mr-1 h-[30px] w-[30px]" href={link.url} target={link.target}><Image src={link.icon} alt={link.name}/></a>
       </li>)
     }
   </ul>
@@ -117,10 +121,10 @@ const socialLinks = [
     </div>
     <div class="mt-auto">
       <div class="pt-6">
-        <ul>
+        <ul class="flex items-center gap-5">
         {
           socialLinks.map((link) => <li class="mb-1">
-            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href={link.url} target={link.target}>{link.name}</a>
+            <a class="block lg:ml-auto lg:mr-1 h-[30px] w-[30px]" href={link.url} target={link.target}><Image src={link.icon} alt={link.name}/></a>
           </li>)
         }
         </ul>

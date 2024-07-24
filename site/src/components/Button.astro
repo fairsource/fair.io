@@ -1,11 +1,14 @@
 ---
 const {type, cta, url, color, target} = Astro.props;
 
-const buttonStyling = type === 'primary' ? '' : '';
+const commonClassList = `px-6 py-4 rounded-small text-[1.5rem] capitalize leading-[130%]`;
+const primaryClassList = `bg-black border-2 border-black ${commonClassList} text-white`;
+const secondaryClassList = `${commonClassList} border-2 border-${color} text-${color}`;
+
 ---
 
 <a href={url} target={target}>
-  <button class={`${color}`}>
+  <button class:list={`${type === 'primary' ? primaryClassList : secondaryClassList}`}>
     {cta}
   </button>
 </a>

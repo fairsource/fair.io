@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
 
 
 ---
@@ -10,12 +11,13 @@ import Section from '../components/Section.astro';
     <div class="relative grid grid-cols-12 gap-1">
       <div class="col-span-12 lg:col-span-6 flex items-center">
         <div class="w-[80%]">
-          <h1 class="text-black text-[72px] leading-[120%] ">
+          <h1 class="text-black text-[72px] leading-[120%] mb-4">
             Software Sharing for Modern Companies
           </h1>
-          <p class="text-black text-[32px] leading-[130%]">Balance innovation and protection with Fair Source licensing.</p>
-          <div class="flex flex-wrap">
-            
+          <p class="text-black text-[32px] leading-[130%] mb-6">Balance innovation and protection with Fair Source licensing.</p>
+          <div class="flex flex-wrap gap-4">
+            <Button type="primary" url='/howto' color="teal" cta="Adopt Fair Source" />
+            <Button type="secondary" url='/faq' color="black" cta="Learn More" />          
           </div>
         </div>
       </div>
@@ -50,10 +52,11 @@ import Section from '../components/Section.astro';
     </section>
     <Section>
       <div class="col-span-12 lg:col-span-6">
-        <div class="w-[80%]">
-          <span class="text-teal font-medium leading-[125%] font-[24px]">Embrace Fair Source</span>
-          <h2>Learn how to adopt Fair Source for your projects</h2>
-          <p>Whether you’re a developer looking to contribute or a business aiming to innovate, we the provide steps to successfully implement Fair Source in your projects. Join the community of ethical and innovative software sharing, balancing collaboration with control for everyone involved.</p>
+        <div class="px-[3.5rem]">
+          <span class="text-teal tag">Embrace Fair Source</span>
+          <h2 class="mb-4">Learn how to adopt Fair Source for your projects</h2>
+          <p class="mb-6">Whether you’re a developer looking to contribute or a business aiming to innovate, we the provide steps to successfully implement Fair Source in your projects. Join the community of ethical and innovative software sharing, balancing collaboration with control for everyone involved.</p>
+          <Button type="secondary" cta="adopt fair source" url="/howto" color="teal" />
         </div>
       </div>
       <div class="col-span-12 lg:col-span-6 relative">
@@ -76,9 +79,10 @@ import Section from '../components/Section.astro';
     <Section>
       <div class="col-span-12 lg:col-span-6"></div>
       <div class="col-span-12 lg:col-span-6">
-        <span>Understand Fair Source</span>
-        <h2>Find answers to your questions about Fair Source</h2>
-        <p>Looking for detailed information about Fair Source? Discover in-depth answers and insights to help you fully understand its benefits and applications. From licensing details to implementation tips, find everything you need to make the most of Fair Source.</p>
+        <span class="tag text-orange">Understand Fair Source</span>
+        <h2 class="mb-4">Find answers to your questions about Fair Source</h2>
+        <p class="mb-6">Looking for detailed information about Fair Source? Discover in-depth answers and insights to help you fully understand its benefits and applications. From licensing details to implementation tips, find everything you need to make the most of Fair Source.</p>
+        <Button type="secondary" cta="learn more" url="/faq" color="orange" />
       </div>
     </Section>
 	</main>

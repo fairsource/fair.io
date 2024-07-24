@@ -7,6 +7,7 @@ export default {
       current: 'currentColor',
       background: '#F2F0ED',
       black: '#0D1B2A',
+      charcoal: '#0D1B2A',
       teal: '#0A9396',
       orange: '#FF763E',
       lightGray: '#A5A5A5',
@@ -17,7 +18,8 @@ export default {
       white: '#ffffff'
     },
     borderRadius: {
-      DEFAULT: '32px'
+      DEFAULT: '2rem',
+      small: '1rem'
     },
 		extend: {},
 	},

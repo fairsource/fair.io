@@ -1,0 +1,11 @@
+---
+const {type, cta, url, color, target} = Astro.props;
+
+const buttonStyling = type === 'primary' ? '' : '';
+---
+
+<a href={url} target={target}>
+  <button class={`${color}`}>
+    {cta}
+  </button>
+</a>

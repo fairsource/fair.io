@@ -7,8 +7,13 @@ import iconGitHub from '../assets/navigation/github.png'
 
 const links = [
   {
-    name: 'How to Adopt Fair Source',
-    url: '/howto/',
+    name: 'Values',
+    url: '/fsd/',
+    target: ''
+  },
+  {
+    name: 'Licenses',
+    url: '/licenses/',
     target: ''
   },
   {
@@ -17,15 +22,10 @@ const links = [
     target: ''
   },
   {
-    name: 'Fair Source Values',
-    url: '/fsd/',
+    name: 'Adopt Fair Source',
+    url: '/howto/',
     target: ''
   },
-  {
-    name: 'Licenses',
-    url: '/licenses/',
-    target: ''
-  }
 ];
 
 const socialLinks = [
@@ -64,7 +64,7 @@ const { title } = Astro.props;
 	<body class="bg-background">
 		<Navigation links={links} socialLinks={socialLinks} />
 		<slot />
-		<Footer />
+		<Footer links={links} socialLinks={socialLinks} />
 	</body>
 </html>
 <style is:global>
@@ -76,7 +76,6 @@ const { title } = Astro.props;
     @font-face {
       font-family: 'Outfit';
       src: url('/fonts/Outfit-VariableFont_wght.ttf') format('truetype');
-      font-weight: normal;
       font-style: normal;
       font-display: swap;
     }
@@ -93,33 +92,85 @@ const { title } = Astro.props;
       font-display: swap;
     }
   }
-
+  html {
+    font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
+  }
   h1 {
     font-size: 4.5rem;
-    font-weight: 500;
-    font-family: 'Outfit', Arial, Helvetica, sans-serif;
-    line-height: 120%;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 5.4rem */
+    letter-spacing: -0.023px;
   }
   h2 {
-    font-size: 2.5rem;
     font-family: 'Outfit', Arial, Helvetica, sans-serif;
-
-
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%; /* 3.125rem */
+    letter-spacing: -0.0575rem;
+    margin-bottom: 1rem;
   }
   h3 {
-    font-size: 1.5rem;
     font-family: 'Outfit', Arial, Helvetica, sans-serif;
-
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%; /* 1.875rem */
+  }
+  h4 {
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%; /* 1.875rem */
+  }
+  h5 {
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+    font-size: .75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%; /* 1.875rem */
+  }
+  h6 {
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+    font-size: .5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%; /* 1.875rem */
   }
   p {
-    font-size: 1.5rem;
     font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
-
+    color: #191919;
+    font-family: "Plus Jakarta Sans";
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 135%; /* 1.85625rem */
+    letter-spacing: -0.03438rem;
   }
   p.small {
+    font-family: "Plus Jakarta Sans";
+    color: #191919;
     font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 1.625rem */
+    letter-spacing: -0.03125rem;
+  }
+  p.hero {
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: -0.035rem;
   }
   span.tag {
+    font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%;
+    margin-bottom: 1rem;
   }
 </style>

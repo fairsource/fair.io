@@ -1,44 +1,40 @@
 ---
 import { Image } from 'astro:assets';
-import iconX from '../assets/navigation/x.png';
-import iconGitHub from '../assets/navigation/github.png';
 import logoFooter from '../assets/navigation/logo-footer.png';
 
 const date = new Date();
 const year = date.getFullYear();
 
-const socialLinks = [
-  {
-    name: 'Github',
-    url: 'https://github.com/fairsource/fair.io',
-    icon: iconGitHub,
-    target: '_BLANK'
-  },
-  {
-    name: 'X',
-    url: 'https://x.com/fairsrc/',
-    icon: iconX,
-    target: '_BLANK'
-  }
-];
+const { links, socialLinks } = Astro.props;
 
 ---
 
 <footer class="px-[3rem]">
   <div class="w-full flex columns-12 justify-between items-center py-[2.5rem]">
-    <div class="span-cols-6 md:span-cols-4 lg:span-cols-2">
+    <div class="span-cols-6 md:span-cols-4 lg:span-cols-2 pr-[10%]">
       <a href="/">
         <Image src={logoFooter} alt="Fair Source" />
       </a>
     </div>
-    <ul class="span-cols-6 lg:span-cols-4 flex gap-[0.38rem]">
-      {
-        socialLinks.map((link) => <li>
-          <a href={link.url} target={link.target} class="h-[30px] w-[30px]"><Image src={link.icon} alt={link.name} class="h-[30px] w-[30px]" /></a>
-        </li>
-        )
-      }
-    </ul>
+    <div class="span-cols-6 lg:span-cols-8 flex items-center">
+      <ul class="hidden lg:flex gap-[2.5rem] mr-[2.5rem]">
+        {
+          links.map((link) => <li>
+            <a href={link.url} target={link.target} class="text-lightGray font-[600] font-[1.25rem] leading-[130%] font-sans hover:underline">{link.name}</a>
+          </li>
+          )
+        }
+      </ul>
+      <ul class="flex gap-[0.38rem]">
+        {
+          socialLinks.map((link) => <li>
+            <a href={link.url} target={link.target} class="h-[30px] w-[30px]"><Image src={link.icon} alt={link.name} class="h-[30px] w-[30px]" /></a>
+          </li>
+          )
+        }
+      </ul>
+    </div>
+
 
   </div>
   <hr class="text-taupe" />

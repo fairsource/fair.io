@@ -21,6 +21,10 @@ export default {
       DEFAULT: '2rem',
       small: '1rem'
     },
+    fontFamily: {
+      'sans': ['"Plus Jakarta Sans"', 'Arial', 'Helvetica', 'sans-serif'],
+      'header': ['"Outfit"'],
+    },
 		extend: {},
 	},
 	plugins: [],

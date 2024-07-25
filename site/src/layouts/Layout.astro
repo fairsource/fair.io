@@ -2,6 +2,46 @@
 
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import iconX from '../assets/navigation/x.png'
+import iconGitHub from '../assets/navigation/github.png'
+
+const links = [
+  {
+    name: 'How to Adopt Fair Source',
+    url: '/howto/',
+    target: ''
+  },
+  {
+    name: 'FAQs',
+    url: '/faq/',
+    target: ''
+  },
+  {
+    name: 'Fair Source Values',
+    url: '/fsd/',
+    target: ''
+  },
+  {
+    name: 'Licenses',
+    url: '/licenses/',
+    target: ''
+  }
+];
+
+const socialLinks = [
+  {
+    name: 'Github',
+    url: 'https://github.com/fairsource/fair.io',
+    icon: iconGitHub,
+    target: '_BLANK'
+  },
+  {
+    name: 'X',
+    url: 'https://x.com/fairsrc/',
+    icon: iconX,
+    target: '_BLANK'
+  }
+];
 
 
 interface Props {
@@ -22,32 +62,59 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="bg-background">
-		<Navigation />
+		<Navigation links={links} socialLinks={socialLinks} />
 		<slot />
 		<Footer />
 	</body>
 </html>
 <style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {
+    @font-face {
+      font-family: 'Outfit';
+      src: url('/fonts/Outfit-VariableFont_wght.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Plus Jakarta Sans';
+      src: url('/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+      font-style: normal;
+      font-display: swap;
+    } 
+    @font-face {
+      font-family: 'Plus Jakarta Sans';
+      src: url('/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype');
+      font-style: italic;
+      font-display: swap;
+    }
+  }
+
   h1 {
     font-size: 4.5rem;
+    font-weight: 500;
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+    line-height: 120%;
   }
   h2 {
     font-size: 2.5rem;
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+
+
   }
   h3 {
     font-size: 1.5rem;
-  }
-  h4 {
-
-  }
-  h5 {
-
-  }
-  h6 {
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
 
   }
   p {
     font-size: 1.5rem;
+    font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
+
   }
   p.small {
     font-size: 1.25rem;

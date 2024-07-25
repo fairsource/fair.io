@@ -3,48 +3,8 @@ import { Image } from 'astro:assets';
 import iconX from '../assets/navigation/x.png'
 import iconGitHub from '../assets/navigation/github.png'
 
-const links = [
-  {
-    name: 'Home',
-    url: '/',
-    target: ''
-  },
-  {
-    name: 'How to Adopt Fair Source',
-    url: '/howto/',
-    target: ''
-  },
-  {
-    name: 'FAQs',
-    url: '/faq/',
-    target: ''
-  },
-  {
-    name: 'Fair Source Values',
-    url: '/fsd/',
-    target: ''
-  },
-  {
-    name: 'Licenses',
-    url: '/licenses/',
-    target: ''
-  }
-];
+const { links, socialLinks } = Astro.props;
 
-const socialLinks = [
-  {
-    name: 'Github',
-    url: 'https://github.com/fairsource/fair.io',
-    icon: iconGitHub,
-    target: '_BLANK'
-  },
-  {
-    name: 'X',
-    url: 'https://x.com/fairsrc/',
-    icon: iconX,
-    target: '_BLANK'
-  }
-];
 
 ---
 
@@ -74,13 +34,13 @@ const socialLinks = [
   </div>
   <ul class="hidden relative lg:flex items-center lg:justify-end">
     {             
-      links.map((link) => <li>
-        <a class="block p-4 text-[17px] font-medium text-black hover:bg-blue-50 hover:text-blue-600 rounded" href={link.url} target={link.target}>{link.name}</a>
+      links && links.map((link) => <li>
+        <a class="block p-4 text-[1.25rem] font-[600] text-black hover:underline" href={link.url} target={link.target}>{link.name}</a>
       </li>)
     }
     <div class="flex lg:w-[3rem] xl:w-[4.31rem] gap-[0.38rem]"></div>
     {
-      socialLinks.map((link) => <li>
+      socialLinks && socialLinks.map((link) => <li>
         <a class="hidden lg:flex lg:ml-auto lg:ml-2 h-[30px] w-[30px]" href={link.url} target={link.target}><Image src={link.icon} alt={link.name}/></a>
       </li>)
     }
@@ -115,7 +75,7 @@ const socialLinks = [
       <ul>
         {
           links.map((link) => <li class="mb-1">
-            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href={link.url} target={link.target}>{link.name}</a>
+            <a class="block p-4 text-[1.25rem] font-[600] text-black hover:underline" href={link.url} target={link.target}>{link.name}</a>
           </li>)
         }
       </ul>

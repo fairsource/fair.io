@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
 import Button from '../components/Button.astro';
+import Carousel from '../components/Carousel.jsx';
+import companies from '../data/companies.json';
 
 
 ---
@@ -47,8 +49,8 @@ import Button from '../components/Button.astro';
     </div>
   </header>
 	<main>
-    <section>
-
+    <section class="ml-[3rem]">
+      <Carousel companies={companies} client:only="react" />
     </section>
     <Section>
       <div class="col-span-12 lg:col-span-6">

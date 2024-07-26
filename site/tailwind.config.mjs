@@ -15,7 +15,7 @@ export default {
       taupe: '#E8E3DC',
       rust: '#BB3E04',
       purple: '#6E5494',
-      white: '#ffffff'
+      white: '#ffffff',
     },
     borderRadius: {
       DEFAULT: '2rem',

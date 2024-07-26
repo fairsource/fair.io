@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Codecov",
+    "url": "https://about.codecov.io",
+    "background": "#ff0077",
+    "logo": "/images/companies/codecov-logo.png",
+    "adoption": "July 06, 2024"
+  },
+  {
+    "name": "CodeCrafters",
+    "url": "https://codecrafters.io/",
+    "background": "#0f192c",
+    "logo": "/images/companies/codecrafters-logo.png",
+    "adoption": "July 06, 2024"
+  },  
+  {
+    "name": "Convex",
+    "url": "https://www.convex.dev/",
+    "background": "",
+    "logo": "/images/companies/convex-logo.png",
+    "adoption": "July 06, 2024"
+  },  
+  {
+    "name": "GitButler",
+    "url": "https://gitbutler.com/",
+    "background": "#7aede6",
+    "logo": "/images/companies/gitbutler-logo.png",
+    "adoption": "July 06, 2024"
+  },  
+  {
+    "name": "Keygen",
+    "url": "https://keygen.sh/",
+    "background": "#000811",
+    "logo": "/images/companies/keygen-logo.png",
+    "adoption": "July 06, 2024"
+  }, 
+  {
+    "name": "PowerSync (JourneyApps)",
+    "url": "https://www.powersync.com/",
+    "background": "",
+    "logo": "/images/companies/powersync-logo.png",
+    "adoption": "July 06, 2024"
+  },
+  {
+    "name": "Sentry",
+    "url": "https://sentry.io/welcome",
+    "background": "#362d59",
+    "logo": "/images/companies/sentry-logo.png",
+    "adoption": "July 06, 2024"
+  }
+]

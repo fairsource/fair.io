@@ -7,7 +7,7 @@ const Carousel = ({companies}) => {
   const maxScrollWidth = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const carousel = useRef(null);
-  const movement = 352;
+  const movement = 400;
 
   const movePrev = () => {
     if (currentIndex > 0) {
@@ -18,7 +18,7 @@ const Carousel = ({companies}) => {
   const moveNext = () => {
     if (
       carousel.current !== 0 &&
-      carousel.current.offsetWidth * currentIndex <= maxScrollWidth.current
+      currentIndex + movement <= maxScrollWidth.current
     ) {
       setCurrentIndex((prevState) => prevState + 1);
     }
@@ -55,8 +55,7 @@ const Carousel = ({companies}) => {
       <h2 className="text-4xl leading-8 font-semibold mb-12 text-slate-700">
         Our epic carousel
       </h2>
-      <div className="relative overflow-hidden">
-        <div className="flex justify-between absolute top left w-full h-full gap-[1.5rem]">
+      <div className="flex relative w-full h-full gap-[1.5rem]">
           <button
             onClick={movePrev}
             className="hover:bg-blue-900/75 text-white w-10 h-full text-center opacity-75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
@@ -100,6 +99,7 @@ const Carousel = ({companies}) => {
             <span className="sr-only">Next</span>
           </button>
         </div>
+      <div className="relative overflow-hidden">
         <div
           ref={carousel}
           className="carousel-container relative flex gap-[1rem] overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"

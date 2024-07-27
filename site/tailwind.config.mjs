@@ -10,6 +10,7 @@ export default {
       charcoal: '#0D1B2A',
       teal: '#0A9396',
       orange: '#FF763E',
+      ltOrange: '#EE9B00',
       lightGray: '#A5A5A5',
       midnight: '#1E1E1E',
       taupe: '#E8E3DC',

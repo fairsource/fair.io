@@ -95,6 +95,37 @@ const { title } = Astro.props;
   html {
     font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
   }
+  body {
+    overflow-x: clip;
+  }
+  .container-spill{
+    margin-left: 0;
+    width: auto;
+    @media (min-width:640px){
+      margin-left: calc((100% - 640px)/2);
+      max-width: 640px;
+    }
+    @media (min-width:768px){
+      margin-left: calc((100% - 640px)/2);
+      max-width: 768px;
+    }
+    @media (min-width:1024px){
+      margin-left: calc((100% - 1024px)/2);
+      max-width: 1024px;
+    }
+    @media (min-width:1280px){
+      margin-left: calc((100% - 1280px)/2);
+      max-width: 1440px;
+    }
+    @media (min-width:1440px){
+      margin-left: calc((100% - 1440px)/2);
+      max-width: 1536px;
+    }
+    @media (min-width:1536px){
+      margin-left: calc((100% - 1536px)/2);
+      max-width: 1800px;
+    }
+  }
   h1 {
     font-size: 4.5rem;
     font-style: normal;
@@ -172,5 +203,15 @@ const { title } = Astro.props;
     font-weight: 500;
     line-height: 125%;
     margin-bottom: 1rem;
+  }
+    /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
   }
 </style>

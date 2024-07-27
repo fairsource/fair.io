@@ -51,58 +51,45 @@ const Carousel = ({companies}) => {
   }, []);
 
   return (
-    <div className="carousel my-12 mx-auto">
-      <h2 className="text-4xl leading-8 font-semibold mb-12 text-slate-700">
-        Our epic carousel
-      </h2>
-      <div className="flex relative w-full h-full gap-[1.5rem]">
-          <button
-            onClick={movePrev}
-            className="hover:bg-blue-900/75 text-white w-10 h-full text-center opacity-75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
-            disabled={isDisabled('prev')}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-12 w-20 -ml-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-            <span className="sr-only">Prev</span>
-          </button>
-          <button
-            onClick={moveNext}
-            className="hover:bg-blue-900/75 text-white w-10 h-full text-center opacity-75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
-            disabled={isDisabled('next')}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-12 w-20 -ml-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-            <span className="sr-only">Next</span>
-          </button>
+    <div className="carousel my-12">
+      <div className="flex justify-around container mx-auto mb-[3.5rem] px-[3rem]">
+        <div className="flex items-center w-[50%]">
+          <h2 className="mr-[3rem] mb-0 text-[1.5rem] font-[500] leading-[125%]">
+            Featured Fair Source Software
+          </h2>
+          <div className="flex relative gap-[1rem]">
+              <button
+                onClick={movePrev}
+                className="w-[2rem] h-[2rem] flex items-center justify-center bg-taupe rounded-[1rem] text-center disabled:opacity-25 disabled:cursor-not-allowed transition-all ease-in-out duration-300"
+                disabled={isDisabled('prev')}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+                  <path d="M8.5 1.5L2 8L8.5 14.5" stroke="#0D1B2A" stroke-width="2.3"/>
+                </svg>
+                <span className="sr-only">Prev</span>
+              </button>
+              <button
+                onClick={moveNext}
+                className="w-[2rem] h-[2rem] flex items-center justify-center bg-taupe rounded-[1rem] text-center disabled:opacity-25 disabled:cursor-not-allowed transition-all ease-in-out duration-300"
+                disabled={isDisabled('next')}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+                  <path d="M1.5 1.5L8 8L1.5 14.5" stroke="#0D1B2A" stroke-width="2.3"/>
+                </svg>
+                <span className="sr-only">Next</span>
+              </button>
+          </div>
         </div>
-      <div className="relative overflow-hidden">
+        <div className="flex justify-end items-center w-[50%]">
+          <a href="/companies" className="py-[0.9375rem] mr-[3rem] px-[1.5rem] rounded-small text-[1.25rem] font-[700] leading-[125%] tracking-[-0.025rem] capitalize border-2 color-black border-[#0d1b2a33]">
+            See all 
+          </a>
+        </div>
+      </div>
+      <div className="relative container-spill pl-[3rem]">
         <div
           ref={carousel}
-          className="carousel-container relative flex gap-[1rem] overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
+          className="carousel-container no-scrollbar overflow-auto touch-pan-x relative flex gap-[1rem] scroll-smooth snap-x snap-mandatory z-0"
         >
           {companies && companies.map((companyData, index) => {
             return (

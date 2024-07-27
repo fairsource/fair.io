@@ -1,7 +1,12 @@
 ---
 
+  const {backgroundStyling} = Astro.props;
+  const backgroundClasses = `${backgroundStyling}`;
+
 ---
 
-<section class="relative grid grid-cols-12 gap-1 bg-white rounded mx-[3rem] my-[1.62rem] mb-4 flex items-center">
-  <slot />
+<section class={`container mx-auto px-[3rem] py-[1.5rem] flex items-center`}>
+  <div class={`${backgroundClasses}  mx-auto relative grid grid-cols-12 gap-1 bg-white rounded overflow-clip`}>
+    <slot />
+  </div>
 </section>

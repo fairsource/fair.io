@@ -4,12 +4,16 @@ import Section from '../components/Section.astro';
 import Button from '../components/Button.astro';
 import Carousel from '../components/Carousel.jsx';
 import companies from '../data/companies.json';
+import { Image } from 'astro:assets';
+
+import fairSourceImage from '../assets/home/fairsource.png';
+import developerImage from '../assets/home/developer.png';
 
 
 ---
 
 <Layout title="Welcome to Astro.">
-  <header class="relative w-100 pl-[3rem]">
+  <header class="container-spill relative w-100 pl-[3rem]">
     <div class="relative grid grid-cols-12 gap-10">
       <div class="col-span-12 lg:col-span-6 flex items-center">
         <div>
@@ -49,42 +53,35 @@ import companies from '../data/companies.json';
     </div>
   </header>
 	<main>
-    <section class="ml-[3rem]">
+    <section class="w-full mb-[3.25rem]">
       <Carousel companies={companies} client:only="react" />
     </section>
-    <Section>
+    <Section backgroundStyling="bg-[url('/images/background-images/embraceFairSource.svg')] bg-auto bg-[position:110%_100%] bg-no-repeat">
       <div class="col-span-12 lg:col-span-6">
-        <div class="px-[3.5rem]">
+        <div class="px-[3.5rem] py-[6.9rem]">
           <span class="text-teal tag">Embrace Fair Source</span>
           <h2>Learn how to adopt Fair Source for your projects</h2>
           <p class="mb-6">Whether you’re a developer looking to contribute or a business aiming to innovate, we the provide steps to successfully implement Fair Source in your projects. Join the community of ethical and innovative software sharing, balancing collaboration with control for everyone involved.</p>
           <Button type="secondary" cta="adopt fair source" url="/howto" color="teal" />
         </div>
       </div>
-      <div class="col-span-12 lg:col-span-6 relative">
-        <svg viewBox="0 0 640 617" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M639.992 206.919L639.992 417.008L636.622 417.008C520.366 417.008 426.013 322.888 426.013 206.919L639.992 206.919Z" fill="#341830"/>
-          <path d="M0.0013687 101.875C0.00136616 159.89 47.6845 206.92 106.505 206.92C165.325 206.92 213.008 159.89 213.008 101.875C213.008 43.861 165.325 -3.16895 106.505 -3.16895C47.6845 -3.16895 0.00137124 43.861 0.0013687 101.875Z" fill="#5C5272"/>
-          <path d="M639.994 101.875C639.994 159.89 687.677 206.92 746.497 206.92C805.317 206.92 853 159.89 853 101.875C853 43.861 805.317 -3.16895 746.497 -3.16895C687.677 -3.16895 639.994 43.861 639.994 101.875Z" fill="#FFA229"/>
-          <path d="M426.013 522.052C426.013 580.066 473.914 627.096 533.003 627.096C592.091 627.096 639.992 580.066 639.992 522.052C639.992 464.038 592.091 417.008 533.003 417.008C473.914 417.008 426.013 464.038 426.013 522.052Z" fill="#FF763E"/>
-          <path d="M639.992 206.92L423.137 206.92C307.145 206.92 213.007 112.8 213.007 -3.16896L429.861 -3.16895C545.854 -3.16895 639.992 90.9507 639.992 206.92Z" fill="#0A9396"/>
-          <path d="M853 417.008L853 311.984L639.994 206.919L639.994 311.984L853 417.008Z" fill="#341830"/>
-          <path d="M853 627.096L853 522.032L639.994 417.008L639.994 522.032L853 627.096Z" fill="#FFA229"/>
-          <path d="M9.18326e-06 206.919L426.013 206.919C426.013 322.888 332.089 417.008 216.361 417.008L209.652 417.008C93.9242 417.008 4.1141e-06 322.888 9.18326e-06 206.919Z" fill="#FFA229"/>
-          <path d="M0.00270688 627.096C0.00271195 511.086 93.8859 417.008 209.655 417.008L216.364 417.008C332.132 417.008 426.016 511.086 426.016 627.096L0.00270688 627.096Z" fill="#341830"/>
-          </svg>
-          <div class="absolute">
-
-          </div>
+      <div class="relative col-span-12 lg:col-span-6 relative flex justify-center justify-center items-center h-full">
+        <Image src={fairSourceImage} alt="Adopt Fair Source" width="300" height="300" class="relative" />
       </div>
     </Section>
     <Section>
-      <div class="col-span-12 lg:col-span-6"></div>
+      <div class="col-span-12 lg:col-span-6 h-full relative flex items-bottom">
+        <div class="absolute bottom-0 left-0 rounded">
+          <Image src={developerImage} alt="Understand Fair Source" />
+        </div>
+      </div>
       <div class="col-span-12 lg:col-span-6">
-        <span class="tag text-orange">Understand Fair Source</span>
-        <h2>Find answers to your questions about Fair Source</h2>
-        <p class="mb-6">Looking for detailed information about Fair Source? Discover in-depth answers and insights to help you fully understand its benefits and applications. From licensing details to implementation tips, find everything you need to make the most of Fair Source.</p>
-        <Button type="secondary" cta="learn more" url="/faq" color="orange" />
+        <div class="px-[3.5rem] py-[6.9rem]">
+          <span class="tag text-orange">Understand Fair Source</span>
+          <h2>Find answers to your questions about Fair Source</h2>
+          <p class="mb-6">Looking for detailed information about Fair Source? Discover in-depth answers and insights to help you fully understand its benefits and applications. From licensing details to implementation tips, find everything you need to make the most of Fair Source.</p>
+          <Button type="secondary" cta="learn more" url="/faq" color="orange" />
+        </div>
       </div>
     </Section>
 	</main>

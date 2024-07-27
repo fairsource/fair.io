@@ -5,8 +5,8 @@
 
 ---
 
-<section class={`container mx-auto px-[3rem] py-[1.5rem] flex items-center`}>
-  <div class={`${backgroundClasses}  mx-auto relative grid grid-cols-12 gap-1 bg-white rounded overflow-clip`}>
+<section class={`container mx-auto px-[1.5rem] lg:px-[3rem] py-[1.5rem]`}>
+  <div class={`${backgroundClasses ? backgroundClasses : ''}  mx-auto relative flex flex-wrap bg-white rounded overflow-clip items-center justify-center`}>
     <slot />
   </div>
 </section>

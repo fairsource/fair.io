@@ -12,10 +12,10 @@ import developerImage from '../assets/home/developer.png';
 
 ---
 
-<Layout title="Welcome to Astro.">
-  <header class="container-spill relative w-100 pl-[3rem]">
-    <div class="relative grid grid-cols-12 gap-10">
-      <div class="col-span-12 lg:col-span-6 flex items-center">
+<Layout title="Software Sharing for Modern Companies | Fair.io">
+  <header class="relative container-spill lg:pl-[3rem]">
+    <div class="relative flex">
+      <div class="w-12/12 lg:w-6/12 flex items-center">
         <div>
           <h1 class="text-black mb-4">
             Software Sharing for Modern Companies
@@ -27,7 +27,7 @@ import developerImage from '../assets/home/developer.png';
           </div>
         </div>
       </div>
-      <div class="col-span-12 lg:col-span-6">
+      <div class="w-12/12 lg:w-7/12">
         <svg class="w-100" viewBox="0 0 724 642" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M480.199 320.978C480.199 232.335 408.637 160.49 320.343 160.49C232.048 160.49 160.486 232.335 160.486 320.978C160.486 409.622 232.048 481.467 320.343 481.467C408.637 481.467 480.199 409.622 480.199 320.978ZM297.522 320.978C297.522 308.315 307.766 298.031 320.379 298.031C332.993 298.031 343.237 308.315 343.237 320.978C343.237 333.642 332.993 343.926 320.379 343.926C307.766 343.926 297.522 333.642 297.522 320.978Z" fill="#FFA229"/>
           <path d="M6.92804e-05 160.453L160.488 160.453L160.488 0.000976562C71.8446 0.000972688 7.31535e-05 71.8455 6.92788e-05 160.489L6.92804e-05 160.453Z" fill="#0A9396"/>
@@ -53,11 +53,13 @@ import developerImage from '../assets/home/developer.png';
     </div>
   </header>
 	<main>
-    <section class="w-full mb-[3.25rem]">
-      <Carousel companies={companies} client:only="react" />
-    </section>
+    {
+      companies &&  <section class="w-full mb-[3.25rem]">
+        <Carousel companies={companies} client:only="react" />
+      </section>
+    }
     <Section backgroundStyling="bg-[url('/images/background-images/embraceFairSource.svg')] bg-auto bg-[position:110%_100%] bg-no-repeat">
-      <div class="col-span-12 lg:col-span-6">
+      <div class="w-12/12 xl:w-1/2">
         <div class="px-[3.5rem] py-[6.9rem]">
           <span class="text-teal tag">Embrace Fair Source</span>
           <h2>Learn how to adopt Fair Source for your projects</h2>
@@ -65,17 +67,17 @@ import developerImage from '../assets/home/developer.png';
           <Button type="secondary" cta="adopt fair source" url="/howto" color="teal" />
         </div>
       </div>
-      <div class="relative col-span-12 lg:col-span-6 relative flex justify-center justify-center items-center h-full">
+      <div class="relative w-12/12 xl:w-1/2 relative flex justify-center justify-center items-center h-full">
         <Image src={fairSourceImage} alt="Adopt Fair Source" width="300" height="300" class="relative" />
       </div>
     </Section>
     <Section backgroundStyling="bg-[url('/images/background-images/learnfairsource.svg')] bg-auto bg-[position:0%_20%] bg-no-repeat">
-      <div class="col-span-12 lg:col-span-6 h-full relative flex items-bottom">
-        <div class="absolute bottom-0 left-0 rounded">
+      <div class="w-12/12 xl:w-1/2 h-full flex align-self">
+        <div class="absolute bottom-0 left w-12/12 xl:w-1/2">
           <Image src={developerImage} alt="Understand Fair Source" />
         </div>
       </div>
-      <div class="col-span-12 lg:col-span-6">
+      <div class="w-12/12 xl:w-1/2">
         <div class="px-[3.5rem] py-[6.9rem]">
           <span class="tag text-orange">Understand Fair Source</span>
           <h2>Find answers to your questions about Fair Source</h2>

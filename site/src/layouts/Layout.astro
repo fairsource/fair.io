@@ -100,18 +100,18 @@ const { title } = Astro.props;
   }
   .container-spill{
     margin-left: 0;
-    width: auto;
+    width: 100%;
     @media (min-width:640px){
-      margin-left: calc((100% - 640px)/2);
-      max-width: 640px;
-    }
-    @media (min-width:768px){
       margin-left: calc((100% - 640px)/2);
       max-width: 768px;
     }
+    @media (min-width:768px){
+      margin-left: calc((100% - 640px)/2);
+      max-width: 1024px;
+    }
     @media (min-width:1024px){
       margin-left: calc((100% - 1024px)/2);
-      max-width: 1024px;
+      max-width: 1280px;
     }
     @media (min-width:1280px){
       margin-left: calc((100% - 1280px)/2);
@@ -204,11 +204,17 @@ const { title } = Astro.props;
     line-height: 125%;
     margin-bottom: 1rem;
   }
+  a.emphasizedLink {
+    position: relative;
+  }
+  a.emphasizedLink::after{
+    content: '';
+    position: absolute;
+  }
     /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
       display: none;
   }
-
   /* Hide scrollbar for IE, Edge and Firefox */
   .no-scrollbar {
       -ms-overflow-style: none;  /* IE and Edge */

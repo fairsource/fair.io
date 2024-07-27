@@ -86,7 +86,7 @@ const Carousel = ({companies}) => {
           </a>
         </div>
       </div>
-      <div className="relative container-spill pl-[3rem]">
+      <div className="relative container-spill lg:pl-[3rem]">
         <div
           ref={carousel}
           className="carousel-container no-scrollbar overflow-auto touch-pan-x relative flex gap-[1rem] scroll-smooth snap-x snap-mandatory z-0"

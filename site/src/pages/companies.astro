@@ -1,8 +1,53 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
+import Section from '../components/Section.astro';
+import companies from '../data/companies.json';
+import CarouselCard from '../components/CarouselCard.jsx';
+import Button from '../components/Button.astro';
 ---
 
 <Layout title="Welcome to Astro.">
+  <header class="flex flex-wrap justify-center items-center">
+    <div class="container w-12/12 lg:w-8/12 text-center lg:pt-[12.19rem]">
+      <h1>Fair Source Companies</h1>
+      <p class="mb-[1.5rem] text-[1.75rem] text-black font-[500] leading-[130%] tracking-[-0.035rem]">
+        Explore the innovative companies that have adopted Fair Source.
+      </p>
+      <div class="flex flex-wrap w-12/12 mb-[11.44rem] gap-[1rem] justify-center">
+        <Button href="/howto" type="primary" cta="Adopt Fair Source"></Button>
+        <Button htef="/" type="secondary" color="black" cta="Add your Project"></Button>
+      </div>
+    </div>
+    <div class="background w-12/12 background-clip">
+
+    </div>
+  </header>
+  <main>
+    <Section>
+      <div class="company-list w-full flex flex-wrap">
+        <h2 class="pl-[3rem] pt-[3rem] mb-0 text-[1.5rem] font-[500] leading-[125%] mb-[2.62rem] justify-self-start w-1/2">
+          All Fair Source Software
+        </h2>
+      </div>
+      {
+        companies && <div class="flex flex-wrap columns-1 md:columns-2 lg:columns-3 pb-[5rem] gap-[2.5rem] justify-center">
+          {
+            companies.map((company) => (
+              <CarouselCard company={company} border={true} />
+            ))
+          }
+
+        </div>
+      }
+      </div>
+      <div class="cta w-full flex flex-wrap items-center justify-center">
+        <div class="w-12/12 md:w-10/12 lg:w-8/12 text-center lg:py-[12rem]">
+          <h2>Want to list your Fair Source product?</h2>
+          <p></p>
+            <Button htef="/" type="secondary" color="black" cta="Add your Project"></Button>
+        </div>
+      </div>
+    </Section>
+  </main>
     
 </Layout>

@@ -1,0 +1,80 @@
+---
+const { title, collapseID } = Astro.props;
+---
+
+<div class="accordion group relative">
+  <button
+    class="accordion__button flex w-full flex-1 items-center justify-between gap-2 p-3 text-left font-medium transition hover:text-purple-500 sm:px-4"
+    type="button"
+    id={`${collapseID}`}
+    aria-expanded="false"
+    aria-controls={`${collapseID} accordion menu content`}
+  >
+    {title}
+  </button>
+
+  <div
+    id={`${collapseID}`}
+    aria-labelledby={`${collapseID} accordion menu button`}
+    class="accordion__content hidden max-h-0 overflow-hidden px-3 transition-all duration-300 ease-in-out sm:px-4"
+  >
+    <slot />
+  </div>
+</div>
+
+<script>
+  function accordionSetup() {
+    const accordionMenus = document.querySelectorAll(
+      ".accordion",
+    ) as NodeListOf<HTMLElement>;
+    accordionMenus.forEach((accordionMenu) => {
+      const accordionButton = accordionMenu.querySelector(
+        ".accordion__button",
+      );
+      const accordionChevron = accordionMenu.querySelector(
+        ".accordion__chevron",
+      );
+      const accordionContent = accordionMenu.querySelector(
+        ".accordion__content",
+      );
+
+      if (accordionButton) {
+        accordionButton.addEventListener("click", (event) => {
+          if (!accordionMenu.classList.contains("active")) {
+            // if accordion is currently closed, so open it
+            accordionMenu.classList.add("active");
+            accordionButton.setAttribute("aria-expanded", "true");
+
+            // set max-height to the height of the accordion content
+            // this makes it animate properly
+            accordionContent.classList.remove("hidden");
+            accordionContent.style.maxHeight =
+              accordionContent.scrollHeight + "px";
+            accordionChevron.classList.add("rotate-180");
+          } else {
+            // accordion is currently open, so close it
+            accordionMenu.classList.remove("active");
+            accordionButton.setAttribute("aria-expanded", "false");
+
+            // set max-height to the height of the accordion content
+            // this makes it animate properly
+            accordionContent.style.maxHeight = "0px";
+            accordionChevron.classList.remove("rotate-180");
+            // delay to allow close animation
+            setTimeout(() => {
+              accordionContent.classList.add("hidden");
+            }, 300);
+          }
+          event.preventDefault();
+          return false;
+        });
+      }
+    });
+  }
+
+  // runs on initial page load
+  accordionSetup();
+
+  // runs on view transitions navigation
+  document.addEventListener("astro:after-swap", accordionSetup);
+</script>

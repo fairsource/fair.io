@@ -17,6 +17,7 @@ export default {
       rust: '#BB3E04',
       purple: '#6E5494',
       white: '#ffffff',
+      borderGray: 'rgba(0,0,0,.16)'
     },
     borderRadius: {
       DEFAULT: '2rem',

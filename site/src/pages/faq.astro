@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
 import Collapse from '../components/Collapse.astro';
-
 ---
 
 <Layout title="Frequently Asked Questions | Fair.io">
@@ -16,25 +15,128 @@ import Collapse from '../components/Collapse.astro';
     </div>
   </header>
   <main>
-    <Section backgroundStyling="py-[3rem]">
-      <div class="w-12/12">
-        <Collapse title="What is Fair Source?" collapse-id="collapse-1">
-          <div class="">
-            Test
+    <Section backgroundStyling="py-[3rem] px-[3rem]">
+      <div class="w-full">
+        <Collapse 
+          title="What is Fair Source?" 
+          collapseID="collapse-1"
+        >
+          <div class="relative flex flex-wrap">
+            <div class="w-12/12 pb-[3.75rem]">
+              <p>
+                Fair Source is software sharing that is safe and fair for companies 
+                and developers alike. The two basic features of Fair Source software 
+                licensing are:
+              </p>
+            </div>
+            <div class="w-full flex flex-wrap pb-[3rem]">
+              <div class="w-12/12 lg:w-1/2 lg:pr-[0.75rem]">
+                <div class="border border-borderGray rounded-small p-[2rem] lg:h-[16rem]">
+                  <img src="/images/icons/non-compete.svg" alt="non-compete icon]" class="mb-[2.25rem]" />
+                  <h3>Non-compete</h3>
+                  <p>
+                    Developers are free to use the software internally without directly 
+                    competing with the company behind it.
+                  </p>
+                </div>
+              </div>
+              <div class="w-12/12 lg:w-1/2 lg:pl-[0.75rem] ">
+                <div class="border border-borderGray rounded-small p-[2rem] lg:h-[16rem]">
+                  <img src="/images/icons/eventual-open-source.svg" alt="eventual open-source icon" class=" mb-[2.25rem]" />
+                  <h3>Eventual Open Source</h3>
+                  <p>
+                    Fair Source software automatically becomes Open Source software, 
+                    usually after two years.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </Collapse>
-        <Collapse title="Test 2" collapse-id="collapse-2">
-          <div class="">
-            Test 2
+        <Collapse 
+          title="How does Fair Source relate to Open Source?" 
+          collapseID="collapse-2"
+        >
+          <div class="relative flex flex-wrap pb-[3rem]">
+            <p>Fair Source and <a href="" class="empahsized" target="_BLANK">Open Source</a> are complementary approaches suited to different cases:</p>
+            <div class="w-full flex flex-wrap py-[3rem] items-center">
+              <div class="w-12/12 lg:w-1/2 lg:pr-[0.75rem]">
+                <div class="border border-borderGray rounded-small p-[2rem] flex flex-wrap items-center">
+                  <div class="w-12/12 lg:w-1/6">
+                    <img src="/images/icons/open-source.svg" alt="open source"/>
+                  </div>
+                  <div class="pl-[1.5rem] w-12/12 lg:w-5/6">
+                    <h3>Open Source works best for shared infrastructure</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="w-12/12 lg:w-1/2 lg:pl-[0.75rem]">
+                <div class="border border-borderGray rounded-small p-[2rem] flex flex-wrap items-center">
+                  <div class="w-12/12 lg:w-1/6">
+                    <img src="/images/icons/fair-source.svg" alt="fair source" />
+                  </div>
+                  <div class="pl-[1.5rem] w-12/12 lg:w-5/6">
+                    <h3>Fair Source works best for a software company’s core products.</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full flex flex-wrap items-center">
+              <div class="w-12/12 lg:w-1/2 lg:pr-[8%]">
+                <p>
+                  Fair Source partially fulfills the purposes of the Open Source to “persuade organizations and software authors to distribute source software freely they otherwise would not distribute.” Fair Source provides as many of the benefits of Open Source to developers as companies are comfortable giving, while reserving and asserting a minimal set of exclusive rights to help achieve a sustainable business model. For a deep dive on the relationship between Fair Source and Open Source, read
+                </p>
+              </div>
+              <div class="w-12/12 lg:w-1/2">
+                <img class="w-full" src="/images/background-images/texture.svg" alt="fair source and open source" />
+              </div>
+              
+            </div>
+
           </div>
         </Collapse>
-        <Collapse title="Test 3" collapse-id="collapse-3">
-          <div class="">
+        <Collapse 
+          title="Why should I adopt Fair Source for my product?" 
+          collapseID="collapse-3"
+        >
+          <div class="relative flex flex-wrap pb-[3rem]">
             Test 3
           </div>
         </Collapse>
+        <Collapse 
+          title="How do I adopt Fair Source?" 
+          collapseID="collapse-4"
+        >
+          <div class="relative flex flex-wrap pb-[3rem]">
+            Test 3
+          </div>
+        </Collapse>
+        <Collapse 
+          title="How does Fair Source benefit developers?" 
+          collapseID="collapse-5"
+        >
+          <div class="relative flex flex-wrap pb-[3rem]">
+            <p class="text-[1.5rem] tracking-[-0.0375rem] mb-[2rem]">
+              Fair Source provides developers with many of the benefits of Free and Open Source Software (FOSS).
+            </p>
+            <p class="mb-[2rem]">
+              In terms of the four software freedoms, Fair Source provides the freedom to read, run for almost all purposes, modify, and contribute back to the production of the software.
+            </p>
+            <p class="mb-[2rem]">
+              Additionally, Fair Source ensures (unlike Open Source) that the software is supported by a sustainable business model so that it can be continually maintained and improved. In the event that a Fair Source product is abandoned or developed in an unsatisfactory direction, new developers can fork a previous version.
+            </p>
+          </div>
+        </Collapse>
+        <Collapse 
+          title="Is Fair Source software safe to use?" 
+          collapseID="collapse-6"
+          isLast
+        >
+          <div class="relative flex flex-wrap pb-[3rem]">
+            <p>Yes. The license terms of the most common Fair Source</p>
+          </div>
+        </Collapse>
       </div>
-
     </Section>
   </main>
     

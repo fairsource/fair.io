@@ -1,22 +1,23 @@
 ---
-const { title, collapseID } = Astro.props;
+const { title, collapseID, isLast = false } = Astro.props;
 ---
 
-<div class="accordion group relative">
+<div class={`accordion group relative ${isLast ? '' : 'border-b-2 border-borderGray'}`}>
   <button
-    class="accordion__button flex w-full flex-1 items-center justify-between gap-2 p-3 text-left font-medium transition hover:text-purple-500 sm:px-4"
+    class="accordion__button flex w-full flex-1 items-center justify-between gap-2 py-[3rem] text-left transition hover:text-purple-500 "
     type="button"
     id={`${collapseID}`}
     aria-expanded="false"
     aria-controls={`${collapseID} accordion menu content`}
   >
-    {title}
+    <h2 class="text-center text-[2.5rem] font-[500] leading-[125%] tracking-[-0.05rem]">{title}</h2>
+    <div class="icon"></div>
   </button>
 
   <div
     id={`${collapseID}`}
     aria-labelledby={`${collapseID} accordion menu button`}
-    class="accordion__content hidden max-h-0 overflow-hidden px-3 transition-all duration-300 ease-in-out sm:px-4"
+    class="accordion__content hidden max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
   >
     <slot />
   </div>
@@ -26,7 +27,7 @@ const { title, collapseID } = Astro.props;
   function accordionSetup() {
     const accordionMenus = document.querySelectorAll(
       ".accordion",
-    ) as NodeListOf<HTMLElement>;
+    );
     accordionMenus.forEach((accordionMenu) => {
       const accordionButton = accordionMenu.querySelector(
         ".accordion__button",

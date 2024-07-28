@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from '@astrojs/react';
 import CarouselCard from './CarouselCard.jsx';
 
 // Data

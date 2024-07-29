@@ -101,13 +101,15 @@ const { title } = Astro.props;
   .container-spill{
     margin-left: 0;
     width: 100%;
+    margin: auto;
+    padding: 0 1.5rem;
     @media (min-width:640px){
       margin-left: calc((100% - 640px)/2);
-      max-width: 768px;
+      max-width: 640px;
     }
     @media (min-width:768px){
-      margin-left: calc((100% - 640px)/2);
-      max-width: 1024px;
+      margin-left: calc((100% - 768px)/2);
+      max-width: 768px;
     }
     @media (min-width:1024px){
       margin-left: calc((100% - 1024px)/2);

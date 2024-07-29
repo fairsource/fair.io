@@ -50,7 +50,7 @@ const Carousel = ({companies}) => {
 
   return (
     <div className="carousel my-12">
-      <div className="flex justify-around container mx-auto mb-[3.5rem] px-[3rem]">
+      <div className="flex justify-around container mx-auto mb-[3.5rem] px-[1.5rem] lg:px-[3rem]">
         <div className="flex items-center w-[50%]">
           <h2 className="mr-[3rem] mb-0 text-[1.5rem] font-[500] leading-[125%]">
             Featured Fair Source Software

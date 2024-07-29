@@ -1,13 +1,15 @@
 ---
 
-  const {backgroundStyling, backgroundColor = false} = Astro.props;
+  const {sectionStyles, backgroundStyling, backgroundColor = false, isFirst = false} = Astro.props;
   const backgroundClasses = `${backgroundStyling ? backgroundStyling : ''}`;
   const backgroundColorClass = `${backgroundColor ? backgroundColor : 'bg-white'}`;
+  const sectionClasses = `${sectionStyles}`;
 
 ---
 
-<section class={`container mx-auto px-[1.5rem] lg:px-[3rem] py-[1rem]`}>
-  <div class={`mx-auto relative flex flex-wrap rounded overflow-clip items-center justify-center ${backgroundClasses} ${backgroundColorClass}`}>
+<section class={`container mx-auto px-[1.5rem] lg:px-[3rem] ${isFirst ? 'pb-[1rem]' : 'py-[1rem]'}`}>
+  <div class={`mx-auto relative flex flex-wrap rounded overflow-clip items-center justify-center ${backgroundColorClass} ${sectionClasses}`}>
+    <div class={`absolute ${backgroundClasses}`}></div>
     <slot />
   </div>
 </section>

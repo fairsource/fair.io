@@ -1,22 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
-import heroBG from '../assets/adopt/bg-howtohero.svg?raw';
+
 ---
 
 <Layout title="How to Adopt Fair Source">
-  <header class="container px-3 mx-auto flex flex-wrap px-[3rem] background-clip">
-    <div class="w-12/12 lg:w-1/2 lg:pb-[15.25rem] lg:pt-[12.38rem]">
+  <header class="container relative px-[1.5rem] mx-auto flex flex-wrap lg:px-[3rem] overflow-clip">
+
+    <div class="w-12/12 xl:w-5/12 py-[3rem] lg:py-[8rem] xl:pb-[15.25rem] xl:pt-[12.38rem]">
       <h1 class="text-balance mb-[1rem]">How to Adopt Fair Source</h1>
       <p class="text-[1.75rem] font-[500] leading-[130%] tracking-[0.035rem]">Sold on the <a href="/" class="underline">benefits</a>? Here's how to adopt Fair Source for your project.</p>
     </div>
-    <div class="w-12/12 lg:w-1/2">
-      <Fragment set:html={heroBG} />
+    <div class="bg-[url('/images/background-images/adoptHeroImage.svg')] hidden xl:flex lg:w-6/12 lg:absolute xl:7/12 lg:top-0 lg:bottom-0 lg:right-[3rem] xl:bg-[bottom_10%_right_90%] lg:bg-no-repeat  xl:bg-[90%] 2xl:bg-[100%]">
     </div>
   </header>
   <main>
-    <Section sectionStyles="lg:px-[3rem]" isFirst>
-      <div class="w-12/12 xl:w-1/2 py-[3rem] xl:pr-[1rem] xl:py-[6rem]">
+    <Section sectionStyles="px-[1.5rem] lg:px-[3.5rem] py-[3rem] xl:py-[6rem] " isFirst itemsTop>
+      <div class="w-12/12 xl:w-1/2 xl:pr-[1rem]">
         <span class="tag text-teal">1. Make a Community Engagement Plan</span>
         <h2>
           Fair source is for companies that want to engage with the developer community
@@ -61,7 +61,7 @@ import heroBG from '../assets/adopt/bg-howtohero.svg?raw';
         <div class="list pb-[2.5rem]">
           <div class="listItem flex grid-columns-2 gap-[1rem]">
             <div class="glyph">
-              <img src="/images/icons/list2.svg" alt="feature requests"/>
+              <img src="/images/icons/list3.svg" alt="feature requests"/>
             </div>
             <div class="text">
               <h3>What will you do with bug reports and feature requests?</h3>
@@ -74,7 +74,7 @@ import heroBG from '../assets/adopt/bg-howtohero.svg?raw';
         </div>
       </div>
     </Section>
-    <Section sectionStyles="lg:px-[3rem]">
+    <Section sectionStyles="px-[1.5rem] lg:px-[3.5rem]">
       <div class="w-12/12 xl:w-8/12 py-[3rem] xl:pt-[11rem] xl:pb-[9rem]">
         <span class="tag text-ltOrange">2. Choosing a License</span>
         <h2>Licensing is the heart of Fair Source</h2>
@@ -100,14 +100,14 @@ import heroBG from '../assets/adopt/bg-howtohero.svg?raw';
       </div>
       <div class="w-12/12 xl:w-5/12"></div>
     </Section>
-    <Section sectionStyles="lg:px-[3rem]">
+    <Section sectionStyles="px-[1.5rem] lg:px-[3.5rem]">
       <div class="w-12/12 xl:w-5/12"></div>
       <div class="w-12/12 xl:w-7/12 xl:py-[13.81rem]">
         <span class="tag text-teal">4. Publish Your Repo</span>
         <h2>This is the fun part. Click the button to make it public and celebrate the moment.</h2>
       </div>
     </Section>
-    <Section sectionStyles="lg:px-[3rem]">
+    <Section sectionStyles="px-[1.5rem] lg:px-[3.5rem]">
       <div class="w-12/12 xl:w-7/12 xl:pt-[11.62rem] xl:pb-[13.75rem]">
         <span class="tag text-rust">5. Tell the World</span>
         <h2>Let’s spread the word together!</h2>
@@ -119,7 +119,7 @@ import heroBG from '../assets/adopt/bg-howtohero.svg?raw';
       </div>
       <div class="w-12/12 xl:w-7/12"></div>
     </Section>
-    <Section sectionStyles="lg:px-[3rem]">
+    <Section sectionStyles="px-[1.5rem] lg:px-[3.5rem]">
       <div class="w-12/12 xl:w-1/2 xl:py-[13.19rem]">
         <h2 class="text-center">Want some more help?</h2>
         <p class="text-center">Reach out to us at <a href="" target="_BLANK" class="emphasized">Github</a> or <a href="" target="_BLANK" class="emphasized">Twitter</a> if you’ve got more questions. We’re happy to help!</p>
@@ -127,3 +127,9 @@ import heroBG from '../assets/adopt/bg-howtohero.svg?raw';
     </Section>
   </main>
 </Layout>
+
+<style>
+  .glyph{
+    /*padding-top: 5px;*/
+  }
+</style>

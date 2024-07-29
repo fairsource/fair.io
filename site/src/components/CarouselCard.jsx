@@ -1,3 +1,5 @@
+import React from "react";
+
 const CarouselCard = ({company, border = false}) => {
 
   let background = company?.background ? `${company?.background}` : `#FFFFFF`;

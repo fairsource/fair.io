@@ -54,8 +54,8 @@ import developerImage from '../assets/home/developer.png';
   </header>
 	<main>
     {
-      companies &&  <section class="w-full mb-[3.25rem]">
-        <Carousel companies={companies} client:only="react" />
+      companies && <section class="w-full mb-[3.25rem]">
+        <Carousel companies={companies} client:load client:only="react" />
       </section>
     }
     <Section backgroundStyling="bg-[url('/images/background-images/embraceFairSource.svg')] bg-auto bg-[position:110%_100%] bg-no-repeat">

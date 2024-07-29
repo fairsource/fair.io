@@ -7,6 +7,7 @@ export default defineConfig({
   integrations: [
     tailwind(),
     react({
+      include: ['**/react/**'],
       experimentalReactChildren: true
     })
   ]

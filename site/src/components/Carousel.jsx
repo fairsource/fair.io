@@ -1,7 +1,5 @@
-import { useState, useRef, useEffect } from '@astrojs/react';
+import React, { useState, useRef, useEffect } from 'react';
 import CarouselCard from './CarouselCard.jsx';
-
-// Data
 
 const Carousel = ({companies}) => {
   const maxScrollWidth = useRef(null);

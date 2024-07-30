@@ -1,8 +1,33 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
 
 ---
 
 <Layout title="Welcome to Astro.">
-    
+<header>
+  <div class="relative container-spill md:pl-[1.5rem] lg:pl-[3rem]">
+    <div class="relative flex">
+      <div class="">
+        <h1>Fair Source Licenses</h1>
+      </div>
+      <div class=""></div>
+    </div>
+  </div>
+</header>
+<main>
+  <Section>
+    <div class="w-12/12 relative flex flex-wrap justify-start">
+      <div class="w-12/12 xl:w-9/12">
+        <h3>We have vetted and approved the following licenses and approaches as fitting our Fair Source Values. While other licenses and approaches may also fit our values, these are the ones we recommend for adoption.</h3>
+      </div>
+    </div>
+    <div class="w-12/12 relative flex flex-wrap justify-around">
+      <div></div>
+      <div></div>
+    </div>
+
+
+  </Section>
+</main>
 </Layout>

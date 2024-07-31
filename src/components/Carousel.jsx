@@ -50,8 +50,8 @@ const Carousel = ({companies}) => {
 
   return (
     <div className="carousel my-12">
-      <div className="flex flex-wrap justify-around container mx-auto mb-[3.5rem] px-[1.5rem] lg:px-[3rem]">
-        <div className="flex items-center w-12/12 xl:w-1/2">
+      <div className="flex flex-wrap xl:justify-around container mx-auto mb-[3.5rem] px-[1.5rem] lg:px-[3rem]">
+        <div className="flex xl:items-center w-12/12">
           <h2 className="mr-[3rem] mb-0 text-[1.5rem] font-[500] leading-[125%]">
             Featured Fair Source Software
           </h2>
@@ -78,7 +78,7 @@ const Carousel = ({companies}) => {
               </button>
           </div>
         </div>
-        <div className="flex justify-end items-center w-12/12 xl:w-1/2">
+        <div className="hidden xl:flex justify-end items-center w-12/12 xl:w-1/2">
           <a href="/companies" className="w-full xl:w-auto py-[0.9375rem] xl:mr-[3rem] px-[1.5rem] rounded-small text-[1.25rem] font-[600] leading-[125%] tracking-[-0.025rem] capitalize border-2 color-black border-[#0d1b2a33]">
             See all 
           </a>
@@ -96,6 +96,11 @@ const Carousel = ({companies}) => {
           })}
         </div>
       </div>
+      <div className="block container mx-auto pl-[1.5rem] py-[3rem] xl:hidden justify-center items-center w-12/12">
+          <a href="/companies" className="table-cell w-full xl:w-auto py-[0.9375rem] xl:mr-[3rem] px-[1.5rem] rounded-small text-[1.25rem] font-[600] leading-[125%] tracking-[-0.025rem] capitalize border-2 color-black border-[#0d1b2a33]">
+            See all 
+          </a>
+        </div>
     </div>
   );
 };

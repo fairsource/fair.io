@@ -2,7 +2,7 @@
 const { title, collapseID, isLast = false } = Astro.props;
 ---
 
-<div class={`accordion group relative mx-[3rem] ${isLast ? '' : 'border-b-2 border-borderGray'}`}>
+<div class={`accordion group relative mx-[3rem] ${isLast ? '' : 'border-b border-borderGray'}`}>
   <button
     class="accordion__button flex w-full flex-1 items-center justify-between gap-2 py-[3rem] text-left transition hover:text-purple-500 "
     type="button"

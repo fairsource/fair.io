@@ -79,7 +79,7 @@ const Carousel = ({companies}) => {
           </div>
         </div>
         <div className="flex justify-end items-center w-12/12 xl:w-1/2">
-          <a href="/companies" className="w-full xl:w-auto py-[0.9375rem] xl:mr-[3rem] px-[1.5rem] rounded-small text-[1.25rem] font-[700] leading-[125%] tracking-[-0.025rem] capitalize border-2 color-black border-[#0d1b2a33]">
+          <a href="/companies" className="w-full xl:w-auto py-[0.9375rem] xl:mr-[3rem] px-[1.5rem] rounded-small text-[1.25rem] font-[600] leading-[125%] tracking-[-0.025rem] capitalize border-2 color-black border-[#0d1b2a33]">
             See all 
           </a>
         </div>

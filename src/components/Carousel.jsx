@@ -50,12 +50,12 @@ const Carousel = ({companies}) => {
 
   return (
     <div className="carousel my-12">
-      <div className="flex justify-around container mx-auto mb-[3.5rem] px-[1.5rem] lg:px-[3rem]">
-        <div className="flex items-center w-[50%]">
+      <div className="flex flex-wrap justify-around container mx-auto mb-[3.5rem] px-[1.5rem] lg:px-[3rem]">
+        <div className="flex items-center w-12/12 xl:w-1/2">
           <h2 className="mr-[3rem] mb-0 text-[1.5rem] font-[500] leading-[125%]">
             Featured Fair Source Software
           </h2>
-          <div className="flex relative gap-[1rem]">
+          <div className="hidden xl:flex relative gap-[1rem]">
               <button
                 onClick={movePrev}
                 className="w-[2rem] h-[2rem] flex items-center justify-center bg-taupe rounded-[1rem] text-center disabled:opacity-25 disabled:cursor-not-allowed transition-all ease-in-out duration-300"
@@ -78,8 +78,8 @@ const Carousel = ({companies}) => {
               </button>
           </div>
         </div>
-        <div className="flex justify-end items-center w-[50%]">
-          <a href="/companies" className="py-[0.9375rem] mr-[3rem] px-[1.5rem] rounded-small text-[1.25rem] font-[700] leading-[125%] tracking-[-0.025rem] capitalize border-2 color-black border-[#0d1b2a33]">
+        <div className="flex justify-end items-center w-12/12 xl:w-1/2">
+          <a href="/companies" className="w-full xl:w-auto py-[0.9375rem] xl:mr-[3rem] px-[1.5rem] rounded-small text-[1.25rem] font-[700] leading-[125%] tracking-[-0.025rem] capitalize border-2 color-black border-[#0d1b2a33]">
             See all 
           </a>
         </div>

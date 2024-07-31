@@ -2,8 +2,8 @@
 const {type, cta, url, color, target} = Astro.props;
 
 const commonClassList = `px-6 py-4 rounded-small text-[1.25rem] font-[700] leading-[130%] tracking-[-0.025rem] capitalize`;
-const primaryClassList = `bg-black border-2 border-black ${commonClassList} text-white`;
-const secondaryClassList = `${commonClassList} border-2 border-${color} text-${color}`;
+const primaryClassList = `bg-black border-2 border-black ${commonClassList} text-white hover:bg-black/80`;
+const secondaryClassList = `${commonClassList} border-2 border-${color} text-${color} hover:border-${color}/80 hover:text-${color}/80`;
 
 ---
 

@@ -129,11 +129,14 @@ const { title } = Astro.props;
     }
   }
   h1 {
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     font-style: normal;
     font-weight: 600;
-    line-height: 120%; /* 5.4rem */
+    line-height: 120%; 
     letter-spacing: -0.023px;
+    @include media (min-width:1280px){
+      font-size: 4.5rem;
+    }
   }
   h2 {
     font-family: 'Outfit', Arial, Helvetica, sans-serif;

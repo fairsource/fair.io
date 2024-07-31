@@ -3,7 +3,7 @@ import React from "react";
 const CarouselCard = ({company, border = false}) => {
 
   let background = company?.background ? `${company?.background}` : `#FFFFFF`;
-  let tileStyling = `h-[15rem] ${border ? 'w-100' : 'w-[24rem]'} lg:w-[24rem] px-[6.3125rem] py-[6rem] rounded-small mb-[1.5rem] ${border && !company?.background ? 'border-2 border-borderGray' : ''}`
+  let tileStyling = `h-[15rem] w-[21rem] lg:w-[24rem] px-[6.3125rem] py-[6rem] rounded-small mb-[1.5rem] ${border && !company?.background ? 'border-2 border-borderGray' : ''}`
 
   return (
     <a href={company.url} target="_BLANK" className='carousel-item text-center relative snap-start'>

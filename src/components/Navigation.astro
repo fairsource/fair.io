@@ -21,7 +21,7 @@ const { links, socialLinks } = Astro.props;
     <ul class="lg:flex items-center lg:justify-end mr-6">
       {             
         links && links.map((link) => <li>
-          <a class="block p-4 text-[1.25rem] font-[600] leading-[130%] text-black focus:underline hover:underline" href={link.url} target={link.target}>{link.name}</a>
+          <a class="block p-4 text-[1.25rem] font-[500] leading-[130%] text-black focus:underline hover:underline" href={link.url} target={link.target}>{link.name}</a>
         </li>)
       }
     </ul>

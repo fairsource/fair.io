@@ -1,8 +1,176 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
+import { Image } from 'astro:assets';
 
+import FSL from '../assets/licenses/FSL-initials.png';
+import Licenses1 from '../assets/licenses/licenses-1.png';
+import IsTrue from '/images/grid/true.svg?raw';
+import IsFalse from '/images/grid/false.svg?raw';
+
+const gridText = 'text-[1.375rem] font-[500] leading-[120%] tracking-[-0.03438rem]';
+const card = 'border border-borderGray rounded-small px-[1rem] py-[1.5rem] xl:px-[2rem] xl:py-[3rem] h-[100%]';
+const cardTitleClasses = `font-sans text-[1.375rem] font-[500] color-black leading-[120%] tracking-[-0.03438rem] flex items-center mb-[0.62rem]`;
 ---
 
 <Layout title="Welcome to Astro.">
-    
+<header>
+  <div class="relative container-spill md:pl-[1.5rem] lg:pl-[3rem]">
+    <div class="relative flex">
+      <div class="w-12/12 py-[7rem] lg:pt-[15.96rem] lg:pb-[17.56rem] lg:w-4/12">
+        <h1>Fair Source Licenses</h1>
+      </div>
+      <div class=""></div>
+    </div>
+  </div>
+</header>
+<main>
+  <Section sectionStyles="px-[1.5rem] xl:px-[3.5rem] py-[2.75rem] xl:py-[5.5rem]">
+    <div class="w-12/12 relative flex flex-wrap justify-start pb-[3rem] xl:pb-[6.25rem]">
+      <div class="w-12/12 xl:w-9/12">
+        <h3 class="text-[2.5rem] font-[500] leading-[125%] tracking-[-0.05rem]">We have vetted and approved the following licenses and approaches as fitting our Fair Source Values. While other licenses and approaches may also fit our values, these are the ones we recommend for adoption.</h3>
+      </div>
+    </div>
+    <div class="w-12/12 relative flex flex-wrap pb-[3rem] xl:pb-[5.59rem]">
+      <div class="w-12/12 xl:w-5/12 pb-[2rem] xl:pb-0">
+        <Image src={Licenses1} alt="Fair Source License" />
+      </div>
+      <div class="w-12/12 xl:w-1/12"></div>
+      <div class="w-12/12 xl:w-6/12">
+        <div class="border border-borderGray rounded-small h-[100%]">
+          <div class="w-12/12">
+            <Image src={FSL} alt="Functional Source License" />
+          </div>
+          <div class="w-12/12 px-[1rem] xl:px-[2rem] pb-[2rem] xl:pb-0">
+            <span class="tag text-teal mt-[-3rem]">Recommended</span>
+            <h3 class="text-[1.75rem] text-[#000000] leading-[120%] tracking-[-0.04375rem] font-[500]">Functional Source License <span class="font-[400]">(FSL)</span></h3>
+            <p class="mb-[0.62rem]">A simple non-compete license with eventual Open Source conversion after two years. This is the flagship Fair Source license.</p>
+            <a href="https://fsl.software/" class="table-cell px-6 py-4 rounded-small text-[1.25rem] font-[600] leading-[130%] tracking-[-0.025rem] capitalize bg-taupe hover:opacity-80"><span class="flex items-center"><span class="pr-[0.5rem]">Visit Website</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+              <path d="M1 2H13M13 2V14M13 2L1 14" stroke="black" stroke-width="2.3"/></span>
+              </svg></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="w-12/12 relative flex flex-wrap pb-[2rem] xl:pb-[4rem]">
+      <div class="w-12/12 pb-[3rem]">
+        <h3 class="tag text-orange">Alternate Fair Source Licenses</h3>
+        <p>These licenses provide different terms and features, catering to specific project needs. They are useful alternatives for projects requiring unique conversion timelines or feature restrictions, offering flexibility beyond our main recommendation.</p>
+      </div>
+      <div class="w-12/12 xl:w-6/12 mb-[1.25rem] xl:pr-[0.72rem]">
+        <div class={card}>
+          <h4 class={cardTitleClasses}><span class="mr-[0.69rem] font-[600]">Fair Core Licence (FCL)</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <path d="M1 2H13M13 2V14M13 2L1 14" stroke="black" stroke-width="2.3"/></span>
+            </svg></h4>
+          <p>A simple non-compete license with two-year delayed conversion to Open Source. Recommended for monetizing self-hosted software.</p>
+        </div>
+      </div>
+      <div class="w-12/12 xl:w-6/12 mb-[1.25rem] xl:pl-[0.72rem]">
+        <div class={card}>
+          <h4 class={cardTitleClasses}><span class="mr-[0.69rem] font-[600]">Business Source License (BUSL or BSL)</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <path d="M1 2H13M13 2V14M13 2L1 14" stroke="black" stroke-width="2.3"/></span>
+            </svg></h4>
+          <p>A complex non-compete license with eventual Open Source conversion after a certain amount of time, usually four years.</p>
+        </div>
+      </div>
+      <div class="w-12/12 xl:w-6/12 mb-[1.25rem] xl:pr-[0.72rem]">
+        <div class={card}>
+          <h4 class={cardTitleClasses}><span class="mr-[0.69rem] font-[600]">Server Side Public License (SSPL)</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <path d="M1 2H13M13 2V14M13 2L1 14" stroke="black" stroke-width="2.3"/></span>
+            </svg></h4>
+          <p>A complex license derived from the GNU General Public License (GPL), designed to extend the share-alike principle to its maximum extent.</p>
+        </div>
+      </div>
+      <div class="w-12/12 xl:w-6/12 mb-[1.25rem] xl:pl-[0.72rem]">
+        <div class={card}>
+          <h4 class={cardTitleClasses}><span class="mr-[0.69rem] font-[600]">Elastic License (EL)</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <path d="M1 2H13M13 2V14M13 2L1 14" stroke="black" stroke-width="2.3"/></span>
+            </svg></h4>
+          <p>A simple non-compete license allowing feature restriction through license keys, suitable for various monetization models.</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3 class="tag text-tangerine">Approaches</h3>
+      <p class="pb-[1.5rem] xl:pb-[3rem]">We differentiate Fair Source licensing approaches based on two factors. First, does the producer utilize eventual Open Source? Second, does the producer limit the features of its Fair Source product relative to other editions of the software? Limiting features is called “Fair Core,” because the core functionality is available under a Fair Source license, while an extended feature set is not. This amounts to whether the company’s business model includes monetizing self-hosted usage.</p>
+      <div class="w-full pb-[1.5rem]">
+        <div class="flex flex-wrap w-12/12 px-[2rem] h-[4.5rem] items-center">
+          <div class="w-2/12 h-[100%] flex items-center">
+            <span class="block text-[1.375rem] font-[600] leading-[120%] tracking-[-0.03438rem]">Tier</span>
+          </div>
+          <div class="w-3/12 h-[100%] flex items-center">
+            <span class="block text-[1.375rem] font-[600] leading-[120%] tracking-[-0.03438rem]">Eventual OSS</span>
+          </div>
+          <div class="w-3/12 h-[100%] flex items-center">
+            <span class="block text-[1.375rem] font-[600] leading-[120%] tracking-[-0.03438rem]">Feautre Complete</span>
+          </div>
+          <div class="w-3/12 h-[100%] flex items-center">
+            <span class="block text-[1.375rem] font-[600] leading-[120%] tracking-[-0.03438rem]">Examples</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap w-12/12 px-[2rem] items-center h-[4rem]">
+          <div class="w-2/12 h-[100%] flex items-center">
+            <span class={gridText}>1</span>
+          </div>
+          <div class="w-3/12 h-[100%] flex items-center">
+            <Fragment set:html={IsTrue} />
+          </div>
+          <div class="w-3/12 h-[100%] flex items-center">
+            <Fragment set:html={IsTrue} />
+          </div>
+          <div class="w-3/12 h-[100%] flex items-center">
+            <span class={gridText}>FSL, BUSL<sup>†</sup></span>
+          </div>
+        </div>
+        <div class="flex flex-wrap w-12/12 px-[2rem] items-center h-[4rem] bg-backgroundGray">
+          <div class="w-2/12 h-[100%] flex items-center">
+            <span class={gridText}>2</span>
+          </div>
+          <div class="w-3/12 h-[100%] flex items-center">
+            <Fragment set:html={IsTrue} />
+          </div>
+          <div class="w-3/12 h-[100%] flex items-center">
+            <Fragment set:html={IsFalse} />
+          </div>
+          <div class="w-3/12 h-[100%] flex items-center">
+            <span class={gridText}>FCL</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap w-12/12 px-[2rem] items-center h-[4rem]">
+          <div class="w-2/12 h-[100%] flex items-center">
+            <span class={gridText}>3</span>
+          </div>
+          <div class="w-3/12 h-[100%] flex items-center">
+            <Fragment set:html={IsFalse} />
+          </div>
+          <div class="w-3/12 h-[100%] flex items-center">
+            <Fragment set:html={IsTrue} />
+          </div>
+          <div class="w-3/12 h-[100%] flex items-center">
+            <span class={gridText}>SSPL, ELv2<sup>†</sup>, BUSL<sup>†</sup></span>
+          </div>
+        </div>
+        <div class="flex flex-wrap w-12/12 px-[2rem] items-center h-[4rem] bg-backgroundGray">
+          <div class="w-2/12 h-[100%] flex items-center">
+            <span class={gridText}>4</span>
+          </div>
+          <div class="w-3/12 h-[100%] flex items-center">
+            <Fragment set:html={IsFalse} />
+          </div>
+          <div class="w-3/12 h-[100%] flex items-center">
+            <Fragment set:html={IsFalse} />
+          </div>
+          <div class="w-3/12 h-[100%] flex items-center">
+            <span class={gridText}>ELv2<sup>†</sup>, BUSL<sup>†</sup></span>
+          </div>
+        </div>
+      </div>
+      <p class='text-gray text-[1.375rem] font-[500] leading-[120%] tracking-[-0.03438rem]'><sup>†</sup> Depends on implementation</p>
+    </div>
+
+
+  </Section>
+</main>
 </Layout>

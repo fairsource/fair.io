@@ -4,11 +4,26 @@ const {type, cta, url, color, target} = Astro.props;
 const commonClassList = `px-6 py-4 rounded-small text-[1.25rem] font-[600] leading-[130%] tracking-[-0.025rem] capitalize`;
 const primaryClassList = `bg-black border-2 border-black ${commonClassList} text-white hover:opacity-80`;
 const secondaryClassList = `${commonClassList} border-2 border-${color} text-${color} hover:opacity-80`;
+const buttonTaupeClassList = `${commonClassList} bg-taupe text-black hover:opacity-80`;
+
+const classList = (type) => {
+  switch(type) {
+    case 'primary':
+      return primaryClassList;
+      break;
+    case 'taupe':
+      return buttonTaupeClassList;
+      break;
+    default:
+      return secondaryClassList;
+      break;
+  }
+}
 
 ---
 
 <a href={url} target={target}>
-  <button class:list={`${type === 'primary' ? primaryClassList : secondaryClassList}`}>
+  <button class:list={`${classList(type)}`}>
     {cta}
   </button>
 </a>

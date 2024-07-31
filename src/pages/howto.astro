@@ -15,8 +15,8 @@ import Section from '../components/Section.astro';
     </div>
   </header>
   <main>
-    <Section sectionStyles="px-[1.5rem] lg:px-[3.5rem] py-[3rem] xl:py-[6rem] " isFirst itemsTop>
-      <div class="w-12/12 xl:w-1/2 xl:pr-[1rem]">
+    <Section sectionStyles="py-[3rem] xl:py-[6rem] gap-x-[4.25rem]" isFirst itemsTop>
+      <div class="w-12/12 xl:w-5/12">
         <span class="tag text-teal">1. Make a Community Engagement Plan</span>
         <h2>
           Fair source is for companies that want to engage with the developer community
@@ -29,9 +29,9 @@ import Section from '../components/Section.astro';
           versa.
         </p>
       </div>
-      <div class="w-full xl:w-1/2">
+      <div class="w-full xl:w-5/12">
         <div class="list pb-[2.5rem]">
-          <div class="listItem flex grid-columns-2 xl:pl-[1rem] gap-[1rem]">
+          <div class="listItem flex grid-columns-2 gap-[1rem]">
             <div class="glyph">
               <img src="/images/icons/list1.svg" alt="open source channels"/>
             </div>
@@ -130,6 +130,6 @@ import Section from '../components/Section.astro';
 
 <style>
   .glyph{
-    /*padding-top: 5px;*/
+    padding-top: 5px;
   }
 </style>

@@ -50,8 +50,8 @@ const Carousel = ({companies}) => {
 
   return (
     <div className="carousel my-12">
-      <div className="flex flex-wrap xl:justify-around container mx-auto mb-[3.5rem] px-[1.5rem] lg:px-[3rem]">
-        <div className="flex xl:items-center w-12/12">
+      <div className="flex flex-wrap xl:justify-around container mx-auto mb-[3.5rem] px-[1.5rem] xl:px-[3rem]">
+        <div className="flex justify-start xl:items-center w-12/12 xl:w-1/2">
           <h2 className="mr-[3rem] mb-0 text-[1.5rem] font-[500] leading-[125%]">
             Featured Fair Source Software
           </h2>
@@ -84,7 +84,7 @@ const Carousel = ({companies}) => {
           </a>
         </div>
       </div>
-      <div className="relative container-spill lg:pl-[3rem]">
+      <div className="relative container-spill xl:pl-[3rem]">
         <div
           ref={carousel}
           className="carousel-container no-scrollbar overflow-auto touch-pan-x relative flex gap-[1rem] scroll-smooth snap-x snap-mandatory z-0"

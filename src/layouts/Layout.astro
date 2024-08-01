@@ -44,21 +44,35 @@ const socialLinks = [
 ];
 
 
-interface Props {
-	title: string;
-}
+const { title, seo } = Astro.props;
 
-const { title } = Astro.props;
+const seoTitle = `${title} | Fair.io`;
+const seoDescription = seo?.description ? seo.description : '';
+const seoMetaImage = seo?.metaImage ? seo.metaImage : 'https://new.fair.io/images/metaImage.png';
+const seoSlug = seo?.slug ? seo.slug : '';
+
+const canonicalURL = `https://fair.io/${seoSlug}`;
+
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={seoDescription} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
+    <meta charset="utf-8"/>
+    <meta property="og:title" content={seoTitle}/>
+    <meta property="og:description" content={seoDescription}/>
+    <meta property="og:image" content={seoMetaImage}/>
+    <meta property='og:url'  content={canonicalURL}/>
+    <meta name='twitter:url' content={canonicalURL}/>
+    <meta name='twitter:title' content={seoTitle}/>
+    <meta name='twitter:description' content={seoDescription}/>
+    <meta name="twitter:image" content={seoMetaImage}/>
+    <link rel="canonical" href={canonicalURL}/>
 		<title>{title}</title>
 	</head>
 	<body class="bg-background">

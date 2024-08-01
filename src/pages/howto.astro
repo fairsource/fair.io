@@ -5,10 +5,14 @@ import { Image } from 'astro:assets';
 
 import auditForSecretsImage from '../assets/adopt/auditforsecrets.png';
 import publishYourRepoImage from '../assets/adopt/publishyourrepo.png';
-import tellTheWorld from '../assets/adopt/telltheworld.png';
+
+const seoMetaData = {
+  description: `Here's how to adopt Fair Source for your project.`,
+  slug: 'howto/'
+};
 ---
 
-<Layout title="How to Adopt Fair Source">
+<Layout title="How to Adopt Fair Source" seo={seoMetaData}>
   <header class="container relative px-[1.5rem] mx-auto flex flex-wrap lg:px-[3rem] overflow-clip">
 
     <div class="w-12/12 xl:w-5/12 py-[3rem] lg:py-[8rem] xl:pb-[15.25rem] xl:pt-[12.38rem]">

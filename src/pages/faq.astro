@@ -1,17 +1,21 @@
 ---
+import { Image } from 'astro:assets';
+
+import heroImage from '../assets/faq/faqHeroImage.png';
+
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
 import Collapse from '../components/Collapse.astro';
 ---
 
 <Layout title="Frequently Asked Questions | Fair.io">
-  <header class="container px-3 mx-auto flex flex-wrap px-[3rem]">
-    <div class="w-12/12 lg:w-1/2 lg:pb-[15.62rem] lg:pt-[12rem]">
+  <header class="relative container mx-auto flex flex-wrap px-[3rem]">
+    <div class="relative w-12/12 lg:w-1/2 lg:pb-[8.62rem] lg:pt-[6rem] xl:pb-[15.62rem] xl:pt-[12rem]">
       <h1 class="text-balance mb-[1rem]">Frequently Asked Questions</h1>
       <p class="text-[1.75rem] font-[500] leading-[130%] tracking-[0.035rem]">Your guide to understanding Fair Source and how to make the most of it.</p>
     </div>
-    <div class="absolute lg:right-0 lg:top-52 lg:bottom-0 lg:w-1/2 lg:bg-no-repeat bg-[url('/images/background-images/faqHeroImage.svg')]">
-
+    <div class="relative lg:w-[65%]">
+      <Image src={heroImage} alt="hero image" densities={[1.5, 2]} class="absolute lg:right-0 lg:bottom-[-3rem] lg:left-[75%] bg-cover"/>
     </div>
   </header>
   <main>
@@ -81,13 +85,17 @@ import Collapse from '../components/Collapse.astro';
                 </div>
               </div>
             </div>
-            <div class="w-full flex flex-wrap items-center">
-              <div class="w-12/12 lg:w-1/2 lg:pr-[8%]">
+            <div class="w-full flex flex-wrap items-center lg:items-start">
+              <div class="w-12/12 lg:w-1/2 lg:pr-[8%] ">
                 <p>
-                  Fair Source partially fulfills the purposes of the Open Source to “persuade organizations and software authors to distribute source software freely they otherwise would not distribute.” Fair Source provides as many of the benefits of Open Source to developers as companies are comfortable giving, while reserving and asserting a minimal set of exclusive rights to help achieve a sustainable business model. For a deep dive on the relationship between Fair Source and Open Source, read
+                  Fair Source partially fulfills the purposes of the Open Source to “persuade organizations and software authors to
+                  distribute source software freely they otherwise would not distribute.” Fair Source provides as many of the benefits of
+                  Open Source to developers as companies are comfortable giving, while reserving and asserting a minimal set of exclusive
+                  rights to help achieve a sustainable business model. For a deep dive on the relationship between Fair Source
+                  and Open Source, read
                 </p>
               </div>
-              <div class="w-12/12 lg:w-1/2">
+              <div class="w-12/12 lg:w-1/2 mx-auto mt-[2rem] lg:mt-0">
                 <img class="w-full" src="/images/background-images/texture.svg" alt="fair source and open source" />
               </div>
               

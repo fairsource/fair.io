@@ -1,17 +1,23 @@
 ---
+import { Image } from 'astro:assets';
+
+import minus from '../assets/icons/minus.svg';
+import plus from '../assets/icons/plus.svg';
+
 const { title, collapseID, isLast = false } = Astro.props;
 ---
 
 <div class={`accordion group relative mx-[3rem] ${isLast ? '' : 'border-b border-borderGray'}`}>
   <button
-    class="accordion__button flex w-full flex-1 items-center justify-between gap-2 py-[3rem] text-left transition hover:text-purple-500 "
+    class="accordion__button flex w-full flex-1 items-center justify-between gap-2 py-[3rem] text-left transition hover:text-purple-500 align-middle"
     type="button"
     id={`${collapseID}`}
     aria-expanded="false"
     aria-controls={`${collapseID} accordion menu content`}
   >
-    <h2 class="text-center text-[2.5rem] font-[500] leading-[125%] tracking-[-0.05rem]">{title}</h2>
-    <div class="icon"></div>
+    <h2 class="text-[2.5rem] font-[500] leading-[125%] tracking-[-0.05rem] mb-0">{title}</h2>
+    <Image src={minus} format="svg" alt="close" loading="lazy" class="close-icon hidden" />
+    <Image src={plus} format="svg" alt="open" loading="lazy" class="open-icon" />
   </button>
 
   <div
@@ -29,15 +35,10 @@ const { title, collapseID, isLast = false } = Astro.props;
       ".accordion",
     );
     accordionMenus.forEach((accordionMenu) => {
-      const accordionButton = accordionMenu.querySelector(
-        ".accordion__button",
-      );
-      const accordionChevron = accordionMenu.querySelector(
-        ".accordion__chevron",
-      );
-      const accordionContent = accordionMenu.querySelector(
-        ".accordion__content",
-      );
+      const accordionButton = accordionMenu.querySelector(".accordion__button");
+      const accordionContent = accordionMenu.querySelector(".accordion__content");
+      const openIcon = accordionMenu.querySelector('.open-icon');
+      const closeIcon = accordionMenu.querySelector('.close-icon');
 
       if (accordionButton) {
         accordionButton.addEventListener("click", (event) => {
@@ -50,8 +51,9 @@ const { title, collapseID, isLast = false } = Astro.props;
             // this makes it animate properly
             accordionContent.classList.remove("hidden");
             accordionContent.style.maxHeight =
-              accordionContent.scrollHeight + "px";
-            accordionChevron.classList.add("rotate-180");
+            accordionContent.scrollHeight + "px";
+            openIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
           } else {
             // accordion is currently open, so close it
             accordionMenu.classList.remove("active");
@@ -60,7 +62,8 @@ const { title, collapseID, isLast = false } = Astro.props;
             // set max-height to the height of the accordion content
             // this makes it animate properly
             accordionContent.style.maxHeight = "0px";
-            accordionChevron.classList.remove("rotate-180");
+            openIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
             // delay to allow close animation
             setTimeout(() => {
               accordionContent.classList.add("hidden");

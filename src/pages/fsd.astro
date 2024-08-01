@@ -5,9 +5,14 @@ import Button from '../components/Button.astro';
 import GeoLeft from '/images/background-images/geo-left.svg?raw';
 import GeoRight from '/images/background-images/geo-right.svg?raw';
 
+const seoMetaData = {
+  description: 'Fair Source values user freedom and developer sustainability. We find a balance through non-compete licenses that allow users to run the software for their own needs, modify it, and propose changes back to the developer.',
+  slug: 'fsd/'
+};
+
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Fair Source Values" seo={seoMetaData}>
   <header class="w-full relative overflow-x-clip z-0">
     <div class="flex flex-wrap justify-center container mx-auto z-10 relative">
       <div class="w-10/12 lg:w-9/12 xl:w-8/12 py-[3rem] lg:py-[6rem] 2xl:pt-[12.19rem] 2xl:pb-[18.06rem] 3xl:pt-[8rem] 3xl:pb-[12rem] flex-col justify-center text-center z-1">
@@ -43,7 +48,7 @@ import GeoRight from '/images/background-images/geo-right.svg?raw';
           another company can fork it from before it started going bad and move it forward on a more desirable course.
         </p>
         <p>
-          See the specific <a href="" class="emphasized">licenses and approaches</a> we have vetted and approved as fitting our Fair Source values.
+          See the specific <a href="/licenses" class="emphasized">licenses and approaches</a> we have vetted and approved as fitting our Fair Source values.
         </p>
       </div>
     </div>

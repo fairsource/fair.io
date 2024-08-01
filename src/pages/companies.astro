@@ -4,9 +4,15 @@ import Section from '../components/Section.astro';
 import companies from '../data/companies.json';
 import Button from '../components/Button.astro';
 import CarouselCard from '../components/CarouselCard';
+
+const seoMetaData = {
+  description: 'Explore the innovative companies that have adopted Fair Source.',
+  slug: 'companies/'
+};
 ---
 
-<Layout title="Welcome to Astro.">
+
+<Layout title="Fair Source Companies" seo={seoMetaData}>
   <header class="relative flex flex-wrap justify-center items-center">
     <div class="container w-12/12 lg:w-8/12 text-center lg:pt-[12.19rem] z-10">
       <h1>Fair Source Companies</h1>

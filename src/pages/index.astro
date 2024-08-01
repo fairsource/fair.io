@@ -8,10 +8,14 @@ import { Image } from 'astro:assets';
 
 import fairSourceImage from '../assets/home/fairsource.png';
 
+const seoMeta = {
+  description: 'Whether you’re a developer looking to contribute or a business aiming to innovate, we the provide steps to successfully implement Fair Source in your projects. Join the community of ethical and innovative software sharing, balancing collaboration with control for everyone involved.',
+};
+
 
 ---
 
-<Layout title="Software Sharing for Modern Companies | Fair.io">
+<Layout title="Software Sharing for Modern Companies" seo={seoMeta}>
   <header class="relative container-spill md:pl-[1.5rem] lg:pl-[3rem]">
     <div class="bg-[url('/images/background-images/homeHeroImage.svg')] absolute lg:right-0 lg:top-0 lg:bottom-0 lg:w-1/2 lg:bg-no-repeat" />
     <div class="relative flex">

@@ -13,14 +13,14 @@ const { links, socialLinks } = Astro.props;
   <div class="w-full flex columns-12 justify-between items-center py-[2.5rem]">
     <div class="span-cols-6 md:span-cols-4 lg:span-cols-2 pr-[10%]">
       <a href="/">
-        <Image src={logoFooter} alt="Fair Source" />
+        <Image src={logoFooter} densities={[1.5, 2, 3]} alt="Fair Source" />
       </a>
     </div>
     <div class="span-cols-6 lg:span-cols-8 flex items-center">
       <ul class="hidden lg:flex gap-[2.5rem] mr-[2.5rem]">
         {
           links.map((link) => <li>
-            <a href={link.url} target={link.target} class="text-lightGray font-[600] font-[1.25rem] leading-[130%] font-sans hover:underline">{link.name}</a>
+            <a href={link.url} target={link.target} class="text-lightGray font-[500] font-[1.25rem] leading-[130%] font-sans hover:underline">{link.name}</a>
           </li>
           )
         }

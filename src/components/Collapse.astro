@@ -7,7 +7,7 @@ import plus from '../assets/icons/plus.svg';
 const { title, collapseID, isLast = false } = Astro.props;
 ---
 
-<div class={`accordion group relative mx-[3rem] ${isLast ? '' : 'border-b border-borderGray'}`}>
+<div class={`accordion group relative mx-[3rem] flex-grow ${isLast ? '' : 'border-b border-borderGray'}`}>
   <button
     class="accordion__button flex w-full flex-1 items-center justify-between gap-2 py-[3rem] text-left transition hover:text-purple-500 align-middle"
     type="button"
@@ -16,10 +16,8 @@ const { title, collapseID, isLast = false } = Astro.props;
     aria-controls={`${collapseID} accordion menu content`}
   >
     <h2 class="text-[2.5rem] font-[500] leading-[125%] tracking-[-0.05rem] mb-0">{title}</h2>
-    <span class="icon">
-      <Image src={minus} format="svg" alt="close" loading="lazy" class="close-icon hidden"  />
-      <Image src={plus} format="svg" alt="open" loading="lazy" class="open-icon" />
-    </span>
+    <Image src={minus} format="svg" alt="close" loading="lazy" class="close-icon hidden" />
+    <Image src={plus} format="svg" alt="open" loading="lazy" class="open-icon" />
   </button>
 
   <div

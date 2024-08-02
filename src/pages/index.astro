@@ -17,8 +17,8 @@ const seoMeta = {
 ---
 
 <Layout title="Software Sharing for Modern Companies" seo={seoMeta}>
-  <header class="relative container-spill md:pl-[1.5rem] lg:pl-[3rem]">
-    <div class="relative flex">
+  <header class="relative container-spill md:pl-[1.5rem] lg:pl-[3rem] overflow-x-clip">
+    <div class="relative flex 3xl:pb-[6rem]">
       <div class="w-12/12 lg:w-6/12 lg:py-[7.19rem] flex items-center">
         <div>
           <h1 class="text-black mb-4">
@@ -31,9 +31,9 @@ const seoMeta = {
           </div>
         </div>
       </div>
-      <div class="relative lg:w-[85%]">
-        <Image src={heroImage} alt="hero image" densities={[1, 1.5, 2, 3, 4]} class="absolute lg:right-0 lg:left-[6.5rem]"/>
-      </div>
+    </div>
+    <div class="absolute w-0 lg:w-[53%] 3xl:w-[48%] top-0 right-0 3xl:top-[-1rem] 3xl:right-[-5rem] 2xl:right-[-4.5rem] xl:right-[-4rem] xl:top-[3rem] lg:right-[-3.5rem]">
+      <Image src={heroImage} alt="hero image" densities={[1, 1.5, 2, 3, 4]} class="relative"/>
     </div>
   </header>
 	<main>

@@ -6,7 +6,7 @@ import GeoLeft from '/images/background-images/geo-left.svg?raw';
 import GeoRight from '/images/background-images/geo-right.svg?raw';
 
 const seoMetaData = {
-  description: 'Fair Source values user freedom and developer sustainability. We find a balance through non-compete licenses that allow users to run the software for their own needs, modify it, and propose changes back to the developer.',
+  description: 'Fair Source values user freedom and developer sustainability. We find a balance through non-compete licenses that allow users to run the software for their own needs, modify it, and propose changes back to the developer, with delayed Open Source publication.',
   slug: 'about/'
 };
 
@@ -17,11 +17,7 @@ const seoMetaData = {
     <div class="flex flex-wrap justify-center container mx-auto z-10 relative">
       <div class="w-10/12 lg:w-9/12 xl:w-8/12 py-[3rem] lg:py-[6rem] 2xl:pt-[12.19rem] 2xl:pb-[18.06rem] 3xl:pt-[8rem] 3xl:pb-[12rem] flex-col justify-center text-center z-1">
         <h1>About Fair Source</h1>
-        <p class="text-[1.75rem] font-[500] leading-[130%] tracking-[-0.035rem] mb-[1.5rem]">Explore the innovative companies that have adopted Fair Source.</p>
-        <div class="flex flex-wrap items-center justify-center columns-2 gap-[1rem]">
-          <Button cta="Join Fair Source" url="/join" type="primary" />
-          <Button cta="Add Your Company" url="https://github.com/fairsource/fair.io" type="secondary" />
-        </div>
+        <p class="text-[1.75rem] font-[500] leading-[130%] tracking-[-0.035rem] mb-[1.5rem]">Learn the what, why, and who of Fair Source Software.</p>
       </div>
     </div>
     <div class="image z-0 w-auto absolute md:top-[11rem] md:bottom-[-12rem] md:left-[-2rem] md:right-0 lg:top-[14rem] lg:top-[-14rem] lg:left:-[-6rem] lg:right-0 xl:top-[20rem] xl:bottom-[-40rem] xl:left-[-8.56rem] xl:right-0 3xl:top-[14rem] 3xl:left-[-4rem] 3xl:right-0 3xl:bottom-[-8rem]">
@@ -39,22 +35,82 @@ const seoMetaData = {
   <main>
     <Section sectionStyles="py-[3rem] px-[5rem] xl:pt-[5.5rem] xl:pb-[11.25rem] xl:px-[14.25rem]">
       <div>
-        <h2>How does Fair Source benefit developers?</h2>
-        <p class="text-[1.75rem] font-[500] leading-[135%] tracking-[-0.0375rem] pb-[3.25rem]">Fair Source values user freedom and developer sustainability. We find a balance through non-compete licenses that allow users to run the software for their own needs, modify it, and propose changes back to the developer.</p>
+        <h2>What is Fair Source Software?</h2>
+        <p
+          class="text-[1.75rem] font-[500] leading-[135%] tracking-[-0.0375rem] pb-[1.25rem]"
+        >
+          Fair Source Software (FSS):
+        </p>
+        <ol
+          class="text-[1.75rem] font-[500] pb-[3.25rem] pl-[3.25rem] list-decimal"
+        >
+          <li>is publicly available to read;</li>
+          <li>
+            allows use, modification, and redistribution with minimal restrictions
+            to protect the producer’s business model; and
+          </li>
+          <li>undergoes delayed Open Source publication (DOSP).</li>
+        </ol>
         <div>
           <p class="pb-[1.5rem]">
-            Additionally, Fair Source software licensing often incorporates <a href="" class="emphasized">delayed Open Source publication</a>. Also known as eventual 
-            Open Source, the idea here is that the software product goes under an <a href="" class="emphasized">Open Source license</a> after a certain period of 
-            time, usually two years. This way, if the developer of the software takes it in a bad direction, the community or 
-            another company can fork it from before it started going bad and move it forward on a more desirable course.
+            The intention is for the first point to be a bright line, and for the
+            second to invite exploration. We expect <a href="/licenses"
+              >Fair Source licenses</a
+            > to emerge and evolve and shake out into a few clear winners over time,
+            as companies <a href="/join">apply Fair Source</a> within their own particular
+            business context.
           </p>
+
+          <p class="pb-[1.5rem]">
+            The third point is also intended as a bright line, and a key
+            differentiator of Fair Source from <a
+              href="https://opensource.org/blog/opencore">Open Core</a
+            > and other approaches. <a href="https://opensource.org/dosp"
+              >Delayed Open Source publication</a
+            > (DOSP) is a concept <a
+              href="https://opensource.org/blog/a-historic-view-of-the-practice-to-delay-releasing-open-source-software-osis-report"
+              >established by the Open Source Initiative</a
+            > (OSI). It is in keeping with <a href="https://opensource.org/bylaws"
+              >OSI's public-benefit mandate</a
+            >
+            to "persuade organizations and software authors to distribute source software
+            freely they otherwise would not distribute." DOSP ensures that if a Fair
+            Source company goes out of business, or takes their software in an undesired
+            direction, the community or another company can pick up and move forward.
+            Will this be meaningful in practice? Again, time will tell.
+          </p>
+
+          <h3>Why Fair Source?</h3>
+
           <p>
-            See the specific <a href="/licenses">licenses and approaches</a> we have vetted and approved as fitting our Fair Source values.
+            The purpose of Fair Source is to legitimize the practice of companies
+            sharing their core software products to a business-justifiable extent,
+            without confusing this sharing with Free and Open Source Software.
+            Companies that adopt Fair Source value user freedom alongside their
+            own sustainability, and quite often maintain and contribute both
+            financially and in other ways to genuine community-governed FOSS
+            projects alongside their commercial Fair Source products.
+          </p>
+
+          <h3>Who is behind Fair Source?</h3>
+
+          <p>
+            Fair Source began as an initiative of <a
+              href="https://sentry.io/welcome/">Sentry</a
+            >
+            in 2024, in response to a 2023 <a
+              href="https://x.com/adamhjk/status/1687113805237714944"
+              >call-to-action</a
+            >
+            from Chef co-founder Adam Jacob. Fair Source is managed on GitHub. Governance
+            and process documentation is in the <a
+              href="https://github.com/fairsource/fair.io">README</a
+            >.
           </p>
         </div>
       </div>
 
     </Section>
-  </main>
-    
+
 </Layout>
+ 

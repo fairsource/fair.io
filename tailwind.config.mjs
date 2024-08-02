@@ -24,7 +24,8 @@ export default {
     },
     borderRadius: {
       DEFAULT: '2rem',
-      small: '1rem'
+      small: '1rem',
+      xs: '0.5rem'
     },
     fontFamily: {
       'sans': ['"Plus Jakarta Sans"', 'Arial', 'Helvetica', 'sans-serif'],

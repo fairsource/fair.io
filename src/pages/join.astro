@@ -5,21 +5,23 @@ import { Image } from 'astro:assets';
 
 import auditForSecretsImage from '../assets/adopt/auditforsecrets.png';
 import publishYourRepoImage from '../assets/adopt/publishyourrepo.png';
+import adoptHeroImage from '../assets/adopt/adoptHeroImage.png';
 
 const seoMetaData = {
   description: `Here's how to adopt Fair Source for your project.`,
-  slug: 'howto/'
+  slug: 'join/'
 };
 ---
 
-<Layout title="How to Adopt Fair Source" seo={seoMetaData}>
+<Layout title="Join Fair Source" seo={seoMetaData}>
   <header class="container relative px-[1.5rem] mx-auto flex flex-wrap lg:px-[3rem] overflow-clip">
 
     <div class="w-12/12 xl:w-5/12 py-[3rem] lg:py-[8rem] xl:pb-[15.25rem] xl:pt-[12.38rem]">
-      <h1 class="text-balance mb-[1rem]">How to Adopt Fair Source</h1>
-      <p class="text-[1.75rem] font-[500] leading-[130%] tracking-[0.035rem]">Sold on the <a href="/" class="underline">benefits</a>? Here's how to adopt Fair Source for your project.</p>
+      <h1 class="text-balance mb-[1rem]">Join Fair Source</h1>
+      <p class="text-[1.75rem] font-[500] leading-[130%] tracking-[0.035rem]">Sold on the <a href="/faq" class="underline">benefits</a>? Here's how to adopt Fair Source at your company.</p>
     </div>
-    <div class="bg-[url('/images/background-images/adoptHeroImage.svg')] hidden xl:flex lg:w-6/12 lg:absolute xl:7/12 lg:top-0 lg:bottom-0 lg:right-[3rem] xl:bg-[bottom_10%_right_90%] lg:bg-no-repeat  xl:bg-[90%] 2xl:bg-[100%]">
+    <div class="absolute hidden right-0 top-0 w-1/2 xl:block">
+      <Image src={adoptHeroImage} alt="How to adopt fair source" densities={[1, 2, 3]}/>
     </div>
   </header>
   <main>
@@ -40,7 +42,7 @@ const seoMetaData = {
       <div class="w-full xl:w-5/12">
         <div class="list pb-[2.5rem]">
           <div class="listItem flex grid-columns-2 gap-[1rem]">
-            <div class="glyph">
+            <div class="glyph basis-[2.875rem] shrink-0">
               <img src="/images/icons/list1.svg" alt="open source channels"/>
             </div>
             <div class="text">
@@ -54,7 +56,7 @@ const seoMetaData = {
         </div>
         <div class="list pb-[2.5rem]">
           <div class="listItem flex grid-columns-2 gap-[1rem]">
-            <div class="glyph">
+            <div class="glyph basis-[2.875rem] shrink-0">
               <img src="/images/icons/list2.svg" alt="communication"/>
             </div>
             <div class="text">
@@ -68,7 +70,7 @@ const seoMetaData = {
         </div>
         <div class="list pb-[2.5rem]">
           <div class="listItem flex grid-columns-2 gap-[1rem]">
-            <div class="glyph">
+            <div class="glyph basis-[2.875rem] shrink-0">
               <img src="/images/icons/list3.svg" alt="feature requests"/>
             </div>
             <div class="text">
@@ -129,8 +131,8 @@ const seoMetaData = {
     </Section>
     <Section
       sectionStyles="p-[1.5rem] items-stretch xl:px-[3.5rem]"
-      backgroundStyling="bg-[url('/images/background-images/tellTheWorld.svg')] bg-contain bg-no-repeat bg-right w-full top-0 bottom-[60%] right-0 md:bottom-[40%] xl:bottom-0 xl:w-5/15 z-0">
-      <div class="relative flex items-center mb-[2rem] min-h-[20rem] w-full z-10 xl:w-5/12 xl:order-12"></div>
+      backgroundStyling="bg-[url('/images/background-images/tellTheWorld.svg')] bg-cover bg-no-repeat bg-center w-full top-0 h-[25rem] right-0 md:bottom-[40%] xl:bg-contain xl:bg-right xl:bottom-0 xl:h-auto xl:w-5/15 z-0">
+      <div class="relative flex items-center mb-[2rem] min-h-[25rem] w-full z-10 xl:min-h-[20rem] xl:w-5/12 xl:order-12"></div>
       <div class="w-12/12 xl:w-7/12 xl:pr-[1rem] xl:pt-[11.62rem] xl:pb-[13.75rem] z-10">
         <span class="tag text-rust">5. Tell the World</span>
         <h2>Let’s spread the word together!</h2>

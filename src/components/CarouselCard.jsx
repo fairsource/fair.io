@@ -6,7 +6,7 @@ const CarouselCard = ({company, border = false}) => {
   let tileStyling = `h-[15rem] w-[21rem] lg:w-[24rem] px-[6.3125rem] py-[6rem] rounded-small mb-[1.5rem] ${border && !company?.background ? 'border-2 border-borderGray' : ''}`
 
   return (
-    <a href={company.url} target="_BLANK" className='carousel-item text-center relative snap-start'>
+    <a href={company.url} target="_BLANK" className='no-underline carousel-item text-center relative snap-start'>
       <div className={tileStyling} style={{backgroundColor: background}}>
         <img src={company.logo} alt={company.name} />
       </div>
@@ -26,13 +26,3 @@ const CarouselCard = ({company, border = false}) => {
 }
 
 export default CarouselCard;
-
-/* 
-
-font-size: 1.375rem;
-font-style: normal;
-font-weight: 700;
-line-height: 120%; /* 1.65rem 
-letter-spacing: -0.03438rem;
-
-*/

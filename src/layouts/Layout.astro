@@ -7,8 +7,8 @@ import iconGitHub from '../assets/navigation/github.png'
 
 const links = [
   {
-    name: 'Values',
-    url: '/fsd/',
+    name: 'About',
+    url: '/about/',
     target: ''
   },
   {
@@ -22,8 +22,13 @@ const links = [
     target: ''
   },
   {
-    name: 'Adopt Fair Source',
-    url: '/howto/',
+    name: 'Companies',
+    url: '/companies/',
+    target: ''
+  },
+  {
+    name: 'Join',
+    url: '/join/',
     target: ''
   },
 ];
@@ -74,6 +79,11 @@ const canonicalURL = `https://fair.io/${seoSlug}`;
     <meta name="twitter:image" content={seoMetaImage}/>
     <link rel="canonical" href={canonicalURL}/>
 		<title>{title}</title>
+    <script
+      defer
+      data-domain="fair.io"
+      src="https://plausible.io/js/script.js"
+    ></script>
 	</head>
 	<body class="bg-background">
 		<Navigation links={links} socialLinks={socialLinks} />
@@ -196,7 +206,7 @@ const canonicalURL = `https://fair.io/${seoSlug}`;
     font-size: 1.375rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 135%; /* 1.85625rem */
+    line-height: 145%; /* 1.85625rem */
     letter-spacing: -0.03438rem;
   }
   p.small {
@@ -224,12 +234,25 @@ const canonicalURL = `https://fair.io/${seoSlug}`;
     line-height: 125%;
     margin-bottom: 1rem;
   }
-  a.emphasizedLink {
-    position: relative;
+  main a{
+    font-weight: 600;
+    text-decoration: underline;
   }
-  a.emphasizedLink::after{
-    content: '';
-    position: absolute;
+  a.no-underline{
+    text-decoration: none !important;
+  }
+  a.emphasized {
+    border-radius: 2rem;
+    padding:  0.125rem 0.75rem;
+    letter-spacing: 0.0375rem;
+  }
+  a.emphasized.external::after {
+    content: url('/images/icons/external-link-icon.svg');
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-left: 1rem;
+    transform: scale(1.25) translateY(-5px);
   }
     /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {

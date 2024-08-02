@@ -234,12 +234,19 @@ const canonicalURL = `https://fair.io/${seoSlug}`;
     line-height: 125%;
     margin-bottom: 1rem;
   }
-  a.emphasizedLink {
-    position: relative;
+  a.emphasized {
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    padding: 0.25rem 0.75rem;
   }
-  a.emphasizedLink::after{
-    content: '';
-    position: absolute;
+
+  a.emphasized.external::after {
+    content: url('/images/icons/external-link-icon.svg');
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-left: 1rem;
+    transform: scale(1.25) translateY(-5px);
   }
     /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {

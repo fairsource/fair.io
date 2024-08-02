@@ -8,6 +8,7 @@ export default {
       background: '#F2F0ED',
       black: '#0D1B2A',
       charcoal: '#0D1B2A',
+      tar: '#191919',
       teal: '#0A9396',
       orange: '#FF763E',
       ltOrange: '#EE9B00',

@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import logo from '../assets/navigation/logo-header.png';
+import close from '/images/icons/close.svg?raw';
 
 const { links, socialLinks } = Astro.props;
 ---
@@ -35,23 +36,21 @@ const { links, socialLinks } = Astro.props;
   </div>
 </nav>
 <div class="navbar-menu relative z-50 hidden">
-  <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-  <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-[2.5rem] px-6 bg-white border-r overflow-y-auto">
-    <div class="flex items-center mb-8">
-      <a class="mr-auto text-3xl font-bold leading-none" href="#">
-        <Image src={logo} alt="Fair Source Licnese" />
+  <div class="navbar-backdrop fixed inset-0 bg-transparent"></div>
+  <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-[2.5rem] px-[1rem] py-[1.5rem] bg-background border-r overflow-y-auto">
+    <div class="flex items-center mb-[3rem]">
+      <a class="mr-auto text-3xl font-bold leading-none w-6/12" href="/">
+        <Image src={logo} alt="Fair Source Licnese" densities={[1, 2, 3, 4]} />
       </a>
-      <button class="navbar-close">
-        <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
+      <button class="navbar-close relative h-[24px] w-[24px]">
+        <Fragment set:html={close} />
       </button>
     </div>
     <div>
       <ul>
         {
-          links.map((link) => <li class="mb-1">
-            <a class="block p-4 text-[1.25rem] font-[600] text-black active:underline hover:underline" href={link.url} target={link.target}>{link.name}</a>
+          links.map((link) => <li class="mb-[1.69rem]">
+            <a class="block text-[1.125rem] leading-[135%] font-[500] tracking-[-0.0225rem] text-tar active:underline hover:underline" href={link.url} target={link.target}>{link.name}</a>
           </li>)
         }
       </ul>

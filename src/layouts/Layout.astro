@@ -266,22 +266,20 @@ const canonicalURL = `https://fair.io/${seoSlug}`;
   .text-balance {
     white-space: balance;
   }
-  @responsive {
-	  .carousel-wrapper-right::after {
-		  z-index: 1;
-		  content: '';
-		  position: absolute;
-		  top: 0;
-		  right: 0;
-		  width: 8rem;
-		  bottom: 0;
-		  flex-shrink: 0;
-		  background: linear-gradient(
-			  270deg,
-			  #F2F0ED 7.69%,
-			  rgba(31, 22, 51, 0) 92.31%
-		  );
-	  }
+  .carousel-wrapper-right::after {
+	  z-index: 1;
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  width: 8rem;
+	  bottom: 0;
+	  flex-shrink: 0;
+	  background: linear-gradient(
+		  270deg,
+		  #F2F0ED 7.69%,
+		  rgba(31, 22, 51, 0) 92.31%
+	  );
   }
   .carousel-wrapper-left::before {
 	  z-index: 1;

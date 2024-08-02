@@ -26,13 +26,3 @@ const CarouselCard = ({company, border = false}) => {
 }
 
 export default CarouselCard;
-
-/* 
-
-font-size: 1.375rem;
-font-style: normal;
-font-weight: 700;
-line-height: 120%; /* 1.65rem 
-letter-spacing: -0.03438rem;
-
-*/

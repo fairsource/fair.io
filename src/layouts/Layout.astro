@@ -7,8 +7,8 @@ import iconGitHub from '../assets/navigation/github.png'
 
 const links = [
   {
-    name: 'Definition',
-    url: '/definition/',
+    name: 'About',
+    url: '/about/',
     target: ''
   },
   {
@@ -234,12 +234,15 @@ const canonicalURL = `https://fair.io/${seoSlug}`;
     line-height: 125%;
     margin-bottom: 1rem;
   }
+  main a{
+    font-weight: 600;
+    text-decoration: underline;
+  }
   a.emphasized {
     border-radius: 2rem;
     padding:  0.125rem 0.75rem;
     letter-spacing: 0.0375rem;
   }
-
   a.emphasized.external::after {
     content: url('/images/icons/external-link-icon.svg');
     display: inline-block;

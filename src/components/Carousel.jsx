@@ -52,6 +52,7 @@ const Carousel = ({companies}) => {
     maxScrollWidth.current = carousel.current
       ? carousel.current.scrollWidth - movement
       : 0;
+    console.log(window.outerWidth)
   }, []);
 
   return (
@@ -90,7 +91,7 @@ const Carousel = ({companies}) => {
           </a>
         </div>
       </div>
-      <div className="relative container-spill xl:pl-[3rem] carousel-wrapper carousel-wrapper-right">
+      <div className="relative container-spill xl:pl-[3rem] carousel-wrapper lg:carousel-wrapper-right">
         <div
           ref={carousel}
           className="carousel-container no-scrollbar overflow-auto touch-pan-x relative flex gap-[1rem] scroll-smooth snap-x snap-mandatory z-0"

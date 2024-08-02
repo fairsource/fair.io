@@ -248,8 +248,16 @@ const canonicalURL = `https://fair.io/${seoSlug}`;
     background: #E8E3DC;
     text-decoration: none !important;
   }
-  a.emphasized:hover{
+  a.emphasized:hover {
     opacity: 80%;
+  }
+  a.emphasized.github.branded {
+    color: white;
+    background-color: #6E5494;
+  }
+  a.emphasized.twitter.branded {
+    color: white;
+    background-color: #1E1E1E;
   }
   a.emphasized.external::after {
     content: url('/images/icons/external-link-icon.svg');
@@ -259,7 +267,8 @@ const canonicalURL = `https://fair.io/${seoSlug}`;
     margin-left: 1rem;
     transform: scale(1.25) translateY(-5px);
   }
-    /* Hide scrollbar for Chrome, Safari and Opera */
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
       display: none;
   }

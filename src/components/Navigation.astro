@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import logo from '../assets/navigation/logo-header.png';
 import close from '/images/icons/close.svg?raw';
+import hamburger from '/images/icons/hamburger.svg?raw';
 
 const { links, socialLinks } = Astro.props;
 ---
@@ -11,11 +12,8 @@ const { links, socialLinks } = Astro.props;
     <Image src={logo} densities={[1, 1.5, 2, 3, 4]} alt="Fair Source Licnese" />
   </a>
   <div class="lg:hidden">
-    <button class="navbar-burger flex items-center text-blue-600 p-3">
-      <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-        <title>Mobile menu</title>
-        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-      </svg>
+    <button class="navbar-burger flex items-center w-[32px] h-[18px]">
+      <Fragment set:html={hamburger} />
     </button>
   </div>
   <div class="hidden relative lg:flex items-center lg:justify-end">

@@ -6,7 +6,7 @@ import Button from '../components/Button.astro';
 import CarouselCard from '../components/CarouselCard';
 
 const seoMetaData = {
-  description: 'Explore the innovative companies that have adopted Fair Source.',
+  description: 'Read the announcements from companies that have adopted Fair Source.',
   slug: 'companies/'
 };
 ---
@@ -17,11 +17,10 @@ const seoMetaData = {
     <div class="container w-12/12 lg:w-8/12 text-center lg:pt-[12.19rem] z-10">
       <h1>Fair Source Companies</h1>
       <p class="mb-[1.5rem] text-[1.75rem] text-black font-[500] leading-[130%] tracking-[-0.035rem]">
-        Explore the innovative companies that have adopted Fair Source.
+        Read in their own words what companies have to say about adopting Fair Source.
       </p>
       <div class="flex flex-wrap flex-col md:flex-row w-12/12 mb-[11.44rem] gap-[1rem] justify-center">
         <Button url="/join" type="primary" cta="Join Fair Source"></Button>
-        <Button url="https://github.com/fairsource/fair.io/issues" type="secondary" color="black" cta="Add Your Company" background="background"></Button>
       </div>
     </div>
     <div class="relative min-w-full overflow-visible z-0">
@@ -33,7 +32,7 @@ const seoMetaData = {
     <Section>
       <div class="company-list w-full flex flex-wrap">
         <h2 class="pl-[3rem] pt-[3rem] mb-0 text-[1.5rem] font-[500] leading-[125%] mb-[2.62rem] justify-self-start w-1/2">
-          All Fair Source Software
+          All Fair Source Announcements
         </h2>
       </div>
       {
@@ -53,9 +52,9 @@ const seoMetaData = {
           <div class="absolute bg-[url('/images/background-images/companiesWantTo-right.svg')] hidden md:block bg-no-repeat bg-contain bg-right-bottom h-[20rem] lg:h-full w-1/2 right-0 bottom-0"></div>
         </div>
         <div class="flex-col w-12/12 md:w-10/12 lg:w-8/12 text-center justify-center lg:py-[12rem] z-10">
-          <h2>Want to list your Fair Source product?</h2>
+          <h2>Want to list your company?</h2>
           <div class="justify-center flex">
-            <Button url="/join" type="secondary" color="black" cta="Add your Project"></Button>
+            <Button url="/join" type="secondary" color="black" cta="Join Fair Source"></Button>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
 import { Image } from 'astro:assets';
 
+import HeroImage from '../assets/licenses/licenses-hero-image.png';
 import FSL from '../assets/licenses/FSL-initials.png';
 import Licenses1 from '../assets/licenses/licenses-1.png';
 import IsTrue from '/images/grid/true.svg?raw';
@@ -15,7 +16,8 @@ const seoMetaData = {
 };
 
 const glyphWrapper = 'relative w-[24px] h-[24px] xl:w-[40px] xl:h-[40px]';
-const gridText = 'text-[0.75rem] font-[600] leading-[135%] tracking-[-0.01125rem] xl:text-[1.375rem] font-[500] xl:leading-[120%] xl:tracking-[-0.03438rem]';
+const gridText = 'text-[0.75rem] text-left font-[600] leading-[135%] tracking-[-0.01125rem] xl:text-[1.375rem] font-[500] xl:leading-[120%] xl:tracking-[-0.03438rem]';
+const gridRow = 'flex flex-wrap w-12/12 pl-[1rem] pr-[0.5rem] xl:px-[2rem] items-center h-[4rem]';
 const card = 'border border-borderGray rounded-small px-[1rem] py-[1.5rem] xl:px-[2rem] xl:py-[3rem] h-[100%]';
 const cardTitleClasses = `font-sans text-[1.375rem] font-[500] color-black leading-[120%] tracking-[-0.03438rem] flex items-center mb-[0.62rem]`;
 const gridHeaderText = 'block text-[0.75rem] font-[600] leading-[120%] tracking-[-0.01125rem] xl:text-[1.375rem] xl:tracking-[-0.03438rem]';
@@ -29,6 +31,9 @@ const gridHeaderText = 'block text-[0.75rem] font-[600] leading-[120%] tracking-
         <h1>Fair Source Licenses</h1>
       </div>
       <div class=""></div>
+    </div>
+    <div class="absolute hidden right-0 bottom-[-10rem] w-7/12 xl:block">
+      <Image src={HeroImage} alt="How to adopt fair source" densities={[1, 2, 3]}/>
     </div>
   </div>
 </header>
@@ -103,7 +108,7 @@ const gridHeaderText = 'block text-[0.75rem] font-[600] leading-[120%] tracking-
       <h3 class="tag text-tangerine">Approaches</h3>
       <p class="pb-[1.5rem] text-[0.9375rem] font-[500] leading-[135%] tracking-[-0.01406rem] xl:text-[1.375rem] xl:tracking-[-0.03438rem] xl:pb-[3rem] ">We differentiate Fair Source licensing approaches based on two factors. First, does the producer utilize eventual Open Source? Second, does the producer limit the features of its Fair Source product relative to other editions of the software? Limiting features is called “Fair Core,” because the core functionality is available under a Fair Source license, while an extended feature set is not. This amounts to whether the company’s business model includes monetizing self-hosted usage.</p>
       <div class="w-full pb-[1.5rem]">
-        <div class="flex flex-wrap w-12/12 px-[2rem] h-[4.5rem] items-center">
+        <div class={gridRow}>
           <div class="w-2/12 h-[100%] flex items-center">
             <span class={gridHeaderText}>Tier</span>
           </div>
@@ -117,7 +122,7 @@ const gridHeaderText = 'block text-[0.75rem] font-[600] leading-[120%] tracking-
             <span class={gridHeaderText}>Examples</span>
           </div>
         </div>
-        <div class="flex flex-wrap w-12/12 px-[2rem] items-center h-[4rem]">
+        <div class={gridRow}>
           <div class="w-2/12 h-[100%] flex items-center">
             <span class={gridText}>1</span>
           </div>
@@ -135,7 +140,7 @@ const gridHeaderText = 'block text-[0.75rem] font-[600] leading-[120%] tracking-
             <span class={gridText}>FSL, BUSL<sup>†</sup></span>
           </div>
         </div>
-        <div class="flex flex-wrap w-12/12 px-[2rem] items-center h-[4rem] bg-backgroundGray">
+        <div class={`${gridRow} bg-backgroundGray rounded-xs`}>
           <div class="w-2/12 h-[100%] flex items-center">
             <span class={gridText}>2</span>
           </div>
@@ -153,7 +158,7 @@ const gridHeaderText = 'block text-[0.75rem] font-[600] leading-[120%] tracking-
             <span class={gridText}>FCL</span>
           </div>
         </div>
-        <div class="flex flex-wrap w-12/12 px-[2rem] items-center h-[4rem]">
+        <div class={gridRow}>
           <div class="w-2/12 h-[100%] flex items-center">
             <span class={gridText}>3</span>
           </div>
@@ -171,7 +176,7 @@ const gridHeaderText = 'block text-[0.75rem] font-[600] leading-[120%] tracking-
             <span class={gridText}>SSPL, ELv2<sup>†</sup>, BUSL<sup>†</sup></span>
           </div>
         </div>
-        <div class="flex flex-wrap w-12/12 px-[2rem] items-center h-[4rem] bg-backgroundGray">
+        <div class={`${gridRow} bg-backgroundGray rounded-xs`}>
           <div class="w-2/12 h-[100%] flex items-center">
             <span class={gridText}>4</span>
           </div>
@@ -190,7 +195,7 @@ const gridHeaderText = 'block text-[0.75rem] font-[600] leading-[120%] tracking-
           </div>
         </div>
       </div>
-      <p class='text-gray text-[1.375rem] font-[500] leading-[120%] tracking-[-0.03438rem]'><sup>†</sup> Depends on implementation</p>
+      <p class='text-gray text-[0.75rem] tracking-[-0.01875rem] xl:text-[1.375rem] font-[500] leading-[120%] xl:tracking-[-0.03438rem]'><sup>†</sup> Depends on implementation</p>
     </div>
 
 

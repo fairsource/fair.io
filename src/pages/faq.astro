@@ -8,7 +8,7 @@ import Section from '../components/Section.astro';
 import Collapse from '../components/Collapse.astro';
 
 const seoMetaData = {
-  description: 'Your guide to understanding Fair Source and how to make the most of it.',
+  description: 'Read on to understand Fair Source and what it has to offer companies and developers.',
   slug: 'faq/'
 };
 
@@ -19,7 +19,7 @@ const seoMetaData = {
   <header class="relative container mx-auto flex flex-wrap px-[3rem]">
     <div class="relative w-12/12 lg:w-1/2 lg:pb-[8.62rem] lg:pt-[6rem] xl:pb-[15.62rem] xl:pt-[12rem]">
       <h1 class="text-balance mb-[1rem]">Frequently Asked Questions</h1>
-      <p class="text-[1.75rem] font-[500] leading-[130%] tracking-[0.035rem]">Your guide to understanding Fair Source and how to make the most of it.</p>
+      <p class="text-[1.75rem] font-[500] leading-[130%] tracking-[0.035rem]">Read on to understand Fair Source and what it has to offer companies and developers.</p>
     </div>
     <div class="relative lg:w-[65%]">
       <Image src={heroImage} alt="hero image" densities={[1.5, 2]} class="absolute lg:right-0 lg:bottom-[-3rem] lg:left-[75%] bg-cover"/>
@@ -28,175 +28,268 @@ const seoMetaData = {
   <main>
     <Section backgroundStyling="py-[3rem] px-[3rem]">
       <div class="w-full">
-        <Collapse 
-          title="What is Fair Source?" 
-          collapseID="collapse-1"
-        >
+        <Collapse title="What is Fair Source?" collapseID="collapse-1">
           <div class="relative flex flex-wrap">
             <div class="w-12/12 pb-[3.75rem]">
               <p>
-                Fair Source is software sharing that is safe and fair for companies 
-                and developers alike. The two basic features of Fair Source software 
-                licensing are:
+                Fair Source is software sharing that is safe for companies and
+                developers alike. The two basic features of Fair Source <a
+                  href="/licenses/">licensing</a
+                > are:
               </p>
             </div>
             <div class="w-full flex flex-wrap pb-[3rem]">
               <div class="w-12/12 lg:w-1/2 pb-[2rem] lg:pr-[0.75rem]">
-                <div class="border border-borderGray rounded-small p-[2rem] lg:h-[100%]">
-                  <img src="/images/icons/non-compete.svg" alt="non-compete icon]" class="mb-[2.25rem]" />
-                  <h3>Non-compete</h3>
+                <div
+                  class="border border-borderGray rounded-small p-[2rem] lg:h-[100%]"
+                >
+                  <img
+                    src="/images/icons/non-compete.svg"
+                    alt="non-compete icon]"
+                    class="mb-[2.25rem]"
+                  />
+                  <h3>Minimal Restrictions</h3>
                   <p>
-                    Developers are free to use the software internally without directly 
-                    competing with the company behind it.
+                    Developers can read, use, and modify Fair Source software
+                    with minimal restrictions that protect the producer's
+                    business model.
                   </p>
                 </div>
               </div>
-              <div class="w-12/12 lg:w-1/2 pb-[2rem] lg:pl-[0.75rem] ">
-                <div class="border border-borderGray rounded-small p-[2rem] lg:h-[100%]">
-                  <img src="/images/icons/eventual-open-source.svg" alt="eventual open-source icon" class=" mb-[2.25rem]" />
-                  <h3>Eventual Open Source</h3>
+              <div class="w-12/12 lg:w-1/2 pb-[2rem] lg:pl-[0.75rem]">
+                <div
+                  class="border border-borderGray rounded-small p-[2rem] lg:h-[100%]"
+                >
+                  <img
+                    src="/images/icons/eventual-open-source.svg"
+                    alt="eventual open-source icon"
+                    class="mb-[2.25rem]"
+                  />
+                  <h3>Delayed Open Source</h3>
                   <p>
-                    Fair Source software automatically becomes Open Source software, 
-                    usually after two years.
+                    Fair Source software automatically becomes Open Source
+                    software, usually after two years.
                   </p>
                 </div>
+              </div>
+              <div>
+                <p>Read more <a href="/about/">about Fair Source</a>.</p>
               </div>
             </div>
           </div>
         </Collapse>
-        <Collapse 
-          title="How does Fair Source relate to Open Source?" 
+        <Collapse
+          title="How does Fair Source relate to Open Source?"
           collapseID="collapse-2"
         >
           <div class="relative flex flex-wrap pb-[3rem]">
-            <p>Fair Source and <a href="" class="empahsized" target="_BLANK">Open Source</a> are complementary approaches suited to different cases:</p>
+            <p>
+              Fair Source provides as many of the benefits of <a
+                href="https://opensource.org/"
+                class="empahsized"
+                target="_BLANK">Open Source</a
+              > to developers as companies are comfortable giving, while reserving
+              and asserting a minimal set of exclusive rights to help achieve a sustainable
+              business model. Consequently, Fair Source and are complementary approaches
+              suited to different cases:
+            </p>
             <div class="w-full flex flex-wrap py-[3rem] items-stretch">
               <div class="w-12/12 lg:w-1/2 pb-[2rem] lg:pr-[0.75rem]">
-                <div class="border border-borderGray rounded-small p-[2rem] flex flex-wrap items-center lg:h-[100%]">
+                <div
+                  class="border border-borderGray rounded-small p-[2rem] flex flex-wrap items-center lg:h-[100%]"
+                >
                   <div class="w-12/12 pb-[1rem] lg:pb-0 lg:w-1/6">
-                    <img src="/images/icons/open-source.svg" alt="open source"/>
+                    <img
+                      src="/images/icons/fair-source.svg"
+                      alt="fair source"
+                    />
                   </div>
                   <div class="lg:pl-[1.5rem] w-12/12 lg:w-5/6">
-                    <h3>Open Source works best for shared infrastructure</h3>
+                    <h3>
+                      Fair Source works best for a company’s core software
+                      products.
+                    </h3>
                   </div>
                 </div>
               </div>
               <div class="w-12/12 lg:w-1/2 pb-[2rem] lg:pl-[0.75rem]">
-                <div class="border border-borderGray rounded-small p-[2rem] flex flex-wrap items-center lg:h-[100%]">
+                <div
+                  class="border border-borderGray rounded-small p-[2rem] flex flex-wrap items-center lg:h-[100%]"
+                >
                   <div class="w-12/12 pb-[1rem] lg:pb-0 lg:w-1/6">
-                    <img src="/images/icons/fair-source.svg" alt="fair source" />
+                    <img
+                      src="/images/icons/open-source.svg"
+                      alt="open source"
+                    />
                   </div>
                   <div class="lg:pl-[1.5rem] w-12/12 lg:w-5/6">
-                    <h3>Fair Source works best for a software company’s core products.</h3>
+                    <h3>
+                      Open Source is best for infrastructure shared across
+                      companies.
+                    </h3>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w-full flex flex-wrap items-center lg:items-start">
-              <div class="w-12/12 lg:w-1/2 lg:pr-[8%] ">
-                <p>
-                  Fair Source partially fulfills the purposes of the Open Source to “persuade organizations and software authors to
-                  distribute source software freely they otherwise would not distribute.” Fair Source provides as many of the benefits of
-                  Open Source to developers as companies are comfortable giving, while reserving and asserting a minimal set of exclusive
-                  rights to help achieve a sustainable business model. For a deep dive on the relationship between Fair Source
-                  and Open Source, read
-                </p>
-              </div>
-              <div class="w-12/12 lg:w-1/2 mx-auto mt-[2rem] lg:mt-0">
-                <img class="w-full" src="/images/background-images/texture.svg" alt="fair source and open source" />
-              </div>
-              
-            </div>
-
+            <p>
+              Read about the <a
+                href="https://openpath.chadwhitacre.com/2024/the-historical-case-for-fair-source/"
+                class="emphasized external">historical background</a
+              > of Fair Source and Open Source.
+            </p>
           </div>
         </Collapse>
-        <Collapse 
-          title="Why should I adopt Fair Source at my company?" 
+        <Collapse
+          title="Why should I adopt Fair Source at my company?"
           collapseID="collapse-3"
         >
           <div class="relative flex flex-wrap pb-[3rem]">
-            <p>Fair Source provides many of the same benefits for companies as Open Source, by helping to foster an engaged developer community around your software products.
-            In “The Single-Vendor Commercial Open Source Business Model, Professor Dirk Riehle of the University of Erlangen has identified the following benefits of such a community, by business function:</p>
+            <p>
+              Fair Source provides many of the same benefits for companies as
+              Open Source, by helping to foster an engaged developer community
+              around your software products. In <a
+                class="emphasized external"
+                href="https://dirkriehle.com/publications/2009-selected/the-commercial-open-source-business-model/#section4"
+                >The Single-Vendor Commercial Open Source Business Model</a
+              >, Professor Dirk Riehle of the University of Erlangen identifies
+              the following benefits of such a community, by business function:
+            </p>
           </div>
           <div class="w-full flex flex-wrap items-stretch pb-[3rem]">
-            <div class="w-12/12 pb-[1.5rem] lg:w-6/12 xl:w-4/12 lg:pr-[0.875rem]">
-              <div class="border border-borderGray rounded-small p-[2rem] flex flex-wrap items-center h-[100%]">
+            <div
+              class="w-12/12 pb-[1.5rem] lg:w-6/12 xl:w-4/12 lg:pr-[0.875rem]"
+            >
+              <div
+                class="border border-borderGray rounded-small p-[2rem] flex flex-wrap items-center h-[100%]"
+              >
                 <div class="w-12/12">
-                  <img class="pb-2" src="/images/icons/faq-sales.svg" alt="sales"/>
+                  <img
+                    class="pb-2"
+                    src="/images/icons/faq-sales.svg"
+                    alt="sales"
+                  />
                   <h3 class="pb-2">Sales</h3>
                   <p>More and easier sales due to customer-side champions.</p>
                 </div>
               </div>
             </div>
-            <div class="w-12/12 pb-[1.5rem] lg:w-6/12 xl:w-4/12 lg:pl-[0.875rem] xl:px-[0.875rem]">
-              <div class="border border-borderGray rounded-small p-[2rem] flex flex-wrap items-center h-[100%]">
+            <div
+              class="w-12/12 pb-[1.5rem] lg:w-6/12 xl:w-4/12 lg:pl-[0.875rem] xl:px-[0.875rem]"
+            >
+              <div
+                class="border border-borderGray rounded-small p-[2rem] flex flex-wrap items-center h-[100%]"
+              >
                 <div class="w-12/12">
-                  <img class="pb-2" src="/images/icons/faq-marketing.svg" alt="marketing" />
+                  <img
+                    class="pb-2"
+                    src="/images/icons/faq-marketing.svg"
+                    alt="marketing"
+                  />
                   <h3 class="pb-2">Marketing</h3>
-                  <p>Effective and cheaper marketing through engaged community.</p>
+                  <p>
+                    Effective and cheaper marketing through engaged community.
+                  </p>
                 </div>
               </div>
             </div>
-            <div class="w-12/12 pb-[1.5rem] lg:w-6/12 xl:w-4/12 lg:pr-[0.875rem] xl:pl-[0.875rem] xl:pr-0">
-              <div class="border border-borderGray rounded-small p-[2rem] flex flex-wrap items-center h-[100%]">
+            <div
+              class="w-12/12 pb-[1.5rem] lg:w-6/12 xl:w-4/12 lg:pr-[0.875rem] xl:pl-[0.875rem] xl:pr-0"
+            >
+              <div
+                class="border border-borderGray rounded-small p-[2rem] flex flex-wrap items-center h-[100%]"
+              >
                 <div class="w-12/12">
-                  <img class="pb-2" src="/images/icons/faq-pm.svg" alt="product management" />
+                  <img
+                    class="pb-2"
+                    src="/images/icons/faq-pm.svg"
+                    alt="product management"
+                  />
                   <h3 class="pb-2">Product Management</h3>
-                  <p>Superior product thanks to broad and deep user innovation.</p>
+                  <p>
+                    Superior product thanks to broad and deep user innovation.
+                  </p>
                 </div>
               </div>
             </div>
-            <div class="w-12/12 pb-[1.5rem] lg:w-6/12 xl:w-4/12 lg:pl-[0.875rem] xl:pr-[0.875rem] xl:pl-0">
-              <div class="border border-borderGray rounded-small p-[2rem] flex flex-wrap items-center h-[100%]">
+            <div
+              class="w-12/12 pb-[1.5rem] lg:w-6/12 xl:w-4/12 lg:pl-[0.875rem] xl:pr-[0.875rem] xl:pl-0"
+            >
+              <div
+                class="border border-borderGray rounded-small p-[2rem] flex flex-wrap items-center h-[100%]"
+              >
                 <div class="w-12/12">
-                  <img class="pb-2" src="/images/icons/faq-engineering.svg" alt="engineering" />
+                  <img
+                    class="pb-2"
+                    src="/images/icons/faq-engineering.svg"
+                    alt="engineering"
+                  />
                   <h3 class="pb-2">Engineering</h3>
                   <p>Faster development with immediate community feedback.</p>
                 </div>
               </div>
             </div>
-            <div class="w-12/12 pb-[1.5rem] lg:w-6/12 xl:w-4/12 lg:pr-[0.875rem] xl:px-[0.875rem]">
-              <div class="border border-borderGray rounded-small p-[2rem] flex flex-wrap items-center h-[100%]">
+            <div
+              class="w-12/12 pb-[1.5rem] lg:w-6/12 xl:w-4/12 lg:pr-[0.875rem] xl:px-[0.875rem]"
+            >
+              <div
+                class="border border-borderGray rounded-small p-[2rem] flex flex-wrap items-center h-[100%]"
+              >
                 <div class="w-12/12">
-                  <img class="pb-2" src="/images/icons/faq-support.svg" alt="support" />
+                  <img
+                    class="pb-2"
+                    src="/images/icons/faq-support.svg"
+                    alt="support"
+                  />
                   <h3 class="pb-2">Support</h3>
-                  <p>Lower support costs thanks to self-supporting user community.</p>
+                  <p>
+                    Lower support costs thanks to self-supporting user
+                    community.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </Collapse>
-        <Collapse 
-          title="How do I adopt Fair Source?" 
-          collapseID="collapse-4"
-        >
+        <Collapse title="How do I adopt Fair Source?" collapseID="collapse-4">
           <div class="relative flex flex-wrap pb-[3rem]">
-            <p>The basic steps to adopt Fair Source are to plan for community engagement, to audit and publish your source code, and to announce that you are now Fair Source. For more details read our guide, The Single-Vendor Commercial Open Source Business Model.</p>
+            <p>
+              The basic steps to adopting Fair Source are to plan for community
+              engagement, apply a license, audit and publish your source code,
+              and announce that you are now Fair Source. For more details read
+              our
+              <a href="/join">guide to joining Fair Source</a>.
+            </p>
           </div>
         </Collapse>
-        <Collapse 
-          title="How does Fair Source benefit developers?" 
+        <Collapse
+          title="How does Fair Source benefit developers?"
           collapseID="collapse-5"
         >
           <div class="relative flex flex-wrap pb-[3rem]">
             <p class="text-[1.5rem] tracking-[-0.0375rem] mb-[2rem]">
-              Fair Source provides developers with many of the benefits of Free and Open Source Software (FOSS).
-            </p>
-            <p class="mb-[2rem]">
-              In terms of the four software freedoms, Fair Source provides the freedom to read, run for almost all purposes, modify, and contribute back to the production of the software.
-            </p>
-            <p class="mb-[2rem]">
-              Additionally, Fair Source ensures (unlike Open Source) that the software is supported by a sustainable business model so that it can be continually maintained and improved. In the event that a Fair Source product is abandoned or developed in an unsatisfactory direction, new developers can fork a previous version.
+              With minimal restrictions to protect the producer's business
+              model, developers can read, use, modify, and redistribute Fair
+              Source Software. Developers can propose modifications back to the
+              producer if they wish, or simply benefit from the company's
+              continual investment in maintenance and improvement. In the event
+              a Fair Source product is abandoned or developed in an
+              unsatisfactory direction, developers can fork a previous version.
             </p>
           </div>
         </Collapse>
-        <Collapse 
-          title="Is Fair Source software safe to use?" 
+        <Collapse
+          title="Is Fair Source software safe to use?"
           collapseID="collapse-6"
           isLast
         >
           <div class="relative flex flex-wrap pb-[3rem]">
-            <p>Yes. The license terms of the most common Fair Source</p>
+            <p>
+              Yes. Fair Source <a href="/licenses/">licenses</a> are written
+              such that it is difficult to violate them. If Fair Source
+              Software includes feature restrictions based on certain criteria,
+              the burden is on the software to monitor and enforce the
+              criteria, not the user of the software.
+            </p>
           </div>
         </Collapse>
       </div>

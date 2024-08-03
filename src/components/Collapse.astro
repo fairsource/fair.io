@@ -31,9 +31,7 @@ const { title, collapseID, isLast = false } = Astro.props;
 
 <script>
   function accordionSetup() {
-    const accordionMenus = document.querySelectorAll(
-      ".accordion",
-    );
+    const accordionMenus = document.querySelectorAll(".accordion");
     accordionMenus.forEach((accordionMenu) => {
       const accordionButton = accordionMenu.querySelector(".accordion__button");
       const accordionContent = accordionMenu.querySelector(".accordion__content");
@@ -74,11 +72,25 @@ const { title, collapseID, isLast = false } = Astro.props;
         });
       }
     });
-  }
+  };
+
+  function resizeHandling() {
+    const accordionMenus = document.querySelectorAll(".accordion");
+    accordionMenus.forEach((accordionMenu) => {
+      if (accordionMenu.classList.contains("active")) {
+        const accordionContent = accordionMenu.querySelector(".accordion__content");
+        accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+      }
+    });
+  };
 
   // runs on initial page load
   accordionSetup();
 
   // runs on view transitions navigation
   document.addEventListener("astro:after-swap", accordionSetup);
+
+  // runs on resize
+  window.onresize = resizeHandling;
+  
 </script>

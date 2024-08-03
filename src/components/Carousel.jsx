@@ -40,6 +40,12 @@ const Carousel = ({companies}) => {
     if (carousel !== null && carousel.current !== null) {
       carousel.current.scrollLeft = movement * currentIndex;
     }
+    const carouselWrapper = document.querySelectorAll('.carousel-wrapper')[0];
+    if (currentIndex > 0) {
+      carouselWrapper.classList.add('carousel-wrapper-left');
+    } else {
+      carouselWrapper.classList.remove('carousel-wrapper-left');
+    }
   }, [currentIndex]);
 
   useEffect(() => {
@@ -84,7 +90,7 @@ const Carousel = ({companies}) => {
           </a>
         </div>
       </div>
-      <div className="relative container-spill xl:pl-[3rem]">
+      <div className="relative container-spill xl:pl-[3rem] carousel-wrapper carousel-wrapper-right">
         <div
           ref={carousel}
           className="carousel-container no-scrollbar overflow-auto touch-pan-x relative flex gap-[1rem] scroll-smooth snap-x snap-mandatory z-0"

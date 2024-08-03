@@ -11,7 +11,7 @@ import IsFalse from '/images/grid/false.svg?raw';
 
 
 const seoMetaData = {
-  description: 'We have vetted and approved the following licenses and approaches as fitting our Fair Source Values. While other licenses and approaches may also fit our values, these are the ones we recommend for adoption.',
+  description: 'The following licenses fit the Fair Source Definition.',
   slug: 'licenses/'
 };
 
@@ -41,7 +41,8 @@ const gridHeaderText = 'block text-[0.75rem] font-[600] leading-[120%] tracking-
   <Section sectionStyles="px-[1.5rem] xl:px-[3.5rem] py-[2.75rem] xl:py-[5.5rem]">
     <div class="w-12/12 relative flex flex-wrap justify-start pb-[3rem] xl:pb-[6.25rem]">
       <div class="w-12/12 xl:w-9/12">
-        <h3 class="text-[2.5rem] font-[500] leading-[125%] tracking-[-0.05rem]">We have vetted and approved the following licenses and approaches as fitting our Fair Source Values. While other licenses and approaches may also fit our values, these are the ones we recommend for adoption.</h3>
+        <h3 class="text-[2.5rem] font-[500] leading-[125%] tracking-[-0.05rem]">The following licenses fit the <a href="/about/">Fair Source Definition</a>.</h3>
+        <p class="pt-[1.5rem]">Other licenses and approaches may also align with our goals and values. These are the ones we recommend for adoption.</p>
       </div>
     </div>
     <div class="w-12/12 relative flex flex-wrap pb-[3rem] xl:pb-[5.59rem]">
@@ -76,7 +77,7 @@ const gridHeaderText = 'block text-[0.75rem] font-[600] leading-[120%] tracking-
           <h4 class={cardTitleClasses}><span class="mr-[0.69rem] font-[600]">Fair Core Licence (FCL)</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
             <path d="M1 2H13M13 2V14M13 2L1 14" stroke="black" stroke-width="2.3"/></span>
             </svg></h4>
-          <p>A simple non-compete license with two-year delayed conversion to Open Source. Recommended for monetizing self-hosted software.</p>
+          <p>A simple non-compete license with two-year delayed conversion to Open Source. Consider it for monetizing self-hosted software.</p>
         </div>
       </div>
       <div class="w-12/12 xl:w-6/12 mb-[1.25rem] xl:pl-[0.72rem]">
@@ -87,117 +88,11 @@ const gridHeaderText = 'block text-[0.75rem] font-[600] leading-[120%] tracking-
           <p>A complex non-compete license with eventual Open Source conversion after a certain amount of time, usually four years.</p>
         </div>
       </div>
-      <div class="w-12/12 xl:w-6/12 mb-[1.25rem] xl:pr-[0.72rem]">
-        <div class={card}>
-          <h4 class={cardTitleClasses}><span class="mr-[0.69rem] font-[600]">Server Side Public License (SSPL)</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-            <path d="M1 2H13M13 2V14M13 2L1 14" stroke="black" stroke-width="2.3"/></span>
-            </svg></h4>
-          <p>A complex license derived from the GNU General Public License (GPL), designed to extend the share-alike principle to its maximum extent.</p>
-        </div>
-      </div>
-      <div class="w-12/12 xl:w-6/12 mb-[1.25rem] xl:pl-[0.72rem]">
-        <div class={card}>
-          <h4 class={cardTitleClasses}><span class="mr-[0.69rem] font-[600]">Elastic License (EL)</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-            <path d="M1 2H13M13 2V14M13 2L1 14" stroke="black" stroke-width="2.3"/></span>
-            </svg></h4>
-          <p>A simple non-compete license allowing feature restriction through license keys, suitable for various monetization models.</p>
-        </div>
+      <div class="w-12/12 pt-[3rem]">
+        <p>Have another license we should consider? <a
+          href="https://github.com/fairsource/fair.io">See the README</a>.</p>
       </div>
     </div>
-    <div>
-      <h3 class="tag text-tangerine">Approaches</h3>
-      <p class="pb-[1.5rem] text-[0.9375rem] font-[500] leading-[135%] tracking-[-0.01406rem] xl:text-[1.375rem] xl:tracking-[-0.03438rem] xl:pb-[3rem] ">We differentiate Fair Source licensing approaches based on two factors. First, does the producer utilize eventual Open Source? Second, does the producer limit the features of its Fair Source product relative to other editions of the software? Limiting features is called “Fair Core,” because the core functionality is available under a Fair Source license, while an extended feature set is not. This amounts to whether the company’s business model includes monetizing self-hosted usage.</p>
-      <div class="w-full pb-[1.5rem]">
-        <div class={gridRow}>
-          <div class="w-2/12 h-[100%] flex items-center">
-            <span class={gridHeaderText}>Tier</span>
-          </div>
-          <div class="w-3/12 h-[100%] flex items-center">
-            <span class={gridHeaderText}>Eventual OSS</span>
-          </div>
-          <div class="w-3/12 h-[100%] flex items-center">
-            <span class={gridHeaderText}>Feature Complete</span>
-          </div>
-          <div class="w-3/12 h-[100%] flex items-center">
-            <span class={gridHeaderText}>Examples</span>
-          </div>
-        </div>
-        <div class={gridRow}>
-          <div class="w-2/12 h-[100%] flex items-center">
-            <span class={gridText}>1</span>
-          </div>
-          <div class="w-3/12 h-[100%] flex items-center">
-            <div class={glyphWrapper}>
-              <Fragment set:html={IsTrue} class="w-[100%] h-auto" />
-            </div>
-          </div>
-          <div class="w-3/12 h-[100%] flex items-center">
-            <div class={glyphWrapper}>
-              <Fragment set:html={IsTrue} />
-            </div>
-          </div>
-          <div class="w-3/12 h-[100%] flex items-center">
-            <span class={gridText}>FSL, BUSL<sup>†</sup></span>
-          </div>
-        </div>
-        <div class={`${gridRow} bg-backgroundGray rounded-xs`}>
-          <div class="w-2/12 h-[100%] flex items-center">
-            <span class={gridText}>2</span>
-          </div>
-          <div class="w-3/12 h-[100%] flex items-center">
-            <div class={glyphWrapper}>
-              <Fragment set:html={IsTrue} />
-            </div>
-          </div>
-          <div class="w-3/12 h-[100%] flex items-center">
-            <div class={glyphWrapper}>
-              <Fragment set:html={IsFalse} />
-            </div>
-          </div>
-          <div class="w-3/12 h-[100%] flex items-center">
-            <span class={gridText}>FCL</span>
-          </div>
-        </div>
-        <div class={gridRow}>
-          <div class="w-2/12 h-[100%] flex items-center">
-            <span class={gridText}>3</span>
-          </div>
-          <div class="w-3/12 h-[100%] flex items-center">
-            <div class={glyphWrapper}>
-              <Fragment set:html={IsFalse} />
-            </div>
-          </div>
-          <div class="w-3/12 h-[100%] flex items-center">
-            <div class={glyphWrapper}>
-              <Fragment set:html={IsTrue} />
-            </div>
-          </div>
-          <div class="w-3/12 h-[100%] flex items-center">
-            <span class={gridText}>SSPL, ELv2<sup>†</sup>, BUSL<sup>†</sup></span>
-          </div>
-        </div>
-        <div class={`${gridRow} bg-backgroundGray rounded-xs`}>
-          <div class="w-2/12 h-[100%] flex items-center">
-            <span class={gridText}>4</span>
-          </div>
-          <div class="w-3/12 h-[100%] flex items-center">
-            <div class={glyphWrapper}>
-              <Fragment set:html={IsFalse} />
-            </div>
-          </div>
-          <div class="w-3/12 h-[100%] flex items-center">
-            <div class={glyphWrapper}>
-              <Fragment set:html={IsFalse} />
-            </div>
-          </div>
-          <div class="w-3/12 h-[100%] flex items-center">
-            <span class={gridText}>ELv2<sup>†</sup>, BUSL<sup>†</sup></span>
-          </div>
-        </div>
-      </div>
-      <p class='text-gray text-[0.75rem] tracking-[-0.01875rem] xl:text-[1.375rem] font-[500] leading-[120%] xl:tracking-[-0.03438rem]'><sup>†</sup> Depends on implementation</p>
-    </div>
-
 
   </Section>
 </main>

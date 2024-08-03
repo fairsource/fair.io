@@ -7,6 +7,10 @@ import auditForSecretsImage from '../assets/adopt/auditforsecrets.png';
 import publishYourRepoImage from '../assets/adopt/publishyourrepo.png';
 import adoptHeroImage from '../assets/adopt/adoptHeroImage.png';
 
+const mobileSectionCommonClasses = 'z-0 pb-0 pt-[12.31rem] sm:pt-[9.12rem] sm:pb-[1.56rem] sm:px-[3rem] md:pt-[6.69rem] md:pb-[7.44rem]';
+const mobileSectionBackgroundImageClasses = 'h-[12.31rem] top-0 left-0 sm:bottom-0 sm:h-auto md:top-[1rem] md:bottom-[1rem]';
+const mobileSectionContentClasses = 'z-10 pt-[1.5rem] pb-[1rem] relative w-12/12 px-[1rem] bg-white sm:border sm:border-borderGray sm:rounded-small sm:p-[2rem] lg:border-0';
+
 const seoMetaData = {
   description: `Here's how to adopt Fair Source for your project.`,
   slug: 'join/'
@@ -107,14 +111,14 @@ const seoMetaData = {
       </div>
     </Section>
     <Section
-      sectionStyles="pb-0 pt-[12.31rem] px-[0.5rem] sm:pt-[9.12rem] sm:pb-[1.56rem] sm:px-[3rem] md:pt-[6.69rem] md:pb-[7.44rem] lg:py-0 lg:px-0 justify-end xl:p-0 xl:items-end"
-      backgroundStyling="bg-[url('/images/background-images/auditForSecrets.svg')] bg-cover bg-no-repeat bg-bottom w-[100%] h-[12.31rem] top-0 left-0 right-0 sm:bottom-0 sm:h-auto sm:bg-top md:top-[1rem] md:bottom-[1rem] md:bg-[size:90%] md:bg-top lg:top-0 lg:bottom-0 lg:right-0 lg:left-auto lg:w-[40%] xl:w-[50%] xl:bg-top-right xl:top-0 xl:right-[3.125rem] xl:left-auto xl:bottom-0 xl:w-[42%]">
+      sectionStyles={`${mobileSectionCommonClasses} lg:py-0 lg:px-0 justify-end xl:p-0 xl:items-end`}
+      backgroundStyling={`${mobileSectionBackgroundImageClasses} w-[100%] bg-[url('/images/background-images/auditForSecrets.svg')] bg-cover bg-bottom sm:bg-top lg:top-0 lg:bottom-0 lg:right-0 lg:left-auto lg:w-[40%] xl:w-[50%] xl:bg-top-right xl:top-0 xl:right-[3.125rem] xl:left-auto xl:bottom-0 xl:w-[42%]`}>
       <div class="w-12/12 relative mr-[-0.5rem] lg:h-[25.7195rem] lg:w-5/12 lg:order-12 overflow-clip lg:overflow-visible">
         <div class="hidden lg:flex relative  w-auto lg:h-[28.36405rem] lg:mt-[4.5rem] lg:mt-[1rem] lg:ml-[3rem] lg:w-[90%] xl:w-[100%] xl:h-[35.3125rem] 2xl:w-[100%] 2xl:ml-[6.65rem] 2xl:mt-0">
           <Image src={auditForSecretsImage} alt="Audit For Secrets" densities={[1.5, 2]} class="relative w-[100%] h-auto" />
         </div>
       </div>
-      <div class="relative w-12/12 px-[1rem] bg-white sm:border sm:border-borderGray sm:rounded-small sm:p-[2rem] lg:border-0 lg:h-full lg:w-7/12 xl:w-6/12 pt-[1.5rem] pb-[1rem] lg:py-[3rem] xl:pt-[4rem] xl:pb-[7rem]">
+      <div class={`${mobileSectionContentClasses} lg:h-full lg:w-7/12 xl:w-6/12 lg:py-[3rem] xl:pt-[4rem] xl:pb-[7rem]`}>
         <span class="tag text-rust">3. Audit for Secrets</span>
         <h2>
           Before you publish your code, make sure you don’t have any secrets in your 
@@ -126,13 +130,13 @@ const seoMetaData = {
       </div>
     </Section>
     <Section
-      sectionStyles="px-[1.5rem] items-stretch xl:pr-[3.5rem] xl:pl-0"
-      backgroundStyling="bg-[url('/images/background-images/publishYourRepo-top.svg')] bg-contain bg-no-repeat bg-right w-full top-0 right-0 xl:right-[4.75rem] min-h-[13rem] z-0"
-      backgroundBottomStyling="bg-[url('/images/background-images/publishYourRepo-bottom.svg')] bg-contain bg-no-repeat bg-center w-1/2 bottom-[30%] left-0 h-full z-0 xl:min-h-[20rem] xl:bg-left xl:bottom-0">
-      <div class="flex items-center mb-[2rem] w-12/12 z-10 xl:w-5/12">
+      sectionStyles={`${mobileSectionCommonClasses} items-stretch xl:pr-[3.5rem] xl:pl-0`}
+      backgroundStyling="hidden lg:bg-[url('/images/background-images/publishYourRepo-top.svg')] bg-contain bg-no-repeat bg-right w-full top-0 right-0 xl:right-[4.75rem] min-h-[13rem] z-0"
+      backgroundBottomStyling={`${mobileSectionBackgroundImageClasses} bg-[url('/images/background-images/publishYourRepo-bottom.svg')] bg-contain bg-no-repeat bg-center w-1/2 bottom-[30%] left-0 h-full z-0 xl:min-h-[20rem] xl:bg-left xl:bottom-0`}>
+      <div class="hidden lg:flex items-center mb-[2rem] w-12/12 z-10 lg:w-5/12">
         <Image src={publishYourRepoImage} alt="Publish Your Repo" densities={[1.5, 2]} class="relative xl:min-w-[30rem]" />
       </div>
-      <div class="w-12/12 xl:w-7/12 xl:py-[13.81rem]">
+      <div class={`${mobileSectionContentClasses} w-12/12 lg:w-7/12 xl:py-[13.81rem]`}>
         <span class="tag text-teal">4. Publish Your Repo</span>
         <h2>This is the fun part. Click the button to make it public and celebrate the moment.</h2>
       </div>

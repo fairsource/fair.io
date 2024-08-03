@@ -52,7 +52,6 @@ const Carousel = ({companies}) => {
     maxScrollWidth.current = carousel.current
       ? carousel.current.scrollWidth - movement
       : 0;
-    console.log(window.outerWidth)
   }, []);
 
   return (

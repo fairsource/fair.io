@@ -165,12 +165,23 @@ const canonicalURL = `https://fair.io/${seoSlug}`;
   }
   h2 {
     font-family: 'Outfit', Arial, Helvetica, sans-serif;
-    font-size: 2.5rem;
     font-style: normal;
     font-weight: 500;
     line-height: 125%; /* 3.125rem */
     letter-spacing: -0.0575rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+    @media (min-width: 640px) {
+      font-size: 2rem;
+    }
+    @media (min-width: 1024px) {
+      font-size: 2.375rem;
+      margin-bottom: 0.75rem;
+    }
+    @media (min-width: 1440px) {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
   }
   h3 {
     font-family: 'Outfit', Arial, Helvetica, sans-serif;
@@ -203,21 +214,20 @@ const canonicalURL = `https://fair.io/${seoSlug}`;
   p {
     font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
     color: #191919;
-    font-family: "Plus Jakarta Sans";
-    font-size: 1.375rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 145%; /* 1.85625rem */
+    font-size: 1rem;
+    line-height: 145%; 
     letter-spacing: -0.03438rem;
-  }
-  p.small {
-    font-family: "Plus Jakarta Sans";
-    color: #191919;
-    font-size: 1.25rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 130%; /* 1.625rem */
-    letter-spacing: -0.03125rem;
+    @media (min-width: 640px) {
+      font-size: 1.125rem;
+    }
+    @media (min-width: 1024px) {
+      font-size: 1.3125rem;
+    }
+    @media (min-width: 1440px) {
+      font-size: 1.375rem;
+    }
   }
   p.hero {
     font-size: 1.75rem;
@@ -229,11 +239,23 @@ const canonicalURL = `https://fair.io/${seoSlug}`;
   .tag {
     display: block;
     font-family: 'Outfit', Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
     font-style: normal;
     font-weight: 500;
     line-height: 125%;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+    @media (min-width: 640px) {
+      font-size: 1.1875rem;
+    }
+    @media (min-width: 1024px) {
+      font-size: 1.4375rem;
+      margin-bottom: 0.75rem;
+    }
+    @media (min-width: 1440px) {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
   }
   main a{
     font-weight: 600;
@@ -280,6 +302,15 @@ const canonicalURL = `https://fair.io/${seoSlug}`;
   }
   .text-balance {
     white-space: balance;
+  }
+  .section-body-spacing{
+    margin-bottom: 1.5rem;
+    @media (min-width: 1024px) {
+      margin-bottom: 1.125rem;
+    }
+    @media (min-width: 1440px) {
+      margin-bottom: 1.5rem;
+    }
   }
   .carousel-wrapper-right::after {
 	  z-index: 1;

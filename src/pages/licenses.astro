@@ -13,25 +13,22 @@ const seoMetaData = {
   slug: 'licenses/'
 };
 
-const glyphWrapper = 'relative w-[24px] h-[24px] xl:w-[40px] xl:h-[40px]';
-const gridText = 'text-[0.75rem] text-left font-[600] leading-[135%] tracking-[-0.01125rem] xl:text-[1.375rem] font-[500] xl:leading-[120%] xl:tracking-[-0.03438rem]';
-const gridRow = 'flex flex-wrap w-12/12 pl-[1rem] pr-[0.5rem] xl:px-[2rem] items-center h-[4rem]';
 const card = 'border border-borderGray rounded-small px-[1rem] py-[1.5rem] xl:px-[2rem] xl:py-[3rem] h-[100%]';
 const cardTitleClasses = `font-sans text-[1.375rem] font-[500] color-black leading-[120%] tracking-[-0.03438rem] flex items-center mb-[0.62rem]`;
-const gridHeaderText = 'block text-[0.75rem] font-[600] leading-[120%] tracking-[-0.01125rem] xl:text-[1.375rem] xl:tracking-[-0.03438rem]';
 ---
+
 
 <Layout title="Fair Source Licenses" seo={seoMetaData}>
 <header>
-  <div class="relative container-spill md:pl-[1.5rem] lg:pl-[3rem]">
+  <div class="relative container-spill pl-[0.5rem] sm:pl-[1rem] md:pl-[1.5rem] lg:pl-[2rem] xl:pl-[1.5rem] 2xl:pl-[3.62rem] 3xl:pl-[6.62rem]">
+    <div class="block relative w-12/12 lg:absolute lg:right-0 lg:bottom-0 lg:top-0 xl:bottom-[-10rem] lg:w-7/12 ">
+      <Image src={HeroImage} alt="How to adopt fair source" densities={[1, 2, 3]}/>
+    </div>
     <div class="relative flex">
       <div class="w-12/12 py-[7rem] 2xl:pt-[15.96rem] 2xl:pb-[17.56rem] lg:w-4/12">
         <h1>Fair Source Licenses</h1>
       </div>
       <div class=""></div>
-    </div>
-    <div class="lg:absolute hidden lg:block right-0 bottom-0 top-0 xl:top-0 xl:bottom-[-10rem] w-7/12 ">
-      <Image src={HeroImage} alt="How to adopt fair source" densities={[1, 2, 3]}/>
     </div>
   </div>
 </header>

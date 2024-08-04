@@ -13,7 +13,6 @@ const seoMeta = {
   description: 'Whether you’re a developer looking to contribute or a business aiming to innovate, we the provide steps to successfully implement Fair Source in your projects. Join the community of ethical and innovative software sharing, balancing collaboration with control for everyone involved.',
 };
 
-
 ---
 
 <Layout title="Software Sharing for Modern Companies" seo={seoMeta}>
@@ -32,7 +31,7 @@ const seoMeta = {
         </div>
       </div>
     </div>
-    <div class="absolute w-0 lg:w-[47%] 3xl:w-[48%] top-0 right-0 3xl:top-[-1rem] 3xl:right-[-3rem] 2xl:right-[-1rem] xl:right-[-4rem] xl:top-[2rem] lg:right-[-3.5rem]">
+    <div class="absolute w-full lg:w-[47%] 3xl:w-[48%] top-0 right-0 3xl:top-[-1rem] 3xl:right-[-3rem] 2xl:right-[-1rem] xl:right-[-4rem] xl:top-[2rem] lg:right-[-3.5rem]">
       <Image src={heroImage} alt="hero image" densities={[1, 1.5, 2, 3, 4]} class="relative"/>
     </div>
   </header>
@@ -42,11 +41,41 @@ const seoMeta = {
         <Carousel companies={companies} client:load client:only="react" />
       </section>
     }
-    <Section sectionStyles="px-[1.5rem] lg:px-[3.5rem]" backgroundStyling="bg-[url('/images/background-images/embraceFairSource.svg')] w-full top-0 left-0 right-0 min-h-[20rem] bottom-[75%] md:bottom-[60%] md:left-[8%] md:bg-[right_-200%_bottom] md:bg-no-repeat lg:bottom-[55%] lg:bg-cover xl:bg-no-repeat xl:bg-auto xl:left-1/2 xl:w-1/2 xl:bottom-0 xl:right-0 xl:bg-[right_100%_bottom] 2xl:bottom-0 2xl:bg-[right_280%_bottom] 2xl:scale-[1.0125] 3xl:bg-[right_-140%_bottom]">
-      <div class="relative w-12/12 p-[25%] xl:p-[10%] xl:w-1/2 flex justify-center items-center xl:order-12 lg:p-[25%]">
-        <Image src={fairSourceImage} alt="Adopt Fair Source" densities={[1, 1.5, 2, 3, 4]} class="absolute xl:w-[75%] xl:top-[-4.5rem] xl:left-[7rem] 2xl:w-[65%] 2xl:top-[-3.5rem] 2xl:left-[9.5rem]" />
+    <Section
+      sectionStyles="px-[1.5rem] lg:px-[3.5rem] xl:justify-start"
+      backgroundStyling=`
+        bg-[url('/images/background-images/embraceFairSource.svg')] bg-cover bg-[right_100%_bottom]
+        w-full top-0 right-0 
+        left-[1.125rem] min-h-[20rem] bottom-[75%] scale-[1.1]
+        sm:h-[33.7rem] sm:relative sm:scale-[1.175] sm:left-[1.45rem]
+        md:h-[41.6rem] md:bottom-[60%] md:left-[2.125rem] md:bg-[right_-200%_bottom] md:bg-no-repeat
+        lg:bottom-[55%] lg:bg-cover 
+        xl:absolute xl:bg-no-repeat xl:bg-auto xl:left-1/2 xl:w-1/2 xl:bottom-0 xl:right-0 xl:bg-[right_100%_bottom] 
+        2xl:bottom-0 2xl:bg-[right_280%_bottom] 2xl:scale-[1.0125] 2xl:h-[39.6rem]
+        3xl:bg-[right_-140%_bottom]
+      `
+    >
+      <div
+        class=`
+          w-12/12 p-[50%] flex justify-center items-center
+          sm:p-[30%] sm:absolute 
+          md:p-[29%]
+          lg:p-[25%] xl:w-1/2 
+          xl:p-[10%] xl:order-1
+        `>
+          <Image
+            src={fairSourceImage} alt="Adopt Fair Source" densities={[1, 1.5, 2, 3, 4]}
+            class=`
+              absolute top-[3rem] left-[3rem] w-[70%] 
+              sm:w-[100%] sm:top-[-11.8rem] sm:left-[1rem]
+              md:top-[-7.55rem]
+              xl:w-[75%] xl:top-[-2.5rem] xl:left-[40rem] 
+              2xl:w-[65%] 2xl:top-[-3.5rem] 2xl:left-[45rem]
+              3xl:left-[49rem]
+            `
+          />
       </div>
-      <div class="relative w-12/12 xl:w-1/2 xl:order-1">
+      <div class="relative w-12/12 xl:w-1/2 xl:order-1 sm:pt-[2rem]">
         <div class="py-[3rem] md:py-[3rem] lg:py-[4rem] xl:py-[6rem] 2xl:py-[6.9rem]">
           <span class="text-teal tag">Embrace Fair Source</span>
           <h2>Learn how to adopt Fair Source at your company</h2>

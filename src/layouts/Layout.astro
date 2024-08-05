@@ -53,7 +53,7 @@ const { title, seo } = Astro.props;
 
 const seoTitle = `${title} | Fair.io`;
 const seoDescription = seo?.description ? seo.description : '';
-const seoMetaImage = seo?.metaImage ? seo.metaImage : 'https://new.fair.io/images/metaimage.png';
+const seoMetaImage = seo?.metaImage ? seo.metaImage : 'https://fair.io/images/metaimage.png';
 const seoSlug = seo?.slug ? seo.slug : '';
 
 const canonicalURL = `https://fair.io/${seoSlug}`;
@@ -78,7 +78,7 @@ const canonicalURL = `https://fair.io/${seoSlug}`;
     <meta name='twitter:description' content={seoDescription}/>
     <meta name="twitter:image" content={seoMetaImage}/>
     <link rel="canonical" href={canonicalURL}/>
-		<title>{title}</title>
+		<title>{seoTitle}</title>
     <script
       defer
       data-domain="fair.io"

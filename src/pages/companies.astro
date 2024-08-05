@@ -4,6 +4,8 @@ import Section from '../components/Section.astro';
 import companies from '../data/companies.json';
 import Button from '../components/Button.astro';
 import CarouselCard from '../components/CarouselCard';
+import GeoLeft from '/images/background-images/geo-left.svg?raw';
+import GeoRight from '/images/background-images/geo-right.svg?raw';
 
 const seoMetaData = {
   description: 'Read the announcements from companies that have adopted Fair Source.',
@@ -23,9 +25,15 @@ const seoMetaData = {
         <Button url="/join" type="primary" cta="Join Fair Source"></Button>
       </div>
     </div>
-    <div class="relative min-w-full overflow-visible z-0">
-      <div class="absolute bg-[url('/images/background-images/companiesHero-left.svg')] bg-contain bg-no-repeat bg-left-bottom min-h-[30rem] lg:min-h-[53.5rem] w-7/12 left-0 bottom-[-7rem] md:bottom-[-12rem] lg:bottom-[-27rem] xl:bottom-[-35rem]"></div>
-      <div class="absolute bg-[url('/images/background-images/companiesHero-right.svg')] bg-contain bg-no-repeat bg-right-bottom min-h-[30rem] lg:min-h-[53.5rem] w-5/12 right-0 bottom-[-3rem] md:bottom-[-5rem] lg:bottom-[-13rem] xl:bottom-[-20rem]"></div>
+    <div class="image z-0 w-auto hidden sm:block absolute top-[10rem] left-0 right-0 bottom-[5rem] sm:top-[14rem] md:top-[15rem] md:bottom-[-12rem] md:left-0 md:right-0 lg:top-[5rem] lg:top-[19rem] lg:left:-0 lg:right-0 xl:bottom-[-40rem] xl:left-0 xl:right-0 2xl:top-[19rem] 3xl:top-[18rem] 3xl:left-0 3xl:right-0 3xl:bottom-[-8rem]">
+      <div class="flex items-top justify-center w-[100%] relative mx-auto columns-2 md:gap-[4rem] z-0 xl:max-h-[30rem] 2xl:max-h-[40rem] 3xl:max-h-[60rem] overflow-clip">
+        <div class="w-6/12 pt-[2rem]">
+          <Fragment set:html={GeoLeft} />
+        </div>
+        <div class="w-6/12">
+          <Fragment set:html={GeoRight} />
+        </div>
+      </div>
     </div>
   </header>
   <main>

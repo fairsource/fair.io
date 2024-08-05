@@ -6,6 +6,7 @@ import { Image } from 'astro:assets';
 import auditForSecretsImage from '../assets/adopt/auditforsecrets.png';
 import publishYourRepoImage from '../assets/adopt/publishyourrepo.png';
 import adoptHeroImage from '../assets/adopt/adoptHeroImage.png';
+import adoptHeroImageDesktop from '../assets/adopt/adoptHeroImageDesktop.png';
 
 const mobileSectionCommonClasses = 'z-0 pb-0 pt-[12.31rem] sm:pt-[9.12rem] sm:pb-[1.56rem] sm:px-[3rem] md:pt-[6.69rem] md:pb-[7.44rem]';
 const mobileSectionBackgroundImageClasses = 'h-[12.31rem] top-0 left-0 sm:bottom-0 sm:h-auto md:top-[1rem] md:bottom-[1rem] md:left-[1rem] md:w-auto md:h-auto';
@@ -19,7 +20,10 @@ const seoMetaData = {
 ---
 <Layout title="Join Fair Source" seo={seoMetaData}>
   <header class="container relative mx-auto flex flex-wrap px-[0.5rem] sm:px-[1rem] md:px-[1.5rem] lg:px-[2rem] xl:px-[1.5rem] 2xl:px-[3.62rem] 3xl:px-[6.62rem] pb-[0.5rem] pb-[1rem]">
-    <div class="relative block lg:absolute lg:right-[2rem] lg:bottom-0 lg:top-0 lg:w-1/2 xl:right-[2rem] 2xl:right-[3.62rem] 3xl:right-[6.62rem]">
+    <div class="hidden relative lg:block lg:absolute lg:right-[2rem] lg:bottom-0 lg:top-0 lg:w-1/2 xl:right-[2rem] 2xl:right-[3.62rem] 3xl:right-[6.62rem]">
+      <Image src={adoptHeroImageDesktop} alt="How to adopt fair source" densities={[1, 2, 3]} class="w-[100%] h-auto"/>
+    </div>
+    <div class="block relative lg:hidden lg:absolute lg:right-[2rem] lg:bottom-0 lg:top-0 lg:w-1/2 xl:right-[2rem] 2xl:right-[3.62rem] 3xl:right-[6.62rem]">
       <Image src={adoptHeroImage} alt="How to adopt fair source" densities={[1, 2, 3]} class="w-[100%] h-auto"/>
     </div>
     <div class="w-12/12 py-[3rem] lg:w-5/12 lg:py-[8rem] xl:pb-[15.25rem] xl:pt-[12.38rem]">

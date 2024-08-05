@@ -41,6 +41,12 @@ const Carousel = ({companies}) => {
     if (carousel !== null && carousel.current !== null) {
       carousel.current.scrollLeft = movement * currentIndex;
     }
+    const carouselWrapper = document.querySelectorAll('.carousel-wrapper')[0];
+    if (currentIndex > 0) {
+      carouselWrapper.classList.add('carousel-wrapper-left');
+    } else {
+      carouselWrapper.classList.remove('carousel-wrapper-left');
+    }
   }, [currentIndex]);
 
   useEffect(() => {

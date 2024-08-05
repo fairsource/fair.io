@@ -28,7 +28,7 @@ const { links, socialLinks } = Astro.props;
       <ul class="flex gap-[0.38rem]">
         {
           socialLinks.map((link) => <li>
-            <a href={link.url} target={link.target} class="h-[30px] w-[30px]"><Image src={link.icon} alt={link.name} class="h-[30px] w-[30px]" /></a>
+            <a href={link.url} target={link.target} class="h-[30px] w-[30px]"><Image src={link.icon} alt={link.name} class="h-[30px] w-[30px]" densities={[1,2,3,4]} /></a>
           </li>
           )
         }

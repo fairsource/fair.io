@@ -2,8 +2,8 @@
 
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
-import iconX from '../assets/navigation/x.png'
-import iconGitHub from '../assets/navigation/github.png'
+import iconX from '../assets/navigation/twitter4x.png'
+import iconGitHub from '../assets/navigation/github4x.png'
 
 const links = [
   {
@@ -274,13 +274,36 @@ const canonicalURL = `https://fair.io/${seoSlug}`;
   a.emphasized:hover {
     opacity: 80%;
   }
-  a.emphasized.github.branded {
+
+  a.emphasized.branded {
     color: white;
-    background-color: #6E5494;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 0.25rem 1.1875rem 0.4375rem 0.75rem;
+    line-height: 1.7875rem;
+    margin: 0 0.25rem;
+    white-space: nowrap;
   }
-  a.emphasized.twitter.branded {
-    color: white;
+  a.emphasized.branded::before {
+    display: inline-block;
+    width: 1.625rem;
+    height: 1.625rem;
+    margin-right: 0.75rem;
+  }
+  a.emphasized.github {
+    background-color: #6E5494;
+    padding-left: 0.5rem;
+  }
+  a.emphasized.github::before {
+    content: url('/images/icons/gitHub-logo.svg');
+    transform: translateY(4px);
+  }
+  a.emphasized.twitter {
     background-color: #1E1E1E;
+  }
+  a.emphasized.twitter:before {
+    content: url('/images/icons/twitter-logo.svg');
+    transform: translateY(3px);
   }
   a.emphasized.external::after {
     content: url('/images/icons/external-link-icon.svg');
@@ -288,7 +311,12 @@ const canonicalURL = `https://fair.io/${seoSlug}`;
     width: 0.75rem;
     height: 0.75rem;
     margin-left: 1rem;
-    transform: scale(1.25) translateY(-5px);
+    transform: scale(1.25) translateY(-2px);
+  }
+  @media (min-width: 1024px) {
+    a.emphasized.external::after {
+      transform: scale(1.25) translateY(-4px);
+    }
   }
 
   /* Hide scrollbar for Chrome, Safari and Opera */

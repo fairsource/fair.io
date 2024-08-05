@@ -5,15 +5,19 @@ import close from '/images/icons/close.svg?raw';
 import hamburger from '/images/icons/hamburger.svg?raw';
 
 const { links, socialLinks } = Astro.props;
+
+const date = new Date();
+const year = date.getFullYear();
+
 ---
 
 <nav class="container mx-auto relative px-[0.5rem] sm:px-[1rem] md:px-[1.5rem] lg:px-[2rem] xl:px-[1.5rem] 2xl:px-[3.62rem] 3xl:px-[6.62rem] py-[2.5rem] flex justify-between items-center bg-transparent">
   <a class="text-3xl font-bold leading-none w-4/12 md:w-3/12 lg:w-2/12" href="/">
-    <Image src={logo} densities={[1, 1.5, 2, 3, 4]} alt="Fair Source Licnese" />
+    <Image src={logo} densities={[1, 1.5, 2, 3, 4]} alt="Fair Source Licneses" />
   </a>
   <div class="lg:hidden">
-    <button class="navbar-burger flex items-center w-[32px] h-[18px]">
-      <Fragment set:html={hamburger} />
+    <button class="relative navbar-burger flex items-center w-[32px] h-[18px]">
+      <Fragment set:html={hamburger} class="relative w-[100%] h-auto"/>
     </button>
   </div>
   <div class="hidden relative lg:flex items-center lg:justify-end">
@@ -27,7 +31,7 @@ const { links, socialLinks } = Astro.props;
     <ul class="flex gap-[0.38rem]">
       {
         socialLinks && socialLinks.map((link) => <li>
-          <a class="hidden lg:flex lg:ml-auto lg:ml-2 h-[30px] w-[30px]" href={link.url} target={link.target}><Image src={link.icon} alt={link.name}/></a>
+          <a class="hidden lg:flex lg:ml-auto lg:ml-2 h-[30px] w-[30px]" href={link.url} target={link.target}><Image src={link.icon} alt={link.name} densities={[1,2,3,4]} /></a>
         </li>)
       }
     </ul>
@@ -37,7 +41,7 @@ const { links, socialLinks } = Astro.props;
   <div class="navbar-backdrop fixed inset-0 bg-transparent"></div>
   <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-[2.5rem] px-[1rem] py-[1.5rem] bg-background border-r overflow-y-auto">
     <div class="flex items-center mb-[3rem]">
-      <a class="mr-auto text-3xl font-bold leading-none w-6/12" href="/">
+      <a class="mr-auto text-3xl font-bold leading-none w-6/12 pr-[1rem] md:pr-0 md:w-6/12" href="/">
         <Image src={logo} alt="Fair Source Licnese" densities={[1, 2, 3, 4]} />
       </a>
       <button class="navbar-close relative h-[24px] w-[24px]">
@@ -55,13 +59,14 @@ const { links, socialLinks } = Astro.props;
     </div>
     <div class="mt-auto">
       <div class="pt-6">
-        <ul class="flex items-center gap-5">
+        <ul class="flex items-center gap-3">
         {
-          socialLinks.map((link) => <li class="mb-1">
-            <a class="lg:mr-1 h-[30px] w-[30px]" href={link.url} target={link.target}><Image src={link.icon} alt={link.name}/></a>
+          socialLinks.map((link) => <li class="mb-[1rem]">
+            <a class="relative " href={link.url} target={link.target}><div class="relative h-[30px] w-[30px]"><Image src={link.icon} alt={link.name} densities={[1,2,3,4]} class="relative w-100 h-auto" /></div></a>
           </li>)
         }
         </ul>
+        <p class="text-lightGray text-[1rem] heading-[130%] tracking-[-0.02rem]">Copyright © {year ? year : ''} Fair.io | All Rights Reserved</p>
       </div>
     </div>
   </nav>

@@ -41,12 +41,6 @@ const Carousel = ({companies}) => {
     if (carousel !== null && carousel.current !== null) {
       carousel.current.scrollLeft = movement * currentIndex;
     }
-    const carouselWrapper = document.querySelectorAll('.carousel-wrapper')[0];
-    if (currentIndex > 0) {
-      carouselWrapper.classList.add('carousel-wrapper-left');
-    } else {
-      carouselWrapper.classList.remove('carousel-wrapper-left');
-    }
   }, [currentIndex]);
 
   useEffect(() => {
@@ -63,26 +57,26 @@ const Carousel = ({companies}) => {
             Featured Fair Source Software
           </h2>
           <div className="hidden xl:flex relative gap-[1rem]">
-              <button
-                onClick={movePrev}
-                className="w-[2rem] h-[2rem] flex items-center justify-center bg-taupe rounded-[1rem] text-center disabled:opacity-25 disabled:cursor-not-allowed transition-all ease-in-out duration-300"
-                disabled={isDisabled('prev')}
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
-                  <path d="M8.5 1.5L2 8L8.5 14.5" stroke="#0D1B2A" stroke-width="2.3"/>
-                </svg>
-                <span className="sr-only">Prev</span>
-              </button>
-              <button
-                onClick={moveNext}
-                className="w-[2rem] h-[2rem] flex items-center justify-center bg-taupe rounded-[1rem] text-center disabled:opacity-25 disabled:cursor-not-allowed transition-all ease-in-out duration-300"
-                disabled={isDisabled('next')}
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
-                  <path d="M1.5 1.5L8 8L1.5 14.5" stroke="#0D1B2A" stroke-width="2.3"/>
-                </svg>
-                <span className="sr-only">Next</span>
-              </button>
+            <button
+              onClick={movePrev}
+              className="w-[2rem] h-[2rem] flex items-center justify-center bg-taupe rounded-[1rem] text-center disabled:opacity-25 disabled:cursor-not-allowed transition-all ease-in-out duration-300"
+              disabled={isDisabled('prev')}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+                <path d="M8.5 1.5L2 8L8.5 14.5" stroke="#0D1B2A" stroke-width="2.3"/>
+              </svg>
+              <span className="sr-only">Prev</span>
+            </button>
+            <button
+              onClick={moveNext}
+              className="w-[2rem] h-[2rem] flex items-center justify-center bg-taupe rounded-[1rem] text-center disabled:opacity-25 disabled:cursor-not-allowed transition-all ease-in-out duration-300"
+              disabled={isDisabled('next')}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+                <path d="M1.5 1.5L8 8L1.5 14.5" stroke="#0D1B2A" stroke-width="2.3"/>
+              </svg>
+              <span className="sr-only">Next</span>
+            </button>
           </div>
         </div>
         <div className="hidden xl:flex justify-end items-center w-12/12 xl:w-1/2">

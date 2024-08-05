@@ -30,44 +30,30 @@ const Carousel = ({companies}) => {
 
     if (direction === 'next' && carousel.current !== null) {
       return (
-        movement * currentIndex >= maxScrollWidth.current
+        (movement * (currentIndex + 3)) >= maxScrollWidth.current
       );
     }
 
     return false;
   };
 
-  const calcMovement = () => {
-    const container = carousel.current;
-    const totalWidth = Array.from(container.querySelectorAll('.carousel-item'))
-        .reduce((sum, div) => sum + div.getBoundingClientRect().width, 0);
-    const numCards = companies?.length || 0;
-
-    console.log('Total width of child divs:', totalWidth, 'pixels');
-    console.log('Should move', totalWidth / numCards)
-    return totalWidth/numCards;
-  };
-
   useEffect(() => {
     if (carousel !== null && carousel.current !== null) {
       carousel.current.scrollLeft = movement * currentIndex;
     }
-    // const carouselWrapper = document.querySelectorAll('.carousel-wrapper')[0];
-    // if (currentIndex > 0) {
-    //   carouselWrapper.classList.add('carousel-wrapper-left');
-    // } else {
-    //   carouselWrapper.classList.remove('carousel-wrapper-left');
-    // }
+    const carouselWrapper = document.querySelectorAll('.carousel-wrapper')[0];
+    if (currentIndex > 0) {
+      carouselWrapper.classList.add('carousel-wrapper-left');
+    } else {
+      carouselWrapper.classList.remove('carousel-wrapper-left');
+    }
   }, [currentIndex]);
 
   useEffect(() => {
-    setMovement(calcMovement())
     maxScrollWidth.current = carousel.current
       ? carousel.current.scrollWidth - movement
       : 0;
   }, []);
-
-  console.log(currentIndex, movement, maxScrollWidth)
 
   return (
     <div className="carousel my-12">
@@ -108,7 +94,7 @@ const Carousel = ({companies}) => {
       <div className="relative container-spill xl:pl-[3rem] carousel-wrapper carousel-wrapper-right">
         <div
           ref={carousel}
-          className="carousel-container no-scrollbar overflow-auto touch-pan-x relative flex gap-[1rem] scroll-smooth snap-x snap-mandatory z-0"
+          className="carousel-container no-scrollbar overflow-auto touch-pan-x relative flex gap-[1rem] scroll-smooth snap-x snap-mandatory z-0 lg:pr-[2rem]"
         >
           {companies && companies.map((companyData, index) => {
             return (

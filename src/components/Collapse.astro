@@ -15,7 +15,7 @@ const { title, collapseID, isLast = false } = Astro.props;
     aria-expanded="false"
     aria-controls={`${collapseID} accordion menu content`}
   >
-    <h2 class="text-[2.5rem] font-[500] leading-[125%] tracking-[-0.05rem] mb-0">{title}</h2>
+    <h2 class="font-[500] leading-[125%] tracking-[-0.05rem] mb-0">{title}</h2>
     <Image src={minus} format="svg" alt="close" loading="lazy" class="close-icon hidden" />
     <Image src={plus} format="svg" alt="open" loading="lazy" class="open-icon" />
   </button>

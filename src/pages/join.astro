@@ -7,21 +7,24 @@ import auditForSecretsImage from '../assets/adopt/auditforsecrets.png';
 import publishYourRepoImage from '../assets/adopt/publishyourrepo.png';
 import adoptHeroImage from '../assets/adopt/adoptHeroImage.png';
 
+const mobileSectionCommonClasses = 'z-0 pb-0 pt-[12.31rem] sm:pt-[9.12rem] sm:pb-[1.56rem] sm:px-[3rem] md:pt-[6.69rem] md:pb-[7.44rem]';
+const mobileSectionBackgroundImageClasses = 'h-[12.31rem] top-0 left-0 sm:bottom-0 sm:h-auto md:top-[1rem] md:bottom-[1rem] md:left-[1rem] md:w-auto md:h-auto';
+const mobileSectionCenteredBackground = 'top-0 left-0 sm:bottom-0 md:left-[1rem] md:right-[1rem] md:bottom-[1rem]';
+const mobileSectionContentClasses = 'z-10 pt-[1.5rem] pb-[1rem] relative w-12/12 px-[1rem] bg-white sm:border sm:border-borderGray sm:rounded-small sm:p-[2rem] lg:border-0 lg:rounded-none lg:bg-transparent';
+
 const seoMetaData = {
   description: `Here's how to adopt Fair Source for your project.`,
   slug: 'join/'
 };
 ---
-
 <Layout title="Join Fair Source" seo={seoMetaData}>
-  <header class="container relative px-[1.5rem] mx-auto flex flex-wrap lg:px-[3rem] overflow-clip">
-
-    <div class="w-12/12 xl:w-5/12 py-[3rem] lg:py-[8rem] xl:pb-[15.25rem] xl:pt-[12.38rem]">
+  <header class="container relative mx-auto flex flex-wrap px-[0.5rem] sm:px-[1rem] md:px-[1.5rem] lg:px-[2rem] xl:px-[1.5rem] 2xl:px-[3.62rem] 3xl:px-[6.62rem] pb-[0.5rem] pb-[1rem]">
+    <div class="relative block lg:absolute lg:right-[2rem] lg:bottom-0 lg:top-0 lg:w-1/2 xl:right-[2rem] 2xl:right-[3.62rem] 3xl:right-[6.62rem]">
+      <Image src={adoptHeroImage} alt="How to adopt fair source" densities={[1, 2, 3]} class="w-[100%] h-auto"/>
+    </div>
+    <div class="w-12/12 py-[3rem] lg:w-5/12 lg:py-[8rem] xl:pb-[15.25rem] xl:pt-[12.38rem]">
       <h1 class="text-balance mb-[1rem]">Join Fair Source</h1>
       <p class="text-[1.75rem] font-[500] leading-[130%] tracking-[0.035rem]">Sold on the <a href="/faq" class="underline">benefits</a>? Here's how to adopt Fair Source at your company.</p>
-    </div>
-    <div class="absolute hidden right-0 top-0 w-1/2 xl:block">
-      <Image src={adoptHeroImage} alt="How to adopt fair source" densities={[1, 2, 3]}/>
     </div>
   </header>
   <main>
@@ -87,15 +90,15 @@ const seoMetaData = {
       </div>
     </Section>
     <Section
-      sectionStyles="px-[1.5rem] lg:px-[3.5rem]"
+      sectionStyles={`${mobileSectionCommonClasses} lg:px-[3.5rem]`}
       backgroundStyling="bg-[url('/images/background-images/choosingALicense-top.svg')] bg-contain bg-no-repeat bg-top w-full bottom-0 top-0 left-0 right-0 min-h-[20rem] z-0"
       backgroundBottomStyling="bg-[url('/images/background-images/choosingALicense-bottom.svg')] bg-contain bg-no-repeat bg-bottom w-full bottom-0 left-0 right-0 min-h-[5rem] z-0 lg:min-h-[5.5rem] xl:min-h-[8rem]">
-      <div class="mt-[4rem] mb-[3rem] w-12/12 z-10 xl:w-8/12 py-[3rem] md:mt-[7rem] xl:my-0 xl:pt-[11rem] xl:pb-[9rem]">
+      <div class={`${mobileSectionContentClasses} z-10 lg:w-8/12 xl:my-0 xl:pt-[11rem] xl:pb-[9rem]`}>
         <span class="tag text-ltOrange">2. Choosing a License</span>
         <h2>Licensing is the heart of Fair Source</h2>
         <div class="section-body-spacing">
           <p>
-            Our recommended approach is the Functional Source Licens 
+            Our recommended approach is the Functional Source License 
             (filler spacee — a robust, clear, non-compete license that offers 
             two-year OSS conversion. FSL is ideal for companies with a SaaS business 
             model. If you have more complex requirements, consider using the 
@@ -107,39 +110,41 @@ const seoMetaData = {
       </div>
     </Section>
     <Section
-      sectionStyles="py-[1.5rem] pl-[1.5rem] !justify-end xl:p-0 xl:pl-[3rem] xl:items-end"
-      backgroundStyling="bg-[url('/images/background-images/auditForSecrets.svg')] bg-contain bg-top bg-no-repeat w-full top-[1.5rem] right-auto left-[1.5rem] min-h-[20rem] bottom-[45%] xl:bg-right xl:top-[2.875rem] xl:right-[3.125rem] xl:left-auto xl:bottom-[1.67rem] xl:w-1/2">
-      <div class="relative mb-[2rem] h-full min-h-[20rem] xl:mb-0 xl:min-h-[20rem] xl:w-1/2 flex justify-end items-end xl:order-12">
-        <Image src={auditForSecretsImage} alt="Audit For Secrets" densities={[1.5, 2]} class="relative max-h-[30rem] w-auto xl:max-h-[35rem]" />
+      sectionStyles={`${mobileSectionCommonClasses} lg:p-0 lg:items-end justify-end`}
+      backgroundStyling={`${mobileSectionBackgroundImageClasses} ${mobileSectionCenteredBackground} w-[100%] bg-[url('/images/background-images/auditForSecrets.svg')] bg-cover bg-bottom sm:bg-top lg:top-[1.5rem] lg:bottom-0 lg:right-0 lg:left-auto lg:w-[45%] lg:mr-[1.5rem] xl:bg-top-right xl:right-[1.5rem] xl:left-auto xl:bottom-[1.5rem] xl:w-[46%]`}>
+      <div class="w-12/12 relative mr-[-0.5rem] lg:w-6/12 lg:order-12 overflow-clip lg:overflow-visible">
+        <div class="hidden lg:flex relative h-auto lg:mt-[1.5rem] lg:ml-[3rem] lg:w-[90%] xl:mt-0 xl:w-[100%] 2xl:w-[100%] 2xl:h-auto ">
+          <Image src={auditForSecretsImage} alt="Audit For Secrets" densities={[1.5, 2]} class="relative w-[100%] h-auto" />
+        </div>
       </div>
-      <div class="relative h-1/2 w-12/12 xl:h-full xl:w-1/2 xl:pt-[12.19rem] xl:pb-[12.56rem]">
+      <div class={`${mobileSectionContentClasses} lg:h-full lg:w-6/12 lg:py-[3rem] lg:pr-[3rem] lg:pt-[2rem] xl:w-6/12 xl:pt-[7rem] xl:pl-[4rem] xl:pb-[7rem]`}>
         <span class="tag text-rust">3. Audit for Secrets</span>
         <h2>
           Before you publish your code, make sure you don’t have any secrets in your 
           repository.
         </h2>
         <div class="section-body-spacing">
-          <p>Tools such <a href="https://trufflesecurity.com/" class="emphasized external">TruffleHog</a> can help with this.</p>
+          <p>Tools such as <a href="https://trufflesecurity.com/" class="emphasized external">TruffleHog</a> can help with this.</p>
         </div>
       </div>
     </Section>
     <Section
-      sectionStyles="px-[1.5rem] items-stretch xl:pr-[3.5rem] xl:pl-0"
-      backgroundStyling="bg-[url('/images/background-images/publishYourRepo-top.svg')] bg-contain bg-no-repeat bg-right w-full top-0 right-0 xl:right-[4.75rem] min-h-[13rem] z-0"
-      backgroundBottomStyling="bg-[url('/images/background-images/publishYourRepo-bottom.svg')] bg-contain bg-no-repeat bg-center w-1/2 bottom-[30%] left-0 h-full z-0 xl:min-h-[20rem] xl:bg-left xl:bottom-0">
-      <div class="flex items-center mb-[2rem] w-12/12 z-10 xl:w-5/12">
+      sectionStyles={`${mobileSectionCommonClasses} items-stretch xl:pr-[3.5rem] xl:pl-0`}
+      backgroundStyling="hidden lg:bg-[url('/images/background-images/publishYourRepo-top.svg')] bg-contain bg-no-repeat bg-right w-full top-0 right-0 xl:right-[4.75rem] min-h-[13rem] z-0"
+      backgroundBottomStyling={`${mobileSectionBackgroundImageClasses} bg-[url('/images/background-images/publishYourRepo-bottom.svg')] bg-contain bg-no-repeat bg-top w-1/2 h-full bottom-[30%] left-0 right-[50%] z-0 sm:bg-left lg:h-auto lg:min-h-0 lg:top-0 lg:bottom-0 lg:left-[-3rem] lg:bg-contain lg:bg-left z-0 lg:bg-center lg:right-0  lg:w-[50%] xl:min-h-[20rem] xl:bottom-0 `}>
+      <div class="hidden lg:flex items-center mb-[2rem] w-12/12 lg:w-5/12 z-10 xl:w-6/12">
         <Image src={publishYourRepoImage} alt="Publish Your Repo" densities={[1.5, 2]} class="relative xl:min-w-[30rem]" />
       </div>
-      <div class="w-12/12 xl:w-7/12 xl:py-[13.81rem]">
+      <div class={`${mobileSectionContentClasses} w-12/12 lg:w-7/12 xl:w-6/12 xl:py-[13.81rem]`}>
         <span class="tag text-teal">4. Publish Your Repo</span>
         <h2>This is the fun part. Click the button to make it public and celebrate the moment.</h2>
       </div>
     </Section>
     <Section
-      sectionStyles="p-[1.5rem] items-stretch xl:px-[3.5rem]"
-      backgroundStyling="bg-[url('/images/background-images/tellTheWorld.svg')] bg-cover bg-no-repeat bg-center w-full top-0 h-[25rem] right-0 md:bottom-[40%] xl:bg-contain xl:bg-right xl:bottom-0 xl:h-auto xl:w-5/15 z-0">
-      <div class="relative flex items-center mb-[2rem] min-h-[25rem] w-full z-10 xl:min-h-[20rem] xl:w-5/12 xl:order-12"></div>
-      <div class="w-12/12 xl:w-7/12 xl:pr-[1rem] xl:pt-[11.62rem] xl:pb-[13.75rem] z-10">
+      sectionStyles={`${mobileSectionCommonClasses} lg:p-[1.5rem] items-stretch xl:px-[3.5rem]`}
+      backgroundStyling={`${mobileSectionBackgroundImageClasses} ${mobileSectionCenteredBackground} bg-[url('/images/background-images/tellTheWorld.svg')] bg-cover bg-no-repeat bg-center w-full top-0 h-[25rem] lg:h-auto lg:min-h-0 lg:top-0 lg:bottom-0 lg:right-0 lg:w-[40%] lg:bg-[100%] lg:left-auto lg:bg-left xl:bg-contain xl:bg-right xl:bottom-0 xl:h-auto xl:w-5/12 z-0"`}>
+      <div class="relative hidden lg:flex items-center mb-[2rem] min-h-[25rem] w-full z-10 xl:min-h-[20rem] lg:w-5/12 lg:order-12"></div>
+      <div class={`${mobileSectionContentClasses} lg:w-7/12 lg:order-1 xl:pr-[1rem] xl:pt-[11.62rem] xl:pb-[13.75rem] z-10`}>
         <span class="tag text-rust">5. Tell the World</span>
         <h2>Let’s spread the word together!</h2>
         <p>Use the fair-source repo topic on

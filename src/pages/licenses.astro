@@ -12,26 +12,24 @@ const seoMetaData = {
   description: 'The following licenses fit the Fair Source Definition.',
   slug: 'licenses/'
 };
-
-const glyphWrapper = 'relative w-[24px] h-[24px] xl:w-[40px] xl:h-[40px]';
-const gridText = 'text-[0.75rem] text-left font-[600] leading-[135%] tracking-[-0.01125rem] xl:text-[1.375rem] font-[500] xl:leading-[120%] xl:tracking-[-0.03438rem]';
-const gridRow = 'flex flex-wrap w-12/12 pl-[1rem] pr-[0.5rem] xl:px-[2rem] items-center h-[4rem]';
+const mobileSectionCommonClasses = 'z-0 pb-0 pt-[12.31rem] sm:pt-[9.12rem] sm:pb-[1.56rem] sm:px-[3rem] md:pt-[6.69rem] md:pb-[7.44rem] lg:px-0 lg:py-0';
+const mobileSectionBackgroundImageClasses = 'absolute h-[12.31rem] top-0 left-0 sm:bottom-0 sm:h-auto sm:bottom-0 sm:right-0 md:top-[1rem] md:bottom-[1rem] md:left-[1rem] md:w-auto md:h-auto lg:right-0 lg:bottom-0 lg:left-0 lg:top-0';
+const mobileCardClasses = `z-10`;
 const card = 'border border-borderGray rounded-small px-[1rem] py-[1.5rem] xl:px-[2rem] xl:py-[3rem] h-[100%]';
 const cardTitleClasses = `font-sans text-[1.375rem] font-[500] color-black leading-[120%] tracking-[-0.03438rem] flex items-center mb-[0.62rem]`;
-const gridHeaderText = 'block text-[0.75rem] font-[600] leading-[120%] tracking-[-0.01125rem] xl:text-[1.375rem] xl:tracking-[-0.03438rem]';
 ---
+
 
 <Layout title="Fair Source Licenses" seo={seoMetaData}>
 <header>
-  <div class="relative container-spill md:pl-[1.5rem] lg:pl-[3rem]">
+  <div class="relative container-spill pl-[0.5rem] sm:pl-[1rem] md:pl-[1.5rem] lg:pl-[2rem] xl:pl-[1.5rem] 2xl:pl-[3.62rem] 3xl:pl-[6.62rem]">
+    <div class="block relative w-12/12 lg:absolute lg:right-0 lg:bottom-0 lg:top-0 xl:bottom-[-10rem] lg:w-7/12 ">
+      <Image src={HeroImage} alt="How to adopt fair source" densities={[1, 2, 3]}/>
+    </div>
     <div class="relative flex">
       <div class="w-12/12 py-[7rem] 2xl:pt-[15.96rem] 2xl:pb-[17.56rem] lg:w-4/12">
         <h1>Fair Source Licenses</h1>
       </div>
-      <div class=""></div>
-    </div>
-    <div class="lg:absolute hidden lg:block right-0 bottom-0 top-0 xl:top-0 xl:bottom-[-10rem] w-7/12 ">
-      <Image src={HeroImage} alt="How to adopt fair source" densities={[1, 2, 3]}/>
     </div>
   </div>
 </header>
@@ -43,13 +41,12 @@ const gridHeaderText = 'block text-[0.75rem] font-[600] leading-[120%] tracking-
         <p class="pt-[1.5rem]">Other licenses and approaches may also align with our goals and values. These are the ones we recommend for adoption.</p>
       </div>
     </div>
-    <div class="w-12/12 relative flex flex-wrap pb-[3rem] xl:pb-[5.59rem]">
-      <div class="w-12/12 xl:w-5/12 pb-[2rem] xl:pb-0">
-        <Image src={Licenses1} alt="Fair Source License" />
+    <div class={`${mobileSectionCommonClasses} w-12/12 relative flex flex-wrap justify-between pb-[3rem] sm:mb-[3rem] lg:gap-x-[3rem] lg:mb-0 lg:h-[100%] xl:pb-[5.59rem]`}>
+      <div class={`${mobileSectionBackgroundImageClasses} lg:relative lg:w-5/12 h-[100%]`}>
+        <Image src={Licenses1} alt="Fair Source License" class="w-[100%] relative h-auto" />
       </div>
-      <div class="w-12/12 xl:w-1/12"></div>
-      <div class="w-12/12 xl:w-6/12">
-        <div class="border border-borderGray rounded-small h-[100%]">
+      <div class={`z-10 relative w-12/12 lg:h-[100%] lg:w-6/12`}>
+        <div class={`border border-borderGray bg-white rounded-small lg:h-[100%] lg:pb-[2rem]`}>
           <div class="w-12/12">
             <Image src={FSL} alt="Functional Source License" />
           </div>
@@ -62,15 +59,14 @@ const gridHeaderText = 'block text-[0.75rem] font-[600] leading-[120%] tracking-
               </svg></a>
           </div>
         </div>
-
       </div>
     </div>
-    <div class="w-12/12 relative flex flex-wrap pb-[2rem] xl:pb-[4rem]">
+    <div class="w-12/12 relative flex flex-wrap pb-[2rem]  xl:pb-[4rem]">
       <div class="w-12/12 pb-[3rem]">
         <h3 class="tag text-orange">Alternate Fair Source Licenses</h3>
         <p>These licenses provide different terms and features, catering to specific project needs. They are useful alternatives for projects requiring unique conversion timelines or feature restrictions, offering flexibility beyond our main recommendation.</p>
       </div>
-      <div class="w-12/12 xl:w-6/12 mb-[1.25rem] xl:pr-[0.72rem]">
+      <div class="w-12/12 lg:w-6/12 mb-[1.25rem] lg:pr-[0.72rem]">
         <div class={card}>
           <h4 class={cardTitleClasses}><span class="mr-[0.69rem] font-[600]">Fair Core Licence (FCL)</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
             <path d="M1 2H13M13 2V14M13 2L1 14" stroke="black" stroke-width="2.3"/></span>
@@ -78,7 +74,7 @@ const gridHeaderText = 'block text-[0.75rem] font-[600] leading-[120%] tracking-
           <p>A simple non-compete license with two-year delayed conversion to Open Source. Consider it for monetizing self-hosted software.</p>
         </div>
       </div>
-      <div class="w-12/12 xl:w-6/12 mb-[1.25rem] xl:pl-[0.72rem]">
+      <div class="w-12/12 lg:w-6/12 mb-[1.25rem] lg:pl-[0.72rem]">
         <div class={card}>
           <h4 class={cardTitleClasses}><span class="mr-[0.69rem] font-[600]">Business Source License (BUSL or BSL)</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
             <path d="M1 2H13M13 2V14M13 2L1 14" stroke="black" stroke-width="2.3"/></span>

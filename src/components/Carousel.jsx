@@ -5,7 +5,7 @@ const Carousel = ({companies}) => {
   const maxScrollWidth = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const carousel = useRef(null);
-  const movement = 400;
+  const [movement, setMovement] = useState(400);
 
   const movePrev = () => {
     if (currentIndex > 0) {
@@ -14,6 +14,7 @@ const Carousel = ({companies}) => {
   };
 
   const moveNext = () => {
+    console.log(currentIndex, movement, maxScrollWidth)
     if (
       carousel.current !== 0 &&
       currentIndex + movement <= maxScrollWidth.current
@@ -36,23 +37,37 @@ const Carousel = ({companies}) => {
     return false;
   };
 
+  const calcMovement = () => {
+    const container = carousel.current;
+    const totalWidth = Array.from(container.querySelectorAll('.carousel-item'))
+        .reduce((sum, div) => sum + div.getBoundingClientRect().width, 0);
+    const numCards = companies?.length || 0;
+
+    console.log('Total width of child divs:', totalWidth, 'pixels');
+    console.log('Should move', totalWidth / numCards)
+    return totalWidth/numCards;
+  };
+
   useEffect(() => {
     if (carousel !== null && carousel.current !== null) {
       carousel.current.scrollLeft = movement * currentIndex;
     }
-    const carouselWrapper = document.querySelectorAll('.carousel-wrapper')[0];
-    if (currentIndex > 0) {
-      carouselWrapper.classList.add('carousel-wrapper-left');
-    } else {
-      carouselWrapper.classList.remove('carousel-wrapper-left');
-    }
+    // const carouselWrapper = document.querySelectorAll('.carousel-wrapper')[0];
+    // if (currentIndex > 0) {
+    //   carouselWrapper.classList.add('carousel-wrapper-left');
+    // } else {
+    //   carouselWrapper.classList.remove('carousel-wrapper-left');
+    // }
   }, [currentIndex]);
 
   useEffect(() => {
+    setMovement(calcMovement())
     maxScrollWidth.current = carousel.current
       ? carousel.current.scrollWidth - movement
       : 0;
   }, []);
+
+  console.log(currentIndex, movement, maxScrollWidth)
 
   return (
     <div className="carousel my-12">

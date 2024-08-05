@@ -1,9 +1,13 @@
 ---
+import { Image } from 'astro:assets';
+
 import Button from '../components/Button.astro';
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
 import GeoLeft from '/images/background-images/geo-left.svg?raw';
 import GeoRight from '/images/background-images/geo-right.svg?raw';
+
+import dospImage from '../assets/about/dosp.webp';
 
 const seoMetaData = {
   description: 'Fair Source Software is publicly available to read; allows use, modification, and redistribution with minimal restrictions to protect the producer’s business model; and undergoes delayed Open Source publication.',
@@ -60,6 +64,12 @@ const seoMetaData = {
             as companies <a href="/join">apply Fair Source</a> within their own particular
             business context.
           </p>
+
+          <div class="pb-[1.5rem]">
+            <a  href="https://opensource.org/delayed-open-source-publication">
+              <Image src={dospImage} alt="dosp image" densities={[1.5, 2]} class="relative w-[100%] h-auto"/>
+            </a>
+          </div>
 
           <p class="pb-[1.5rem]">
             The third point is also intended as a bright line, and a key

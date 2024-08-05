@@ -16,8 +16,8 @@ const year = date.getFullYear();
     <Image src={logo} densities={[1, 1.5, 2, 3, 4]} alt="Fair Source Licneses" />
   </a>
   <div class="lg:hidden">
-    <button class="navbar-burger flex items-center w-[32px] h-[18px]">
-      <Fragment set:html={hamburger} />
+    <button class="relative navbar-burger flex items-center w-[32px] h-[18px]">
+      <Fragment set:html={hamburger} class="relative w-[100%] h-auto"/>
     </button>
   </div>
   <div class="hidden relative lg:flex items-center lg:justify-end">

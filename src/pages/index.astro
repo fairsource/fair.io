@@ -7,17 +7,29 @@ import companies from '../data/companies.json';
 import { Image } from 'astro:assets';
 
 import fairSourceImage from '../assets/home/fairsource.png';
+import embraceFairSourceImage from '../assets/home/embraceFairSource.png';
+import learnFairSourceImage from '../assets/home/learnFairSource.png';
 import heroImage from '../assets/home/homeHeroImage.png';
 
 const seoMeta = {
   description: 'Whether you’re a developer looking to contribute or a business aiming to innovate, we the provide steps to successfully implement Fair Source in your projects. Join the community of ethical and innovative software sharing, balancing collaboration with control for everyone involved.',
 };
 
+const mobileSectionCommonClasses = 'z-0 pb-0 pt-[12.31rem] sm:pt-[9.12rem] sm:pb-[1.56rem] sm:px-[3rem] md:pt-[6.69rem] md:pb-[7.44rem] lg:px-0 lg:py-0';
+const mobileSectionBackgroundImageClasses = 'absolute h-[12.31rem] top-0 left-0 sm:bottom-0 sm:h-auto sm:bottom-0 sm:right-0 md:top-[1rem] md:bottom-[1rem] md:left-[1rem] md:w-auto md:h-auto lg:right-0 lg:bottom-0 lg:left-0 lg:top-0';
+
+const desktopSectionCommonClasses = '';
+const desktopSectionBackgroundImageClasses = '';
+
+const mobileSectionCenteredBackground = 'top-0 left-0 sm:bottom-0 md:left-[1rem] md:right-[1rem] md:bottom-[1rem]';
+const mobileSectionContentClasses = 'z-10 pt-[1.5rem] pb-[1rem] relative w-12/12 px-[1rem] bg-white sm:border sm:border-borderGray sm:rounded-small sm:p-[2rem] lg:border-0 lg:rounded-none lg:bg-transparent';
+
 ---
 
 <Layout title="Software Sharing for Modern Companies" seo={seoMeta}>
-  <header class="relative container-spill md:pl-[1.5rem] lg:pl-[3rem] overflow-x-clip">
-    <div class="relative flex 3xl:pb-[6rem]">
+  <header>
+    <div class="relative container-spill pl-[0.5rem] sm:pl-[1rem] md:pl-[1.5rem] lg:pl-[2rem] xl:pl-[1.5rem] 2xl:pl-[3.62rem] 3xl:pl-[6.62rem]">
+
       <div class="w-12/12 lg:w-6/12 lg:py-[7.19rem] flex items-center">
         <div>
           <h1 class="text-black mb-4">
@@ -26,13 +38,15 @@ const seoMeta = {
           <p class="text-balance text-black text-[1.5rem] xl:text-[2rem] leading-[130%] font-sans font-[500] mb-6">Balance innovation and protection with Fair Source licensing.</p>
           <div class="flex flex-wrap gap-4">
             <Button type="primary" url='/join' color="teal" cta="Join Fair Source" />
-            <Button type="secondary" url='/faq' color="black" cta="Learn More" />          
+            <Button type="secondary" url='/faq' color="black" cta="Learn More" />
           </div>
         </div>
       </div>
-    </div>
-    <div class="absolute w-full lg:w-[47%] 3xl:w-[48%] top-0 right-0 3xl:top-[-1rem] 3xl:right-[-3rem] 2xl:right-[-1rem] xl:right-[-4rem] xl:top-[2rem] lg:right-[-3.5rem]">
-      <Image src={heroImage} alt="hero image" densities={[1, 1.5, 2, 3, 4]} class="relative"/>
+
+      <div class="absolute w-0 lg:w-[47%] 3xl:w-[48%] top-0 right-0 3xl:top-[-1rem] 3xl:right-[-3rem] 2xl:right-[-1rem] xl:right-[-4rem] xl:top-[2rem] lg:right-[-3.5rem]">
+        <Image src={heroImage} alt="hero image" densities={[1, 1.5, 2, 3, 4]} class="relative"/>
+      </div>
+
     </div>
   </header>
 	<main>
@@ -42,63 +56,49 @@ const seoMeta = {
       </section>
     }
     <Section
-      sectionStyles="px-[1.5rem] lg:px-[3.5rem] xl:justify-start"
-      backgroundStyling=`
-        bg-[url('/images/background-images/embraceFairSource.svg')] bg-cover bg-[right_100%_bottom]
-        w-full top-0 right-0 
-        left-[1.125rem] min-h-[20rem] bottom-[75%] scale-[1.1]
-        sm:h-[33.7rem] sm:relative sm:scale-[1.175] sm:left-[1.45rem]
-        md:h-[41.6rem] md:bottom-[60%] md:left-[2.125rem] md:bg-[right_-200%_bottom] md:bg-no-repeat
-        lg:bottom-[55%] lg:bg-cover 
-        xl:absolute xl:bg-no-repeat xl:bg-auto xl:left-1/2 xl:w-1/2 xl:bottom-0 xl:right-0 xl:bg-[right_100%_bottom] 
-        2xl:bottom-0 2xl:bg-[right_280%_bottom] 2xl:scale-[1.0125] 2xl:h-[39.6rem]
-        3xl:bg-[right_-140%_bottom]
-      `
+      sectionStyles="px-[1.5rem] xl:px-[3.5rem] py-[2.75rem] xl:py-[5.5rem]"
     >
-      <div
-        class=`
-          w-12/12 p-[50%] flex justify-center items-center
-          sm:p-[30%] sm:absolute 
-          md:p-[29%]
-          lg:p-[25%] xl:w-1/2 
-          xl:p-[10%] xl:order-1
-        `>
-          <Image
-            src={fairSourceImage} alt="Adopt Fair Source" densities={[1, 1.5, 2, 3, 4]}
-            class=`
-              absolute top-[3rem] left-[3rem] w-[70%] 
-              sm:w-[100%] sm:top-[-11.8rem] sm:left-[1rem]
-              md:top-[-7.55rem]
-              xl:w-[75%] xl:top-[-2.5rem] xl:left-[40rem] 
-              2xl:w-[65%] 2xl:top-[-3.5rem] 2xl:left-[45rem]
-              3xl:left-[49rem]
-            `
-          />
-      </div>
-      <div class="relative w-12/12 xl:w-1/2 xl:order-1 sm:pt-[2rem]">
-        <div class="py-[3rem] md:py-[3rem] lg:py-[4rem] xl:py-[6rem] 2xl:py-[6.9rem]">
-          <span class="text-teal tag">Embrace Fair Source</span>
-          <h2>Learn how to adopt Fair Source at your company</h2>
-          <div class="section-body-spacing">
-            <p>Whether you’re a developer looking to contribute or a business aiming to innovate, we the provide steps to successfully implement Fair Source in your projects. Join the community of ethical and innovative software sharing, balancing collaboration with control for everyone involved.</p>
+      <!--<div class="relative w-12/12 p-[25%] xl:p-[10%] xl:w-1/2 flex justify-center items-center xl:order-12 lg:p-[25%]">-->
+      <!--  <Image src={fairSourceImage} alt="Adopt Fair Source" densities={[1, 1.5, 2, 3, 4]} class="absolute xl:w-[75%] xl:top-[-4.5rem] xl:left-[7rem] 2xl:w-[65%] 2xl:top-[-3.5rem] 2xl:left-[9.5rem]" />-->
+      <!--</div>-->
+      <div class=`${mobileSectionCommonClasses} w-12/12 relative flex flex-wrap justify-between pb-[3rem] sm:mb-[3rem] lg:gap-x-[3rem] lg:mb-0 lg:h-[100%] xl:pb-[5.59rem]`>
+        <div class={`z-10 relative w-12/12 lg:h-[100%] lg:w-6/12 lg:order-1`}>
+          <div class={`border border-borderGray bg-white rounded-small lg:h-[100%] lg:pb-[2rem]`}>
+            <div class="w-12/12 px-[1rem] xl:px-[2rem] pb-[2rem] xl:pb-0">
+              <span class="text-teal tag mt-[4rem]">Embrace Fair Source</span>
+              <h2>Learn how to adopt Fair Source at your company</h2>
+              <div class="section-body-spacing">
+                <p>Whether you’re a developer looking to contribute or a business aiming to innovate, we the provide steps to successfully implement Fair Source in your projects. Join the community of ethical and innovative software sharing, balancing collaboration with control for everyone involved.</p>
+              </div>
+              <Button type="secondary" cta="join fair source" url="/join" color="teal" />
+            </div>
           </div>
-          <Button type="secondary" cta="join fair source" url="/join" color="teal" />
+        </div>
+        <div class={`${mobileSectionBackgroundImageClasses} lg:relative lg:w-5/12 h-[100%]`}>
+          <Image src={embraceFairSourceImage} alt="Fair Source License" class="w-[100%] relative h-auto" />
         </div>
       </div>
     </Section>
-    <Section sectionStyles="px-[1.5rem] lg:px-[3.5rem]" backgroundStyling="bg-[url('/images/background-images/learnfairsource.svg')] w-full top-0 left-[-5rem] right-0 min-h-[20rem] bottom-[80%] md:bottom-[60%] md:bg-no-repeat md:left-[0] lg:bottom-[55%] lg:bg-cover lg:bottom-0 lg:bg-cover xl:h-auto xl:w-1/2 xl:bottom-0 3xl:bg-[top_20%_left] xl:h-auto">
-      <div class="w-12/12 xl:w-1/2 h-auto min-h-[20rem] xl:h-full flex items-center justify-center">
-        <div class="relative w-1/2 xl:block xl:absolute xl:bottom-0 xl:left-0 xl:w-12/12 xl:w-1/2">
+
+    <Section
+      sectionStyles="px-[1.5rem] xl:px-[3.5rem] py-[2.75rem] xl:py-[5.5rem]"
+    >
+      <div class={`${mobileSectionCommonClasses} w-12/12 relative flex flex-wrap justify-between pb-[3rem] sm:mb-[3rem] lg:gap-x-[3rem] lg:mb-0 lg:h-[100%] xl:pb-[5.59rem]`}>
+        <div class={`${mobileSectionBackgroundImageClasses} lg:relative lg:w-5/12 h-[100%]`}>
+          <Image src={learnFairSourceImage} alt="Fair Source License" class="w-[100%] relative h-auto" />
         </div>
-      </div>
-      <div class="w-12/12 xl:w-1/2">
-        <div class="py-[3rem] md:py-[3rem] lg:py-[4rem] xl:py-[6rem] 2xl:py-[6.9rem]">
-          <span class="tag text-orange">Understand Fair Source</span>
-          <h2>Find answers to your questions about Fair Source</h2>
-          <div class="section-body-spacing">
-            <p>Looking for detailed information about Fair Source? Discover in-depth answers and insights to help you fully understand its benefits and applications. From licensing details to implementation tips, find everything you need to make the most of Fair Source.</p>
+
+        <div class={`z-10 relative w-12/12 lg:h-[100%] lg:w-6/12`}>
+          <div class={`border border-borderGray bg-white rounded-small lg:h-[100%] lg:pb-[2rem]`}>
+            <div class="w-12/12 px-[1rem] xl:px-[2rem] pb-[2rem] xl:pb-0">
+              <span class="tag text-orange mt-[4rem]">Understand Fair Source</span>
+              <h2>Find answers to your questions about Fair Source</h2>
+              <div class="section-body-spacing">
+                <p>Looking for detailed information about Fair Source? Discover in-depth answers and insights to help you fully understand its benefits and applications. From licensing details to implementation tips, find everything you need to make the most of Fair Source.</p>
+              </div>
+              <Button type="secondary" cta="learn more" url="/faq" color="orange" />
+            </div>
           </div>
-          <Button type="secondary" cta="learn more" url="/faq" color="orange" />
         </div>
       </div>
     </Section>

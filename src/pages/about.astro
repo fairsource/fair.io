@@ -1,4 +1,5 @@
 ---
+import Button from '../components/Button.astro';
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
 import GeoLeft from '/images/background-images/geo-left.svg?raw';
@@ -34,7 +35,7 @@ const seoMetaData = {
   <main>
     <Section sectionStyles="py-[3rem] px-[5rem] xl:pt-[5.5rem] xl:pb-[11.25rem] xl:px-[14.25rem]">
       <div>
-        <h2>What is Fair Source Software?</h2>
+        <h2>Fair Source Definition</h2>
         <p
           class="text-[1.75rem] font-[500] leading-[135%] tracking-[-0.0375rem] pb-[1.25rem]"
         >
@@ -108,6 +109,10 @@ const seoMetaData = {
               href="https://github.com/fairsource/fair.io">in the README</a
             >.
           </p>
+
+          <div class="justify-center flex mt-[3rem] mb-[3rem]">
+            <Button url="/faq/" type="secondary" color="black" cta="Continue to the FAQ"></Button>
+          </div>
         </div>
       </div>
 

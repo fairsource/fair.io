@@ -277,7 +277,6 @@ const canonicalURL = `https://fair.io/${seoSlug}`;
 
   a.emphasized.branded {
     color: white;
-    font-size: 22px;
     font-weight: 500;
     padding: 0.25rem 1.1875rem 0.4375rem 0.75rem;
     line-height: 1.7875rem;
@@ -296,14 +295,30 @@ const canonicalURL = `https://fair.io/${seoSlug}`;
   }
   a.emphasized.github::before {
     content: url('/images/icons/gitHub-logo.svg');
-    transform: translateY(4px);
+    transform: translateY(7px);
   }
   a.emphasized.twitter {
     background-color: #1E1E1E;
   }
   a.emphasized.twitter:before {
     content: url('/images/icons/twitter-logo.svg');
-    transform: translateY(3px);
+    transform: translateY(5px);
+  }
+
+  @media (min-width: 768px) {
+    a.emphasized.github::before {
+      transform: translateY(6px);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    a.emphasized.twitter::before {
+      transform: translateY(3px);
+    }
+
+    a.emphasized.github::before {
+      transform: translateY(4px);
+    }
   }
   a.emphasized.external::after {
     content: url('/images/icons/external-link-icon.svg');

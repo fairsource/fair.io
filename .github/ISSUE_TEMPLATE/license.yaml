@@ -1,0 +1,30 @@
+name: Propose a License
+description: Propose a new license for official recognition as Fair Source.
+body:
+  - type: input
+    id: name
+    attributes:
+      label: License Name
+      placeholder: "e.g., Foo License, v 1.0"
+    validations:
+      required: true
+  - type: input
+    id: identifier
+    attributes:
+      label: License Short Identifier
+      placeholder: "e.g., FOO-1.0"
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+    validations:
+      required: true
+

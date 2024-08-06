@@ -1,0 +1,31 @@
+name: Propose a Company
+description: Submit your company for official recognition as Fair Source.
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Company Name
+      placeholder: "e.g., Acme"
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Announcement Link
+      placeholder: "https://acme.blog/foo-is-now-fair-source"
+    validations:
+      required: true
+  - type: input
+    id: background
+    attributes:
+      label: Background
+      description: Background color to go behind your logo
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please upload your logo here
+    validations:
+      required: true

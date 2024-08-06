@@ -1,5 +1,5 @@
 name: Propose a License
-description: Propose a new license for official recognition as Fair Source.
+description: Submit a new license for official recognition as Fair Source.
 body:
   - type: input
     id: name

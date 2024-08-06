@@ -18,14 +18,15 @@ body:
   - type: input
     id: background
     attributes:
-      label: Background
-      description: Background color to go behind your logo
+      label: Background Color
+      description: We will use this color behind your logo.
+      placeholder: "e.g., #6495ED"
     validations:
       required: true
   - type: textarea
     id: description
     attributes:
       label: Description
-      description: Please upload your logo here
+      description: Please upload your logo here, along with anything else you wish to add.
     validations:
       required: true

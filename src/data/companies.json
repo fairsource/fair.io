@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Sentry",
+    "url": "https://blog.sentry.io/sentry-is-now-fair-source/",
+    "background": "#362d59",
+    "logo": "/images/companies/sentry.png",
+    "adoption": "August 6, 2024"
+  },
+  {
+    "name": "Codecov",
+    "url": "https://about.codecov.io/blog/codecov-is-now-fair-source/",
+    "background": "#ff0077",
+    "logo": "/images/companies/codecov.png",
+    "adoption": "August 6, 2024"
+  },
+  {
+    "name": "GitButler",
+    "url": "https://blog.gitbutler.com/gitbutler-is-now-fair-source/",
+    "background": "#7aede6",
+    "logo": "/images/companies/gitbutler.png",
+    "adoption": "July 06, 2024"
+  },
+  {
+    "name": "Keygen",
+    "url": "https://keygen.sh/blog/keygen-is-now-fair-source/",
+    "background": "#000811",
+    "logo": "/images/companies/keygen.png",
+    "adoption": "August 6, 2024"
+  },
+  {
+    "name": "PowerSync",
+    "url": "https://www.powersync.com/blog/powersync-supports-fair-source",
+    "background": "",
+    "logo": "/images/companies/powersync.png",
+    "adoption": "August 6, 2024"
+  },
+  {
+    "name": "CodeCrafters",
+    "url": "https://codecrafters.io/blog/fair-source",
+    "background": "#0f192c",
+    "logo": "/images/companies/codecrafters.png",
+    "adoption": "August 6, 2024"
+  }
+]

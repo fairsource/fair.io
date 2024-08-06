@@ -1,0 +1,132 @@
+---
+import { Image } from 'astro:assets';
+
+import Button from '../components/Button.astro';
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import GeoLeft from '/images/background-images/geo-left.svg?raw';
+import GeoRight from '/images/background-images/geo-right.svg?raw';
+
+import dospImage from '../assets/about/dosp.webp';
+
+const seoMetaData = {
+  description: 'Fair Source Software is publicly available to read; allows use, modification, and redistribution with minimal restrictions to protect the producer’s business model; and undergoes delayed Open Source publication.',
+  slug: 'about/'
+};
+
+---
+
+<Layout title="About Fair Source" seo={seoMetaData}>
+  <header class="w-full relative overflow-x-clip z-0">
+    <div class="flex flex-wrap justify-center container mx-auto z-10 relative px-[0.5rem] sm:px-[1rem] md:px-[1.5rem] lg:px-[2rem] xl:px-[1.5rem] 2xl:px-[3.62rem] 3xl:px-[6.62rem]">
+      <div class="w-10/12 lg:w-9/12 xl:w-8/12 py-[3rem] lg:py-[6rem] 2xl:pt-[12.19rem] 2xl:pb-[8rem] 3xl:pt-[8rem] flex-col justify-center text-center z-1">
+        <h1>About Fair Source</h1>
+        <p class="text-[1.75rem] font-[500] leading-[130%] tracking-[-0.035rem] mb-[1.5rem]">Learn the what, why, and who of Fair Source Software.</p>
+      </div>
+    </div>
+    <div class="image z-0 w-auto hidden sm:block absolute top-[10rem] left-0 right-0 bottom-[5rem] sm:top-[6rem] md:top-[6rem] md:bottom-[-12rem] md:left-[-2rem] md:right-0 lg:top-[5rem] lg:top-[-14rem] lg:left:-0 lg:right-0 xl:bottom-[-40rem] xl:left-0 xl:right-0 2xl:top-[15rem] 3xl:top-[8rem] 3xl:left-0 3xl:right-0 3xl:bottom-[-8rem]">
+      <div class="flex items-top justify-center w-[100%] relative mx-auto columns-2 md:gap-[4rem] z-0 xl:max-h-[30rem] 2xl:max-h-[40rem] 3xl:max-h-[60rem] overflow-clip">
+        <div class="w-6/12 pt-[2rem]">
+          <Fragment set:html={GeoLeft} />
+        </div>
+        <div class="w-6/12">
+          <Fragment set:html={GeoRight} />
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <main>
+    <Section sectionStyles="py-[3rem] px-[5rem] xl:pt-[5.5rem] xl:pb-[11.25rem] xl:px-[14.25rem]">
+      <div>
+        <h2>Fair Source Definition</h2>
+        <p
+          class="text-[1.75rem] font-[500] leading-[135%] tracking-[-0.0375rem] pb-[1.25rem]"
+        >
+          Fair Source Software (FSS):
+        </p>
+        <ol
+          class="text-[1.75rem] font-[500] pb-[3.25rem] pl-[3.25rem] list-decimal"
+        >
+          <li>is publicly available to read;</li>
+          <li>
+            allows use, modification, and redistribution with minimal restrictions
+            to protect the producer’s business model; and
+          </li>
+          <li>undergoes delayed Open Source publication (DOSP).</li>
+        </ol>
+        <div>
+          <p class="pb-[1.5rem]">
+            The intention is for the first point to be a bright line, and for the
+            second to invite exploration. We expect <a href="/licenses"
+              >Fair Source licenses</a
+            > to emerge and evolve and shake out into a few clear winners over time,
+            as companies <a href="/join">apply Fair Source</a> within their own particular
+            business context.
+          </p>
+
+          <div class="pb-[1.5rem]">
+            <a  href="https://opensource.org/delayed-open-source-publication">
+              <Image src={dospImage} alt="dosp image" densities={[1.5, 2]} class="relative w-[100%] h-auto"/>
+            </a>
+          </div>
+
+          <p class="pb-[1.5rem]">
+            The third point is also intended as a bright line, and a key
+            differentiator of Fair Source from <a
+              href="https://opensource.org/blog/opencore">Open Core</a
+            > and other approaches. <a href="https://opensource.org/dosp"
+              >Delayed Open Source publication</a
+            > (DOSP) is a concept <a
+              href="https://opensource.org/blog/a-historic-view-of-the-practice-to-delay-releasing-open-source-software-osis-report"
+              >established by the Open Source Initiative</a
+            > (OSI). It is in keeping with <a href="https://opensource.org/bylaws"
+              >OSI's public-benefit mandate</a
+            >
+            to "persuade organizations and software authors to distribute source software
+            freely they otherwise would not distribute." DOSP ensures that if a Fair
+            Source company goes out of business, or develops its products in an undesired
+            direction, the community or another company can pick up and move forward.
+            Will this be meaningful in practice? Again, time will tell.
+          </p>
+
+          <h3>Why Fair Source?</h3>
+
+          <p class="pb-[1.5rem]">
+            The purpose of Fair Source is to legitimize the practice of
+            companies meaningfully sharing the code for their core software
+            products while retaining control of their roadmap and business
+            model, without confusing this with Free and Open Source Software.
+            <a href="/companies/">Fair Source companies</a> value user freedom
+            and developer sustainability. Quite often, we maintain and
+            contribute both financially and in other ways to genuine
+            community-governed FOSS projects alongside our commercial Fair
+            Source offerings.
+          </p>
+
+          <h3>Who is behind Fair Source?</h3>
+
+          <p>
+            Fair Source began as an initiative of <a
+              href="https://sentry.io/welcome/">Sentry</a
+            >
+            in 2024, in response to a 2023 <a
+              href="https://x.com/adamhjk/status/1687113805237714944"
+              >call-to-action</a
+            >
+            from Chef co-founder Adam Jacob. Fair Source is managed on GitHub. Governance
+            and process documentation is <a
+              href="https://github.com/fairsource/fair.io">in the README</a
+            >.
+          </p>
+
+          <div class="justify-center flex mt-[3rem] mb-[3rem]">
+            <Button url="/faq/" type="secondary" color="black" cta="Continue to the FAQ"></Button>
+          </div>
+        </div>
+      </div>
+
+    </Section>
+
+</Layout>
+ 

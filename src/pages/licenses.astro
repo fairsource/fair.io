@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import { Image } from 'astro:assets';
+
+import HeroImage from '../assets/licenses/licenses-hero-image.png';
+import FSL from '../assets/licenses/FSL-initials.png';
+import Licenses1 from '../assets/licenses/licenses-1.png';
+
+
+const seoMetaData = {
+  description: 'The following licenses fit the Fair Source Definition.',
+  slug: 'licenses/'
+};
+const mobileSectionCommonClasses = 'z-0 pb-0 pt-[12.31rem] sm:pt-[9.12rem] sm:pb-[1.56rem] sm:px-[3rem] md:pt-[6.69rem] md:pb-[7.44rem] lg:px-0 lg:py-0';
+const mobileSectionBackgroundImageClasses = 'absolute h-[12.31rem] top-0 left-0 sm:bottom-0 sm:h-auto sm:bottom-0 sm:right-0 md:top-[1rem] md:bottom-[1rem] md:left-[1rem] md:w-auto md:h-auto lg:right-0 lg:bottom-0 lg:left-0 lg:top-0';
+const mobileCardClasses = `z-10`;
+const card = 'border border-borderGray rounded-small px-[1rem] py-[1.5rem] xl:px-[2rem] xl:py-[3rem] h-[100%]';
+const cardTitleClasses = `font-sans text-[1.375rem] font-[500] color-black leading-[120%] tracking-[-0.03438rem] flex items-center mb-[0.62rem]`;
+---
+
+
+<Layout title="Fair Source Licenses" seo={seoMetaData}>
+<header>
+  <div class="relative container-spill pl-[0.5rem] sm:pl-[1rem] md:pl-[1.5rem] lg:pl-[2rem] xl:pl-[1.5rem] 2xl:pl-[3.62rem] 3xl:pl-[6.62rem]">
+    <div class="block relative w-12/12 lg:absolute lg:right-0 lg:bottom-0 lg:top-0 xl:bottom-[-10rem] lg:w-7/12 ">
+      <Image src={HeroImage} alt="How to adopt fair source" densities={[1, 2, 3]}/>
+    </div>
+    <div class="relative flex">
+      <div class="w-12/12 py-[2rem] lg:py-[7rem] 2xl:pt-[12rem] 2xl:pb-[17.56rem] lg:w-4/12">
+        <h1>Fair Source Licenses</h1>
+        <p class="text-[1.75rem] font-[500] leading-[130%] tracking-[0.035rem]">Our licenses encode our values: user freedom and developer sustainability.</p>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <Section sectionStyles="px-[1.5rem] xl:px-[3.5rem] py-[2.75rem] xl:py-[5.5rem]">
+    <div class="w-12/12 relative flex flex-wrap justify-start pb-[3rem] xl:pb-[6.25rem]">
+      <div class="w-12/12 xl:w-9/12">
+        <h3 class="text-[2.5rem] font-[500] leading-[125%] tracking-[-0.05rem]">The following licenses fit the <a href="/about/">Fair Source Definition</a>.</h3>
+        <p class="pt-[1.5rem]">Other licenses and approaches may also align with our goals and values. These are the ones we recommend for adoption.</p>
+      </div>
+    </div>
+    <div class={`${mobileSectionCommonClasses} w-12/12 relative flex flex-wrap justify-between pb-[3rem] sm:mb-[3rem] lg:gap-x-[3rem] lg:mb-0 lg:h-[100%] xl:pb-[5.59rem]`}>
+      <div class={`${mobileSectionBackgroundImageClasses} lg:relative lg:w-5/12 h-[100%]`}>
+        <Image src={Licenses1} alt="Fair Source License" class="w-[100%] relative h-auto" />
+      </div>
+      <div class={`z-10 relative w-12/12 lg:h-[100%] lg:w-6/12`}>
+        <div class={`border border-borderGray bg-white rounded-small lg:h-[100%] lg:pb-[2rem]`}>
+          <div class="w-12/12">
+            <Image src={FSL} alt="Functional Source License" />
+          </div>
+          <div class="w-12/12 px-[1rem] xl:px-[2rem] pb-[2rem] xl:pb-0">
+            <span class="tag text-teal mt-[-3rem]">Recommended</span>
+            <h3 class="text-[1.75rem] text-[#000000] leading-[120%] tracking-[-0.04375rem] font-[500]">Functional Source License <span class="font-[400]">(FSL)</span></h3>
+            <p class="mb-[0.62rem]">A simple non-compete license with eventual Open Source conversion after two years. This is the flagship Fair Source license.</p>
+            <a href="https://fsl.software/" class="no-underline table-cell px-6 py-4 rounded-small text-[1.25rem] font-[600] leading-[130%] tracking-[-0.025rem] capitalize bg-taupe hover:opacity-80"><span class="flex items-center"><span class="pr-[0.5rem]">Visit Website</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+              <path d="M1 2H13M13 2V14M13 2L1 14" stroke="black" stroke-width="2.3"/></span>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-12/12 relative flex flex-wrap pb-[2rem]  xl:pb-[4rem]">
+      <div class="w-12/12 pb-[3rem]">
+        <h3 class="tag text-orange">Alternate Fair Source Licenses</h3>
+        <p>These licenses provide different terms and features, catering to specific project needs. They are useful alternatives for projects requiring unique conversion timelines or feature restrictions, offering flexibility beyond our main recommendation.</p>
+      </div>
+      <div class="w-12/12 lg:w-6/12 mb-[1.25rem] lg:pr-[0.72rem]">
+        <div class={card}>
+          <a href="https://fcl.dev/" target="_BLANK"><h4 class={cardTitleClasses}><span class="mr-[0.69rem] font-[600]">Fair Core License (FCL)</span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <path d="M1 2H13M13 2V14M13 2L1 14" stroke="black" stroke-width="2.3"/></span>
+            </svg></h4></a>
+          <p>A simple non-compete license with two-year delayed conversion to Open Source. Consider it for monetizing self-hosted software.</p>
+        </div>
+      </div>
+      <div class="w-12/12 lg:w-6/12 mb-[1.25rem] lg:pl-[0.72rem]">
+        <div class={card}>
+          <a href="https://mariadb.com/bsl-faq-mariadb/" target="_BLANK"><h4 class={cardTitleClasses}><span class="mr-[0.69rem] font-[600]">Business Source License (BUSL or BSL)</span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <path d="M1 2H13M13 2V14M13 2L1 14" stroke="black" stroke-width="2.3"/></span>
+            </svg></h4></a>
+          <p>A complex non-compete license with eventual Open Source conversion after a certain amount of time, usually four years.</p>
+        </div>
+      </div>
+      <div class="w-12/12 pt-[3rem]">
+        <p>Have another license we should consider? <a
+          href="https://github.com/fairsource/fair.io">See the README</a>.</p>
+      </div>
+    </div>
+
+  </Section>
+</main>
+</Layout>

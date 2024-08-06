@@ -1,0 +1,45 @@
+---
+import { Image } from 'astro:assets';
+import logoFooter from '../assets/navigation/logo-footer.png';
+
+const date = new Date();
+const year = date.getFullYear();
+
+const { links, socialLinks } = Astro.props;
+
+---
+
+<footer class="px-[3rem] container mx-auto px-[0.5rem] sm:px-[1rem] md:px-[1.5rem] lg:px-[2rem] xl:px-[1.5rem] 2xl:px-[3.62rem] 3xl:px-[6.62rem]">
+  <div class="w-full flex columns-12 justify-between items-center py-[2.5rem]">
+    <div class="w-4/12 md:w-3/12 lg:w-2/12">
+      <a href="/">
+        <Image src={logoFooter} densities={[1.5, 2, 3, 4]} alt="Fair Source" />
+      </a>
+    </div>
+    <div class="span-cols-6 lg:span-cols-8 flex items-center">
+      <ul class="hidden lg:flex gap-[2.5rem] mr-[2.5rem]">
+        {
+          links.map((link) => <li>
+            <a href={link.url} target={link.target} class="text-lightGray font-[500] font-[1.25rem] leading-[130%] font-sans hover:underline">{link.name}</a>
+          </li>
+          )
+        }
+      </ul>
+      <ul class="flex gap-[0.38rem]">
+        {
+          socialLinks.map((link) => <li>
+            <a href={link.url} target={link.target} class="h-[30px] w-[30px]"><Image src={link.icon} alt={link.name} class="h-[30px] w-[30px]" densities={[1,2,3,4]} /></a>
+          </li>
+          )
+        }
+      </ul>
+    </div>
+
+
+  </div>
+  <hr class="text-taupe" />
+  <div class="flex justify-center py-[2.69rem]">
+    <p class="text-lightGray text-[1.25rem] heading-[130%]">Copyright © {year ? year : ''} Fair.io | All Rights Reserved</p>
+  </div>
+
+</footer>

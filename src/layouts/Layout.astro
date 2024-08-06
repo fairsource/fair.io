@@ -1,0 +1,388 @@
+---
+
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import iconX from '../assets/navigation/twitter4x.png'
+import iconGitHub from '../assets/navigation/github4x.png'
+
+const links = [
+  {
+    name: 'About',
+    url: '/about/',
+    target: ''
+  },
+  {
+    name: 'Licenses',
+    url: '/licenses/',
+    target: ''
+  },
+  {
+    name: 'FAQ',
+    url: '/faq/',
+    target: ''
+  },
+  {
+    name: 'Companies',
+    url: '/companies/',
+    target: ''
+  },
+  {
+    name: 'Join',
+    url: '/join/',
+    target: ''
+  },
+];
+
+const socialLinks = [
+  {
+    name: 'GitHub',
+    url: 'https://github.com/fairsource/fair.io',
+    icon: iconGitHub,
+    target: '_BLANK'
+  },
+  {
+    name: 'X',
+    url: 'https://x.com/fairsrc/',
+    icon: iconX,
+    target: '_BLANK'
+  }
+];
+
+
+const { title, seo } = Astro.props;
+
+const seoTitle = `${title} | Fair.io`;
+const seoDescription = seo?.description ? seo.description : '';
+const seoMetaImage = seo?.metaImage ? seo.metaImage : 'https://fair.io/images/metaimage.png';
+const seoSlug = seo?.slug ? seo.slug : '';
+
+const canonicalURL = `https://fair.io/${seoSlug}`;
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={seoDescription} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+    <meta charset="utf-8"/>
+    <meta property="og:title" content={seoTitle}/>
+    <meta property="og:description" content={seoDescription}/>
+    <meta property="og:image" content={seoMetaImage}/>
+    <meta property='og:url'  content={canonicalURL}/>
+    <meta name='twitter:url' content={canonicalURL}/>
+    <meta name='twitter:title' content={seoTitle}/>
+    <meta name='twitter:description' content={seoDescription}/>
+    <meta name="twitter:image" content={seoMetaImage}/>
+    <link rel="canonical" href={canonicalURL}/>
+		<title>{seoTitle}</title>
+    <script
+      defer
+      data-domain="fair.io"
+      src="https://plausible.io/js/script.js"
+    ></script>
+	</head>
+	<body class="bg-background">
+		<Navigation links={links} socialLinks={socialLinks} />
+		<slot />
+		<Footer links={links} socialLinks={socialLinks} />
+	</body>
+</html>
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {
+    @font-face {
+      font-family: 'Outfit';
+      src: url('/fonts/Outfit-VariableFont_wght.ttf') format('truetype');
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Plus Jakarta Sans';
+      src: url('/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+      font-style: normal;
+      font-display: swap;
+    } 
+    @font-face {
+      font-family: 'Plus Jakarta Sans';
+      src: url('/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype');
+      font-style: italic;
+      font-display: swap;
+    }
+  }
+  html {
+    font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
+  }
+  body {
+    overflow-x: clip;
+  }
+  .container-spill {
+    margin-left: 0;
+    width: 100%;
+    margin: auto;
+    padding: 0 1.5rem;
+    @media (min-width:640px){
+      margin-left: calc((100% - 640px)/2);
+      max-width: 640px;
+    }
+    @media (min-width:768px){
+      margin-left: calc((100% - 768px)/2);
+      max-width: 768px;
+    }
+    @media (min-width:1024px){
+      margin-left: calc((100% - 1024px)/2);
+      max-width: 1280px;
+    }
+    @media (min-width:1280px){
+      margin-left: calc((100% - 1280px)/2);
+      max-width: 1440px;
+    }
+    @media (min-width:1440px){
+      margin-left: calc((100% - 1440px)/2);
+      max-width: 1536px;
+    }
+    @media (min-width:1536px){
+      margin-left: calc((100% - 1536px)/2);
+      max-width: 1800px;
+    }
+  }
+  h1 {
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; 
+    letter-spacing: -0.023px;
+    @media (min-width:1280px){
+      font-size: 4.5rem;
+    }
+  }
+  h2 {
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%; /* 3.125rem */
+    letter-spacing: -0.0575rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+    @media (min-width: 640px) {
+      font-size: 2rem;
+    }
+    @media (min-width: 1024px) {
+      font-size: 2.375rem;
+      margin-bottom: 0.75rem;
+    }
+    @media (min-width: 1440px) {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+  h3 {
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%; /* 1.875rem */
+  }
+  h4 {
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%; /* 1.875rem */
+  }
+  h5 {
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+    font-size: .75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%; /* 1.875rem */
+  }
+  h6 {
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+    font-size: .5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%; /* 1.875rem */
+  }
+  p {
+    font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
+    color: #191919;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 145%; 
+    letter-spacing: -0.03438rem;
+    @media (min-width: 640px) {
+      font-size: 1.125rem;
+    }
+    @media (min-width: 1024px) {
+      font-size: 1.3125rem;
+    }
+    @media (min-width: 1440px) {
+      font-size: 1.375rem;
+    }
+  }
+  p.hero {
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: -0.035rem;
+  }
+  .tag {
+    display: block;
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+    @media (min-width: 640px) {
+      font-size: 1.1875rem;
+    }
+    @media (min-width: 1024px) {
+      font-size: 1.4375rem;
+      margin-bottom: 0.75rem;
+    }
+    @media (min-width: 1440px) {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+  }
+  main a{
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  a.no-underline{
+    text-decoration: none !important;
+  }
+  a.emphasized {
+    border-radius: 2rem;
+    padding:  0.125rem 0.75rem;
+    letter-spacing: 0.0375rem;
+    background: #E8E3DC;
+    text-decoration: none !important;
+  }
+  a.emphasized:hover {
+    opacity: 80%;
+  }
+
+  a.emphasized.branded {
+    color: white;
+    font-weight: 500;
+    padding: 0.25rem 1.1875rem 0.4375rem 0.75rem;
+    line-height: 1.7875rem;
+    margin: 0 0.25rem;
+    white-space: nowrap;
+  }
+  a.emphasized.branded::before {
+    display: inline-block;
+    width: 1.625rem;
+    height: 1.625rem;
+    margin-right: 0.75rem;
+  }
+  a.emphasized.github {
+    background-color: #6E5494;
+    padding-left: 0.5rem;
+  }
+  a.emphasized.github::before {
+    content: url('/images/icons/gitHub-logo.svg');
+    transform: translateY(7px);
+  }
+  a.emphasized.twitter {
+    background-color: #1E1E1E;
+  }
+  a.emphasized.twitter:before {
+    content: url('/images/icons/twitter-logo.svg');
+    transform: translateY(5px);
+  }
+
+  @media (min-width: 768px) {
+    a.emphasized.github::before {
+      transform: translateY(6px);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    a.emphasized.twitter::before {
+      transform: translateY(3px);
+    }
+
+    a.emphasized.github::before {
+      transform: translateY(4px);
+    }
+  }
+  a.emphasized.external::after {
+    content: url('/images/icons/external-link-icon.svg');
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-left: 1rem;
+    transform: scale(1.25) translateY(-2px);
+  }
+  @media (min-width: 1024px) {
+    a.emphasized.external::after {
+      transform: scale(1.25) translateY(-4px);
+    }
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
+  .text-balance {
+    white-space: balance;
+  }
+  .section-body-spacing{
+    margin-bottom: 1.5rem;
+    @media (min-width: 1024px) {
+      margin-bottom: 1.125rem;
+    }
+    @media (min-width: 1440px) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  .carousel-wrapper-right::after {
+	  z-index: 1;
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  width: 8rem;
+	  bottom: 0;
+	  flex-shrink: 0;
+	  background: linear-gradient(
+		  270deg,
+		  #F2F0ED 7.69%,
+		  rgba(31, 22, 51, 0) 92.31%
+	  );
+  }
+  .carousel-wrapper-left::before {
+	  z-index: 1;
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 8rem;
+	  bottom: 0;
+	  flex-shrink: 0;
+	  background: linear-gradient(
+		  90deg,
+		  #F2F0ED 7.69%,
+		  rgba(31, 22, 51, 0) 92.31%
+	  );
+  }
+</style>

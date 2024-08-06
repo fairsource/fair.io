@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import companies from '../data/companies.json';
+import Button from '../components/Button.astro';
+import CarouselCard from '../components/CarouselCard';
+import GeoLeft from '/images/background-images/geo-left.svg?raw';
+import GeoRight from '/images/background-images/geo-right.svg?raw';
+
+const seoMetaData = {
+  description: 'Read the announcements from companies that have joined Fair Source.',
+  slug: 'companies/'
+};
+---
+
+
+<Layout title="Fair Source Companies" seo={seoMetaData}>
+  <header class="relative flex flex-wrap justify-center items-center">
+    <div class="container w-8/12 pt-[3rem] px-[0.5rem] sm:px-[1rem] md:px-[1.5rem] lg:w-8/12 text-center lg:pt-[12.19rem] z-10">
+      <h1>Fair Source Companies</h1>
+      <p class="mb-[1.5rem] text-[1.75rem] text-black font-[500] leading-[130%] tracking-[-0.035rem]">
+        Read in their own words what companies have to say about joining Fair Source.
+      </p>
+      <div class="flex flex-wrap flex-col md:flex-row w-12/12 mb-[11.44rem] gap-[1rem] justify-center">
+        <Button url="/join" type="primary" cta="Join Fair Source"></Button>
+      </div>
+    </div>
+    <div class="image z-0 w-auto hidden sm:block absolute top-[10rem] left-0 right-0 bottom-[5rem] sm:top-[17rem] md:top-[18rem] md:bottom-[-12rem] md:left-0 md:right-0 lg:top-[20rem] lg:left:-0 lg:right-0 xl:bottom-[-40rem] xl:left-0 xl:right-0 2xl:top-[19rem] 3xl:top-[18rem] 3xl:left-0 3xl:right-0 3xl:bottom-[-8rem]">
+      <div class="flex items-top justify-center w-[100%] relative mx-auto columns-2 md:gap-[4rem] z-0 xl:max-h-[30rem] 2xl:max-h-[40rem] 3xl:max-h-[60rem] overflow-clip">
+        <div class="w-6/12 pt-[2rem]">
+          <Fragment set:html={GeoLeft} />
+        </div>
+        <div class="w-6/12">
+          <Fragment set:html={GeoRight} />
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <Section>
+      <div class="company-list w-full flex flex-wrap">
+        <h2 class="pl-[3rem] pt-[3rem] mb-0 text-[1.5rem] font-[500] leading-[125%] mb-[2.62rem] justify-self-start w-1/2">
+          All Fair Source Announcements
+        </h2>
+      </div>
+      {
+        companies && <div class="flex flex-wrap columns-1 md:columns-2 lg:columns-3 pb-[5rem] gap-y-[2.5rem] gap-x-[2.5rem] md:gap-x-[1rem] md:gap-y-[3rem] justify-center">
+          {
+            companies.map((company) => (
+              <CarouselCard company={company} border />           
+            ))
+          }
+
+        </div>
+      }
+      </div>
+      <div class="relative cta w-full flex flex-wrap items-center justify-center min-h-[30rem] z-0">
+        <div class="absolute top-0 right-0 bottom-0 left-0">
+          <div class="absolute bg-[url('/images/background-images/companiesWantTo-left.svg')] bg-contain bg-no-repeat bg-left-bottom min-h-[15rem] w-1/3 lg:w-1/2 left-0 bottom-0"></div>
+          <div class="absolute bg-[url('/images/background-images/companiesWantTo-right.svg')] hidden md:block bg-no-repeat bg-contain bg-right-bottom h-[20rem] lg:h-full w-1/2 right-0 bottom-0"></div>
+        </div>
+        <div class="flex-col mx-auto w-4/12 pt-[10rem] lg:w-8/12 lg:max-w-none text-center justify-center lg:py-[12rem] z-10">
+          <h2>Want to list your company?</h2>
+          <div class="justify-center flex pt-10">
+            <Button url="/join" type="secondary" color="black" cta="Join Fair Source"></Button>
+          </div>
+        </div>
+      </div>
+    </Section>
+  </main>
+    
+</Layout>

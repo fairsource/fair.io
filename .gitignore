@@ -22,3 +22,15 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# vscode user preferences
+.vscode/*
+
+# We'll leave some of the vscode settings for better DX
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Ignore all local vscode history of files
+**/.history

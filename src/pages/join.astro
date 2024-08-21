@@ -1,12 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
+import Hero from '../components/Hero.astro';
 import { Image } from 'astro:assets';
 
 import auditForSecretsImage from '../assets/adopt/auditforsecrets.png';
 import publishYourRepoImage from '../assets/adopt/publishyourrepo.png';
 import adoptHeroImage from '../assets/adopt/adoptHeroImage.png';
-import adoptHeroImageDesktop from '../assets/adopt/adoptHeroImageDesktop.png';
 
 const mobileSectionCommonClasses = 'z-0 pb-0 pt-[12.31rem] sm:pt-[9.12rem] sm:pb-[1.56rem] sm:px-[3rem] md:pt-[6.69rem] md:pb-[7.44rem]';
 const mobileSectionBackgroundImageClasses = 'h-[12.31rem] top-0 left-0 sm:bottom-0 sm:h-auto md:top-[1rem] md:bottom-[1rem] md:left-[1rem] md:w-auto md:h-auto';
@@ -17,19 +17,20 @@ const seoMetaData = {
   description: `Here's how to adopt Fair Source at your company.`,
   slug: 'join/'
 };
+
+const heroData = {
+  headline: "Join Fair Source",
+  subhead: 'Sold on the <a href="/faq" class="underline">benefits</a>? Here\'s how to adopt Fair Source at your company.',
+  heroImage: adoptHeroImage
+}
 ---
 <Layout title="Join Fair Source" seo={seoMetaData}>
-  <header class="container relative mx-auto flex flex-wrap px-[0.5rem] sm:px-[1rem] md:px-[1.5rem] lg:px-[2rem] xl:px-[1.5rem] 2xl:px-[3.62rem] 3xl:px-[6.62rem] pb-[0.5rem] pb-[1rem]">
-    <div class="hidden relative lg:block lg:absolute lg:right-[2rem] lg:bottom-0 lg:top-0 lg:w-1/2 xl:right-[2rem] 2xl:right-[3.62rem] 3xl:right-[6.62rem]">
-      <Image src={adoptHeroImageDesktop} alt="How to adopt fair source" densities={[1, 2, 3]} class="w-[100%] h-auto"/>
-    </div>
-    <div class="block relative lg:hidden lg:absolute lg:right-[2rem] lg:bottom-0 lg:top-0 lg:w-1/2 xl:right-[2rem] 2xl:right-[3.62rem] 3xl:right-[6.62rem]">
-      <Image src={adoptHeroImage} alt="How to adopt fair source" densities={[1, 2, 3]} class="w-[100%] h-auto"/>
-    </div>
-    <div class="w-12/12 py-[3rem] lg:w-5/12 lg:py-[8rem] xl:pb-[15.25rem] xl:pt-[12.38rem]">
-      <h1 class="text-balance mb-[1rem]">Join Fair Source</h1>
-      <p class="text-[1.75rem] font-[500] leading-[130%] tracking-[0.035rem]">Sold on the <a href="/faq" class="underline">benefits</a>? Here's how to adopt Fair Source at your company.</p>
-    </div>
+  <header>
+    <Hero
+      headline={heroData.headline}
+      subhead={heroData.subhead}
+      heroImage={heroData.heroImage}
+    />
   </header>
   <main>
     <Section sectionStyles="px-[1.5rem] py-[3rem] gap-[2rem] xl:py-[8rem] xl:gap-x-[4.25rem]" isFirst itemsTop>

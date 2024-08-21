@@ -1,40 +1,31 @@
 ---
-import { Image } from 'astro:assets';
-
 import Button from '../components/Button.astro';
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
-import GeoLeft from '/images/background-images/geo-left.svg?raw';
-import GeoRight from '/images/background-images/geo-right.svg?raw';
+import Hero from '../components/Hero.astro';
 
-import dospImage from '../assets/about/dosp.webp';
+import heroImage from '../assets/about/aboutHeroImage.png';
 
 const seoMetaData = {
   description: 'Fair Source is an alternative to closed source, allowing you to safely share access to your core products. Fair Source Software (FSS) can be used with minimal restrictions, and becomes Open Source after a period of time.',
   slug: 'about/'
 };
 
+const heroData = {
+  headline: "About Fair Source",
+  subhead: 'Learn the what, why, and who of Fair Source Software.',
+  heroImage: heroImage
+}
+
 ---
 
 <Layout title="About Fair Source" seo={seoMetaData}>
-  <header class="w-full relative overflow-x-clip z-0">
-    <div class="flex flex-wrap justify-center container mx-auto z-10 relative px-[0.5rem] sm:px-[1rem] md:px-[1.5rem] lg:px-[2rem] xl:px-[1.5rem] 2xl:px-[3.62rem] 3xl:px-[6.62rem]">
-      <div class="w-10/12 lg:w-9/12 xl:w-8/12 py-[3rem] lg:py-[6rem] 2xl:pt-[12.19rem] 2xl:pb-[8rem] 3xl:pt-[8rem] flex-col justify-center text-center z-1">
-        <h1>About Fair Source</h1>
-        <p class="text-[1.75rem] font-[500] leading-[130%] tracking-[-0.035rem] mb-[1.5rem]">Learn the what, why, and who of Fair Source Software.</p>
-      </div>
-    </div>
-    <div class="image z-0 w-auto hidden sm:block absolute top-[10rem] left-0 right-0 bottom-[5rem] sm:top-[6rem] md:top-[6rem] md:bottom-[-12rem] md:left-[-2rem] md:right-0 lg:top-[5rem] lg:top-[-14rem] lg:left:-0 lg:right-0 xl:bottom-[-40rem] xl:left-0 xl:right-0 2xl:top-[15rem] 3xl:top-[8rem] 3xl:left-0 3xl:right-0 3xl:bottom-[-8rem]">
-      <div class="flex items-top justify-center w-[100%] relative mx-auto columns-2 md:gap-[4rem] z-0 xl:max-h-[30rem] 2xl:max-h-[40rem] 3xl:max-h-[60rem] overflow-clip">
-        <div class="w-6/12 pt-[2rem]">
-          <Fragment set:html={GeoLeft} />
-        </div>
-        <div class="w-6/12">
-          <Fragment set:html={GeoRight} />
-        </div>
-      </div>
-    </div>
-
+  <header>
+    <Hero
+      headline={heroData.headline}
+      subhead={heroData.subhead}
+      heroImage={heroData.heroImage}
+    />
   </header>
   <main>
     <Section sectionStyles="py-[3rem] px-[5rem] xl:pt-[5.5rem] xl:pb-[11.25rem] xl:px-[14.25rem]">

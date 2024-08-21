@@ -1,29 +1,32 @@
 ---
-import { Image } from 'astro:assets';
-
 import heroImage from '../assets/faq/faqHeroImage.png';
 
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
 import Collapse from '../components/Collapse.astro';
+import Hero from '../components/Hero.astro';
 
 const seoMetaData = {
   description: 'Read on to understand Fair Source and what it has to offer companies and developers.',
   slug: 'faq/'
 };
 
+const heroData = {
+  headline: "Frequently Asked Questions",
+  subhead: 'Read on to understand Fair Source and what it has to offer companies and developers.',
+  heroImage: heroImage
+}
+
 ---
 
 
 <Layout title="Frequently Asked Questions" seo={seoMetaData}>
-  <header class="relative container-spill mx-auto flex flex-wrap pl-[0.5rem] sm:pl-[1rem] md:pl-[1.5rem] lg:pl-[2rem] xl:pl-[1.5rem] 2xl:pl-[3.62rem] 3xl:pl-[6.62rem]">
-    <div class="block relative mx-auto w-12/12 lg:w-1/2 lg:order-12 lg:absolute lg:right-[-2rem] lg:left-[calc(50% + 4rem)] xl:top-0 2xl:w-7/12 2xl:bottom-[-2rem]">
-      <Image src={heroImage} alt="hero image" densities={[1.5, 2]} class="relative w-[100%] h-auto"/>
-    </div>
-    <div class="relative w-12/12  py-[3rem] lg:w-1/2 lg:py-[1.5rem] lg:pr-[4rem] xl:pb-[8.62rem] xl:pt-[6rem] 2xl:pb-[8rem] 2xl:pt-[12rem] 2xl:w-5/12 2xl:pr-[2rem]">
-      <h1 class="text-balance mb-[1rem]">Frequently Asked Questions</h1>
-      <p class="text-[1.75rem] font-[500] leading-[130%] tracking-[0.035rem]">Read on to understand Fair Source and what it has to offer companies and developers.</p>
-    </div>
+  <header>
+    <Hero
+      headline={heroData.headline}
+      subhead={heroData.subhead}
+      heroImage={heroData.heroImage}
+    />
   </header>
   <main>
     <Section backgroundStyling="py-[3rem] px-[3rem]">

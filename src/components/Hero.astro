@@ -2,20 +2,19 @@
 import Button from './Button.astro';
 import { Image } from 'astro:assets';
 
-const { headline, subhead, buttonsData = [], heroImage } = Astro.props;
+const { headline, subhead, buttonsData = [], heroImage, bottomMargin = '' } = Astro.props;
 
+const containerClasses = `container flex flex-wrap mx-auto px-[0.5rem] sm:px-[1rem] md:px-[1.5rem] lg:px-[2rem] xl:px-[1.5rem] 2xl:px-[3.62rem] 3xl:px-[6.62rem] ${bottomMargin}`;
 ---
-<div class="container relative mx-auto flex flex-wrap items-stretch px-[0.5rem] sm:px-[1rem] md:px-[1.5rem] lg:px-[2rem] xl:px-[1.5rem] 2xl:px-[3.62rem] 3xl:px-[6.62rem] pb-[0.5rem] pb-[1rem] items-stretch">
-  <div class="relative w-12/12 mx-auto flex lg:w-6/12 lg:h-[100%] lg:order-12">
-    <div class="">
+<div class={containerClasses}>
+  <div class="w-12/12 lg:order-last lg:w-6/12">
       <Image src={heroImage} alt="hero image" densities={[1, 2, 3, 4]} />
-    </div>
   </div>
-  <div class="w-12/12 py-[3rem] h-[100%] lg:w-6/12 lg:py-[8rem] xl:pb-[4rem] xl:pt-[3rem] 2xl:pb-[7.5rem] 2xl:pt-[6rem]">
-    <h1 class="text-black mb-4">{headline}</h1>
-    <p class="text-balance text-black text-[1.5rem] xl:text-[2rem] leading-[130%] font-sans font-[500] mb-6" set:html={subhead} />
+  <div class="w-12/12 mb-[1.5rem] mt-[0.78375rem] lg:my-auto lg:pr-[2.02625rem] lg:w-6/12">
+    <h1 class="mb-[1rem] text-[2.5rem] text-black lg:text-[3rem] 2xl:text-[3.75rem]">{headline}</h1>
+    <p class="text-balance text-black text-[1.75rem] leading-[130%] font-sans font-[500] lg:text-[1.375rem] 2xl:text-[1.75rem]" set:html={subhead} />
     {buttonsData.length > 0 && (
-      <div class="flex flex-wrap gap-4">
+      <div class="flex flex-wrap gap-[0.5rem] mt-6 lg:gap-[1rem]">
        { buttonsData.map((button) => (
           <Button type={button.type} url={button.link} color={button.color} cta={button.text} />
         ))}

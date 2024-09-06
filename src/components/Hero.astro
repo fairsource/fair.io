@@ -4,17 +4,17 @@ import { Image } from 'astro:assets';
 
 const { headline, subhead, buttonsData = [], heroImage, bottomMargin = '' } = Astro.props;
 
-const containerClasses = `container flex flex-col flex-wrap mx-auto px-[0.5rem] sm:px-[1rem] md:px-[1.5rem] lg:flex-row lg:px-[2rem] xl:px-[1.5rem] 2xl:px-[3.62rem] 3xl:px-[6.62rem] ${bottomMargin}`;
+const containerClasses = `container flex flex-col flex-wrap mx-auto px-[0.5rem] sm:px-[1rem] md:px-[1.5rem] md:flex-row md:px-[2rem] xl:px-[1.5rem] 2xl:px-[3.62rem] 3xl:px-[6.62rem] ${bottomMargin}`;
 ---
 <div class={containerClasses}>
-  <div class="w-12/12 lg:order-last lg:w-6/12">
-      <Image class="w-[30rem] mx-auto lg:w-full" src={heroImage} alt={headline} densities={[1, 2, 3, 4]} />
+  <div class="w-12/12 md:order-last md:w-6/12">
+      <Image class="w-[30rem] mx-auto md:w-full" src={heroImage} alt={headline} densities={[1, 2, 3, 4]} />
   </div>
-  <div class="w-12/12 mb-[1.5rem] mt-[0.78375rem] lg:my-auto lg:pr-[2.02625rem] lg:w-6/12">
-    <h1 class="mb-[1rem] text-[2.5rem] text-black lg:text-[3rem] 2xl:text-[3.75rem]">{headline}</h1>
-    <p class="text-balance text-black text-[1.25rem] leading-[130%] font-sans font-[500] lg:text-[1.375rem] 2xl:text-[1.75rem]" set:html={subhead} />
+  <div class="w-12/12 mb-[1.5rem] mt-[0.78375rem] md:my-auto md:pr-[2.02625rem] md:w-6/12">
+    <h1 class="mb-[1rem] text-[2.5rem] text-black md:text-[3rem] 2xl:text-[3.75rem]">{headline}</h1>
+    <p class="text-balance text-black text-[1.25rem] leading-[130%] font-sans font-[500] md:text-[1.375rem] 2xl:text-[1.75rem]" set:html={subhead} />
     {buttonsData.length > 0 && (
-      <div class="flex flex-wrap gap-[0.5rem] mt-6 lg:gap-[1rem]">
+      <div class="flex flex-wrap gap-[0.5rem] mt-6 md:gap-[1rem]">
        { buttonsData.map((button) => (
           <Button type={button.type} url={button.link} color={button.color} cta={button.text} />
         ))}

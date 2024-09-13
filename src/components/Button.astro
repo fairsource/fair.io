@@ -1,8 +1,8 @@
 ---
 const {type, cta, url, color, target, background = 'transparent'} = Astro.props;
 
-const anchorTagClassList = `no-underline flex grow basis-[100%] lg:grow-0 lg:basis-auto lg:table-cell no-underline`;
-const commonClassList = `px-6 py-4 rounded-small text-[1.25rem] font-[600] leading-[130%] tracking-[-0.025rem] w-full xl:w-auto`;
+const anchorTagClassList = `no-underline flex grow md:flex-[1 1 50%] lg:grow-0 lg:basis-auto lg:table-cell no-underline`;
+const commonClassList = `px-[1.125rem] py-[0.78125rem] lg:px-6 lg:py-4 rounded-small text-[1.125rem] lg:text-[1.25rem] font-[600] leading-[130%] tracking-[-0.025rem] w-full xl:w-auto`;
 const primaryClassList = `bg-black border-2 border-black ${commonClassList} text-white hover:opacity-80`;
 const secondaryClassList = `${commonClassList} bg-${background} border-2 border-${color} text-${color} hover:opacity-80`;
 const buttonTaupeClassList = `${commonClassList} bg-taupe text-black hover:opacity-80`;

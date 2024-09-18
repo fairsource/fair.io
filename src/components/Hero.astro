@@ -4,7 +4,7 @@ import { Image } from 'astro:assets';
 
 const { headline, subhead, buttonsData = [], heroImage, bottomMargin = '' } = Astro.props;
 
-const containerClasses = `container flex flex-col flex-wrap mx-auto px-[0.5rem] sm:px-[1rem] md:px-[1.5rem] md:flex-row md:px-[2rem] xl:px-[1.5rem] 2xl:px-[3.62rem] 3xl:px-[6.62rem] ${bottomMargin}`;
+const containerClasses = `container flex flex-col flex-wrap mx-auto px-[0.5rem] sm:px-[1rem] md:px-[1.5rem] md:flex-row lg:px-[2rem] xl:px-[1.5rem] 2xl:px-[3.62rem] 3xl:px-[6.62rem] ${bottomMargin}`;
 ---
 <div class={containerClasses}>
   <div class="w-12/12 md:order-last md:w-1/2">

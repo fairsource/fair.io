@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
 import Button from '../components/Button.astro';
 import Carousel from '../components/Carousel.jsx';
+import Hero from '../components/Hero.astro';
 import companies from '../data/companies.json';
 import { Image } from 'astro:assets';
 
@@ -18,27 +19,35 @@ const mobileSectionBackgroundImageClasses = 'h-[12.31rem] top-0 left-0 sm:bottom
 const mobileSectionCenteredBackground = 'top-0 left-0 sm:bottom-0 md:left-[1rem] md:right-[1rem] md:bottom-[1rem]';
 const mobileSectionContentClasses = 'z-10 pt-[1.5rem] pb-[1rem] relative w-12/12 px-[1rem] bg-white sm:border sm:border-borderGray sm:rounded-small sm:p-[2rem] lg:border-0 lg:rounded-none lg:bg-transparent';
 
+const heroData = {
+  headline: "Software Sharing for Modern Businesses",
+  subhead: "Fair Source is an alternative to closed source, allowing you to safely share access to your core products.",
+  heroImage: heroImage,
+  buttons: [
+    {
+      text: "Join Fair Source",
+      link: "/join/",
+      color: "teal",
+      type: "primary"
+    },
+    {
+      text: "Learn More",
+      link: "/about/",
+      color: "black",
+      type: "secondary"
+    }
+  ]
+}
 ---
 
 <Layout title="Software Sharing for Modern Companies" seo={seoMeta}>
   <header>
-    <div class="container-spill relative mx-auto flex flex-wrap items-stretch px-[0.5rem] sm:px-[1rem] md:px-[1.5rem] lg:px-[2rem] xl:px-[1.5rem] 2xl:px-[3.62rem] 3xl:px-[6.62rem] pb-[0.5rem] pb-[1rem] items-stretch">
-      <div class="relative w-12/12 mx-auto flex lg:w-6/12 lg:h-[100%] lg:order-12">
-        <div class="">
-         <Image src={heroImage} alt="hero image" densities={[1, 2, 3, 4]}/>
-        </div>
-      </div>
-      <div class="w-12/12 py-[3rem] h-[100%] lg:w-6/12 lg:py-[8rem] xl:pb-[4rem] xl:pt-[3rem] 2xl:pb-[7.5rem] 2xl:pt-[6rem]">
-        <h1 class="text-black mb-4">
-          Software Sharing for Modern Businesses
-        </h1>
-        <p class="text-balance text-black text-[1.5rem] xl:text-[2rem] leading-[130%] font-sans font-[500] mb-6">Fair Source is an alternative to closed source, allowing you to safely share access to your core products.</p>
-        <div class="flex flex-wrap gap-4">
-          <Button type="primary" url='/join/' color="teal" cta="Join Fair Source" />
-          <Button type="secondary" url='/about/' color="black" cta="Learn More" />
-        </div>
-      </div>
-    </div>
+    <Hero
+      headline={heroData.headline}
+      subhead={heroData.subhead}
+      heroImage={heroData.heroImage}
+      buttonsData={heroData.buttons}
+    />
   </header>
   <main>
     {

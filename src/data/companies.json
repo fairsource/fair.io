@@ -1,5 +1,12 @@
 [
   {
+    "name": "Typebot",
+    "url": "https://typebot.io/blog/typebot-is-now-fair-source",
+    "background": "#171923",
+    "logo": "/images/companies/typebot.png",
+    "adoption": "September 30, 2024"
+  },
+  {
     "name": "ptah.sh",
     "url": "https://ptah.sh/blog/2024-08-09-we-use-fair-source/",
     "background": "#F1F1F3",

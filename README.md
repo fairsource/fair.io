@@ -19,8 +19,6 @@ you're using BUSL we will need to review your license more closely since BUSL
 can have highly variable implementations.
 
 For **licenses**, we're still working out specifics but we intend to be fairly
-stringent in order to avoid license proliferation. Of course your license must
-meet the [Fair Source Definition](https://fair.io/about/). It must also not put
-an undue burden on the user to monitor their compliance with your license (any
-compliance checks should be built into your software itself). It should also be
-adopted at more than one company, at least.
+stringent in order to avoid license proliferation. Uour license must meet the
+[Fair Source Definition](https://fair.io/about/), and it should be adopted at
+more than one company, at least.

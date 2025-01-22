@@ -11,7 +11,7 @@ lightweight. [Chad Whitacre](https://github.com/chadwhitacre) (Sentry) and
 [company](https://github.com/fairsource/fair.io/issues/new?template=company.yaml)
 and
 [license](https://github.com/fairsource/fair.io/issues/new?template=license.yaml)
-submissions. [David Cramer](https://github.com/dcramer) is the founder of Fair
+submissions. [David Cramer](https://github.com/dcramer) is the co-founder of Fair
 Source; he sets the high-level direction and intent.
 
 For **companies**, we are looking for a) a blog post announcement about b) a

@@ -1,5 +1,12 @@
 [
   {
+    "name": "Pythagora",
+    "url": "https://blog.pythagora.ai/2025/01/30/pythagora-supports-fair-source/",
+    "background": "#030010",
+    "logo": "/images/companies/pythagora.png",
+    "adoption": "January 30, 2025"
+  },
+  {
     "name": "Qlty Software",
     "url": "https://qlty.sh/blog/qlty-cli-is-fair-source",
     "background": "#293A4D",

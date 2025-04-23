@@ -1,5 +1,12 @@
 [
   {
+    "name": "Ayon",
+    "url": "https://ynput.io/blog/ayon-server-is-adopting-fair-source/",
+    "background": "#00dcb4",
+    "logo": "/images/companies/ayon.svg",
+    "adoption": "April 23, 2025"
+  },
+  {
     "name": "Pythagora",
     "url": "https://blog.pythagora.ai/2025/01/30/pythagora-supports-fair-source/",
     "background": "#030010",

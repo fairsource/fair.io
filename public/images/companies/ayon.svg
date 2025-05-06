@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 1077 341" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g transform="matrix(1,0,0,1,-1251,-568)">
-        <g transform="matrix(2.62651,0,0,2.93451,7642,-593.75)">
-            <rect id="AYON_blackG_dot" x="-2433" y="396.201" width="409.76" height="115.799" style="fill:none;"/>
-            <g id="AYON_blackG_dot1" serif:id="AYON_blackG_dot">
+    <g transform="matrix(1,0,0,1,-1251,-1475)">
+        <g transform="matrix(2.62651,0,0,2.93451,7642,312.566)">
+            <rect id="AYON_blackW_dot" x="-2433" y="396.201" width="409.76" height="115.799" style="fill:none;"/>
+            <g id="AYON_blackW_dot1" serif:id="AYON_blackW_dot">
                 <g transform="matrix(-0.804673,-0.415828,-0.464592,0.720215,-2318.13,421.205)">
                     <rect x="-38.052" y="10.196" width="44" height="12.001"/>
                 </g>
@@ -15,7 +15,7 @@
                     <rect x="354.825" y="239.738" width="12" height="44"/>
                 </g>
                 <g transform="matrix(0,-0.831638,-0.929163,0,-2283.98,406.116)">
-                    <path d="M-12,-12C-18.627,-12 -24,-6.627 -24,0C-24,6.627 -18.627,12 -12,12C-5.373,12 0,6.627 0,0C0,-6.627 -5.373,-12 -12,-12" style="fill:rgb(0,215,160);fill-rule:nonzero;"/>
+                    <path d="M-12,-12C-18.627,-12 -24,-6.627 -24,0C-24,6.627 -18.627,12 -12,12C-5.373,12 0,6.627 0,0C0,-6.627 -5.373,-12 -12,-12" style="fill:white;fill-rule:nonzero;"/>
                 </g>
                 <g transform="matrix(0.929163,0,0,0.831638,-2182.7,492.439)">
                     <path d="M0,-64C-17.645,-64 -32,-49.645 -32,-32C-32,-14.355 -17.645,0 0,0C17.645,0 32,-14.355 32,-32C32,-49.645 17.645,-64 0,-64M0,12C-24.262,12 -44,-7.738 -44,-32C-44,-56.262 -24.262,-76 0,-76C24.262,-76 44,-56.262 44,-32C44,-7.738 24.262,12 0,12" style="fill-rule:nonzero;"/>

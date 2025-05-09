@@ -1,5 +1,12 @@
 [
   {
+    "name": "Chartbrew",
+    "url": "https://chartbrew.com/blog/chartbrew-is-now-fair-source/",
+    "background": "#09151C",
+    "logo": "/images/companies/chartbrew.svg",
+    "adoption": "May 7, 2025"
+  },
+  {
     "name": "Ayon",
     "url": "https://ynput.io/blog/ayon-server-is-adopting-fair-source/",
     "background": "#00dcb4",

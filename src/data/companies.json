@@ -1,5 +1,12 @@
 [
   {
+    "name": "Sourcebot",
+    "url": "https://www.sourcebot.dev/blog/fair-source",
+    "background": "#020817",
+    "logo": "/images/companies/sourcebot.png",
+    "adoption": "July 20, 2025"
+  },
+  {
     "name": "Chartbrew",
     "url": "https://chartbrew.com/blog/chartbrew-is-now-fair-source/",
     "background": "#09151C",

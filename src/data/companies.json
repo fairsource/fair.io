@@ -1,5 +1,12 @@
 [
   {
+    "name": "Tuist",
+    "url": "https://tuist.dev/blog/2025/07/08/server-fcl",
+    "background": "#f4f4ff",
+    "logo": "/images/companies/tuist.png",
+    "adoption": "July 8, 2025"
+  },
+  {
     "name": "Sourcebot",
     "url": "https://www.sourcebot.dev/blog/fair-source",
     "background": "#020817",

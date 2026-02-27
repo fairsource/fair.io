@@ -5,14 +5,13 @@ This is the repo for [fair.io](https://fair.io/).
 
 ### Governance and Process
 
-Fair Source is just getting started, so our governance and process are fairly
-lightweight. [Chad Whitacre](https://github.com/chadwhitacre) (Sentry) and
-[Zeke Gabrielse](https://github.com/ezekg) (Keygen) are handling new
+Our governance and process are fairly lightweight. [Chad Whitacre](https://github.com/chadwhitacre)
+(Sentry) and [Zeke Gabrielse](https://github.com/ezekg) (Keygen) manage the project,
+including new
 [company](https://github.com/fairsource/fair.io/issues/new?template=company.yaml)
 and
 [license](https://github.com/fairsource/fair.io/issues/new?template=license.yaml)
-submissions. [David Cramer](https://github.com/dcramer) is the co-founder of Fair
-Source; he sets the high-level direction and intent.
+submissions. [David Cramer](https://github.com/dcramer) sets high-level direction and intent.
 
 For **companies**, we are looking for a) a blog post announcement about b) a
 software product using a [Fair Source license](https://fair.io/licenses/). If

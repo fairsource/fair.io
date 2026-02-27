@@ -11,7 +11,7 @@ including new
 [company](https://github.com/fairsource/fair.io/issues/new?template=company.yaml)
 and
 [license](https://github.com/fairsource/fair.io/issues/new?template=license.yaml)
-submissions. [David Cramer](https://github.com/dcramer) sets high-level direction and intent.
+submissions. [David Cramer](https://github.com/dcramer) (Sentry) sets high-level direction and intent.
 
 For **companies**, we are looking for a) a blog post announcement about b) a
 software product using a [Fair Source license](https://fair.io/licenses/). If

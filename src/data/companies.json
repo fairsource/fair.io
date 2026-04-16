@@ -1,5 +1,12 @@
 [
   {
+    "name": "Liquibase",
+    "url": "https://www.liquibase.com/blog/liquibase-community-for-the-future-fsl",
+    "background": "#182059",
+    "logo": "/images/companies/liquibase.svg",
+    "adoption": "September 30, 2025"
+  },
+  {
     "name": "Tuist",
     "url": "https://tuist.dev/blog/2025/07/08/server-fcl",
     "background": "#f4f4ff",

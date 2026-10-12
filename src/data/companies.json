@@ -1,5 +1,12 @@
 [
   {
+    "name": "vostride",
+    "url": "https://vostride.com/blog/agent-qa-and-the-fair-future",
+    "background": "#171615",
+    "logo": "/images/companies/vostride.png",
+    "adoption": "October 1, 2026"
+  },
+  {
     "name": "Liquibase",
     "url": "https://www.liquibase.com/blog/liquibase-community-for-the-future-fsl",
     "background": "#182059",
